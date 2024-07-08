@@ -34,5 +34,10 @@ namespace Personel_Takip_Otomasyonu
             frmPersonelListele frm = new frmPersonelListele();
             frm.ShowDialog();
         }
+
+        private void frmAnaSayfa_Load(object sender, EventArgs e)
+        {
+            /*KAZARA TIKLADIM BİR İŞLEVİ YOK*/
+        }
     }
 }

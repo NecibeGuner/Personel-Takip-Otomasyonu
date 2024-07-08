@@ -22,6 +22,13 @@ namespace Personel_Takip_Otomasyonu
             Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres,p.Email," +
                "d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, Departmanlar " +
                "d where p.DepartmanID=d.DepartmanID");
+            lblToplamKayit.Text = "Taplam Kayıt: " + (dataGridView1.RowCount - 1) + " kayıt listelenmiştir...";
+            decimal toplammaas = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                toplammaas += decimal.Parse(dataGridView1.Rows[i].Cells["Maasi"].Value.ToString());
+                lblToplamMaas.Text = "Toplam Maaş Tutarı: " + toplammaas.ToString("0,00") + " TL";
+            }
         }
         private void frmPersonelListele_Load(object sender, EventArgs e)
         {

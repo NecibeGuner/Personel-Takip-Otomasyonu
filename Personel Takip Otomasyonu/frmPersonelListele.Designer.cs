@@ -240,7 +240,7 @@ namespace Personel_Takip_Otomasyonu
             // txtAdres
             // 
             this.txtAdres.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtAdres.Location = new System.Drawing.Point(465, 663);
+            this.txtAdres.Location = new System.Drawing.Point(140, 663);
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(194, 62);
@@ -316,7 +316,7 @@ namespace Personel_Takip_Otomasyonu
             // txtAciklama
             // 
             this.txtAciklama.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAciklama.Location = new System.Drawing.Point(140, 663);
+            this.txtAciklama.Location = new System.Drawing.Point(465, 663);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(194, 62);

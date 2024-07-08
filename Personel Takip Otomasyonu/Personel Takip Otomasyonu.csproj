@@ -62,6 +62,12 @@
     <Compile Include="frmDepartmanlar.Designer.cs">
       <DependentUpon>frmDepartmanlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullanici.Designer.cs">
+      <DependentUpon>frmKullanici.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersonelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,7 @@
     <Compile Include="frmPersonelListele.Designer.cs">
       <DependentUpon>frmPersonelListele.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kullanicilar.cs" />
     <Compile Include="Personeller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDepartmanlar.resx">
       <DependentUpon>frmDepartmanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullanici.resx">
+      <DependentUpon>frmKullanici.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersonelEkle.resx">
       <DependentUpon>frmPersonelEkle.cs</DependentUpon>
