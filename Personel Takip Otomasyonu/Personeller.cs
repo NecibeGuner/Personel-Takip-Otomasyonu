@@ -45,5 +45,18 @@ namespace Personel_Takip_Otomasyonu
             Veritabani.connection.Close();
             return tbl;
         }
+        public static DataTable TariheGoreAra(DateTimePicker dt,DataGridView gridView)
+        {
+            DataTable tbl = new DataTable();
+            Veritabani.connection.Open();
+            SqlDataAdapter adtr = new SqlDataAdapter("select p.PersonelID, p.Adi, p.Soyadi,p.Telefon, " +
+                "p.Adres, p.Email, d.Departman, p.Durumu, p.Maasi, p.GirisTarihi, p.Aciklama from Personeller p, " +
+                "Departmanlar d where p.DepartmanID = d.DepartmanID and GirisTarihi =@P1 ", Veritabani.connection);
+            adtr.SelectCommand.Parameters.Add("@P1", SqlDbType.Date).Value = DateTime.Parse(dt.Value.ToShortDateString());
+            gridView.DataSource = tbl;
+            adtr.Fill(tbl);
+            Veritabani.connection.Close();
+            return tbl;
+        }
     }
 }

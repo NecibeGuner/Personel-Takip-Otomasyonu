@@ -21,7 +21,7 @@ namespace Personel_Takip_Otomasyonu
         {
             Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres,p.Email," +
                "d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, Departmanlar " +
-               "d where p.DepartmanID=d.DepartmanID;");
+               "d where p.DepartmanID=d.DepartmanID");
         }
         private void frmPersonelListele_Load(object sender, EventArgs e)
         {
@@ -75,9 +75,13 @@ namespace Personel_Takip_Otomasyonu
             Personeller p = new Personeller();
             
             p.PERSONELID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            string sorgu = "delete from personeller where PersonelID='" + p.PERSONELID + "'";
-            SqlCommand komut = new SqlCommand();
-            Veritabani.ESG(komut, sorgu);
+            //string sorgu = "delete from personeller where PersonelID='" + p.PERSONELID + "'";
+            //SqlCommand komut = new SqlCommand();
+            //Veritabani.ESG(komut, sorgu);
+
+            string sorgu2 = "update personeller set durumu='Pasif' where personelID='" + p.PERSONELID + "'";
+            SqlCommand komut2 = new SqlCommand();
+            Veritabani.ESG(komut2, sorgu2);
             Temizle();
             MessageBox.Show("İşlem Başarılı.", "Sil", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             YenileListele();
@@ -99,7 +103,34 @@ namespace Personel_Takip_Otomasyonu
 
         private void txtPersonelIDAra_TextChanged(object sender, EventArgs e)
         {
-            
+            Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres,p.Email," +
+                "d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, Departmanlar " +
+                "d where p.DepartmanID=d.DepartmanID and PersonelID like '%"+txtPersonelIDAra.Text+"%'");
+        }
+        private void txtPersonelAdAra_TextChanged(object sender, EventArgs e)
+        {
+            Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres,p.Email," +
+               "d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, Departmanlar " +
+               "d where p.DepartmanID=d.DepartmanID and Adi like '%" + txtPersonelAdAra.Text + "%'");
+        }
+
+        private void txtPersonelSoyadAra_TextChanged(object sender, EventArgs e)
+        {
+            Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres,p.Email," +
+              "d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, Departmanlar " +
+              "d where p.DepartmanID=d.DepartmanID and Soyadi like '%" + txtPersonelSoyadAra.Text + "%'");
+        }
+
+        private void txtPersonelTelefonAra_TextChanged(object sender, EventArgs e)
+        {
+            Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres,p.Email," +
+              "d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, Departmanlar " +
+              "d where p.DepartmanID=d.DepartmanID and Telefon like '%" + txtPersonelTelefonAra.Text + "%'");
+        }
+
+        private void dateTimePickerG_Tarihi_ValueChanged(object sender, EventArgs e)
+        {
+            Personeller.TariheGoreAra(dateTimePickerG_Tarihi, dataGridView1);
         }
     }
 }

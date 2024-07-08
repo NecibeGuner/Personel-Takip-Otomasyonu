@@ -1,4 +1,6 @@
-﻿namespace Personel_Takip_Otomasyonu
+﻿using System.Windows.Forms;
+
+namespace Personel_Takip_Otomasyonu
 {
     partial class frmPersonelListele
     {
@@ -65,12 +67,14 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.txtPersonelID = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dateTimePickerG_Tarihi = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPersonelIDAra
             // 
-            this.txtPersonelIDAra.Location = new System.Drawing.Point(122, 67);
+            this.txtPersonelIDAra.Location = new System.Drawing.Point(24, 58);
             this.txtPersonelIDAra.Name = "txtPersonelIDAra";
             this.txtPersonelIDAra.Size = new System.Drawing.Size(133, 22);
             this.txtPersonelIDAra.TabIndex = 0;
@@ -78,29 +82,32 @@
             // 
             // txtPersonelAdAra
             // 
-            this.txtPersonelAdAra.Location = new System.Drawing.Point(404, 67);
+            this.txtPersonelAdAra.Location = new System.Drawing.Point(175, 58);
             this.txtPersonelAdAra.Name = "txtPersonelAdAra";
             this.txtPersonelAdAra.Size = new System.Drawing.Size(147, 22);
             this.txtPersonelAdAra.TabIndex = 1;
+            this.txtPersonelAdAra.TextChanged += new System.EventHandler(this.txtPersonelAdAra_TextChanged);
             // 
             // txtPersonelSoyadAra
             // 
-            this.txtPersonelSoyadAra.Location = new System.Drawing.Point(721, 67);
+            this.txtPersonelSoyadAra.Location = new System.Drawing.Point(342, 58);
             this.txtPersonelSoyadAra.Name = "txtPersonelSoyadAra";
             this.txtPersonelSoyadAra.Size = new System.Drawing.Size(147, 22);
             this.txtPersonelSoyadAra.TabIndex = 2;
+            this.txtPersonelSoyadAra.TextChanged += new System.EventHandler(this.txtPersonelSoyadAra_TextChanged);
             // 
             // txtPersonelTelefonAra
             // 
-            this.txtPersonelTelefonAra.Location = new System.Drawing.Point(1048, 67);
+            this.txtPersonelTelefonAra.Location = new System.Drawing.Point(512, 58);
             this.txtPersonelTelefonAra.Name = "txtPersonelTelefonAra";
             this.txtPersonelTelefonAra.Size = new System.Drawing.Size(147, 22);
             this.txtPersonelTelefonAra.TabIndex = 3;
+            this.txtPersonelTelefonAra.TextChanged += new System.EventHandler(this.txtPersonelTelefonAra_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 70);
+            this.label1.Location = new System.Drawing.Point(21, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 16);
             this.label1.TabIndex = 4;
@@ -109,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(290, 70);
+            this.label2.Location = new System.Drawing.Point(172, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 16);
             this.label2.TabIndex = 5;
@@ -118,7 +125,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(584, 70);
+            this.label3.Location = new System.Drawing.Point(339, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 16);
             this.label3.TabIndex = 6;
@@ -127,7 +134,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(901, 70);
+            this.label4.Location = new System.Drawing.Point(509, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 16);
             this.label4.TabIndex = 7;
@@ -139,12 +146,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 118);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 123);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1180, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(1180, 385);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -415,12 +422,33 @@
             this.txtPersonelID.Size = new System.Drawing.Size(194, 28);
             this.txtPersonelID.TabIndex = 38;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(682, 39);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 16);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Tarihe Göre Ara:";
+            // 
+            // dateTimePickerG_Tarihi
+            // 
+            this.dateTimePickerG_Tarihi.CustomFormat = "dd MMM yyyy";
+            this.dateTimePickerG_Tarihi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerG_Tarihi.Location = new System.Drawing.Point(685, 58);
+            this.dateTimePickerG_Tarihi.Name = "dateTimePickerG_Tarihi";
+            this.dateTimePickerG_Tarihi.Size = new System.Drawing.Size(147, 22);
+            this.dateTimePickerG_Tarihi.TabIndex = 41;
+            this.dateTimePickerG_Tarihi.ValueChanged += new System.EventHandler(this.dateTimePickerG_Tarihi_ValueChanged);
+            // 
             // frmPersonelListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1228, 763);
+            this.Controls.Add(this.dateTimePickerG_Tarihi);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtPersonelID);
             this.Controls.Add(this.btnGuncelle);
@@ -502,5 +530,7 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtPersonelID;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DateTimePicker dateTimePickerG_Tarihi;
     }
 }
