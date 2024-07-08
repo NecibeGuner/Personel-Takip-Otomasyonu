@@ -37,7 +37,8 @@ namespace Personel_Takip_Otomasyonu
 
         private void frmAnaSayfa_Load(object sender, EventArgs e)
         {
-            /*KAZARA TIKLADIM BİR İŞLEVİ YOK*/
+            frmKullanici k = new frmKullanici();
+            k.ShowDialog();
         }
     }
 }
