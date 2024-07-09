@@ -13,20 +13,20 @@ namespace Personel_Takip_Otomasyonu
         private int _KullaniciID;
         private string _KullaniciAdi;
         private string _Sifre;
-        //private string _AdiSoyadi;
-        //private string _Soru;
-        //private string _Cevap;
-        //private string _Aciklama;
-        //private DateTime _Tarih;
+        private string _AdiSoyadi;
+        private string _Soru;
+        private string _Cevap;
+        private string _Aciklama;
+        private DateTime _Tarih;
 
         public int KullaniciID { get => _KullaniciID; set => _KullaniciID = value; }
         public string KullaniciAdi { get => _KullaniciAdi; set => _KullaniciAdi = value; }
         public string Sifre { get => _Sifre; set => _Sifre = value; }
-        //public string AdiSoyadi { get => _AdiSoyadi; set => _AdiSoyadi = value; }
-        //public string Soru { get => _Soru; set => _Soru = value; }
-        //public string Cevap { get => _Cevap; set => _Cevap = value; }
-        //public string Aciklama { get => _Aciklama; set => _Aciklama = value; }
-        //public DateTime Tarih { get => _Tarih; set => _Tarih = value; 
+        public string AdiSoyadi { get => _AdiSoyadi; set => _AdiSoyadi = value; }
+        public string Soru { get => _Soru; set => _Soru = value; }
+        public string Cevap { get => _Cevap; set => _Cevap = value; }
+        public string Aciklama { get => _Aciklama; set => _Aciklama = value; }
+        public DateTime Tarih { get => _Tarih; set => _Tarih = value; }
 
         public static bool durum = false;
         public static int kid = 0;

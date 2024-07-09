@@ -17,11 +17,6 @@ namespace Personel_Takip_Otomasyonu
             InitializeComponent();
         }
 
-        private void btnCikis_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnGiris_Click(object sender, EventArgs e)
         {
             Kullanicilar.KullaniciGirisi(txtKullaniciAdi.Text,txtSifre.Text);
@@ -33,6 +28,23 @@ namespace Personel_Takip_Otomasyonu
             {
                 MessageBox.Show("Kullanıcı Adı veya Şifre yanlış...", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmSifremiUnuttum frm = new frmSifremiUnuttum();
+            frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmYeniKullanici frm = new frmYeniKullanici();
+            frm.ShowDialog();
         }
     }
 }
