@@ -22,7 +22,17 @@ namespace Personel_Takip_Otomasyonu
         {
             this.Close();
         }
-
+        void Temizle()
+        {
+            comboBoxSoru.Text = "";
+            foreach (Control item in Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+                }
+            }
+        }
         private void btnEkle_Click(object sender, EventArgs e)
         {
             Kullanicilar k = new Kullanicilar();
@@ -32,12 +42,22 @@ namespace Personel_Takip_Otomasyonu
             k.Soru = comboBoxSoru.Text;
             k.Cevap = txtCevap.Text;
             k.Aciklama = txtAciklama.Text;
-            //k.Tarih = 
+            k.Tarih = DateTime.Now;
 
-            string sql = "insert into Kullanicilar(KullaniciAdi,Sifre,AdiSoyadi,Soru,Cevap,Aciklama) values('" + k.KullaniciAdi + "'," +
-                "'" + k.Sifre + "','" + k.AdiSoyadi + "','" + k.Soru + "','" + k.Cevap + "','" + k.Aciklama + "')";
-            SqlCommand komut = new SqlCommand();
-            Veritabani.ESG(komut,sql);
+            if (txtSifre.Text==TxtSifreTekrar.Text)
+            {
+                string sql = "insert into Kullanicilar(KullaniciAdi,Sifre,AdiSoyadi,Soru,Cevap,Tarih,Aciklama) values('" + k.KullaniciAdi + "'," +
+                    "'" + k.Sifre + "','" + k.AdiSoyadi + "','" + k.Soru + "','" + k.Cevap + "',@Tarih,'" + k.Aciklama + "')";
+                SqlCommand komut = new SqlCommand();
+                komut.Parameters.Add("@Tarih", SqlDbType.Date).Value = k.Tarih;
+                MessageBox.Show("Yeni kullanıcı eklendi", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Temizle();
+                Veritabani.ESG(komut, sql);
+            }
+            else
+            {
+                MessageBox.Show("Şifreler uyuşmuyor, tekrardan deneyiniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

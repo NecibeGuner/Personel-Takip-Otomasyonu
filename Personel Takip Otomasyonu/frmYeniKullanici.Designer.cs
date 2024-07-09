@@ -63,6 +63,7 @@ namespace Personel_Takip_Otomasyonu
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(227, 22);
             this.txtSifre.TabIndex = 1;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // TxtSifreTekrar
             // 
@@ -70,6 +71,7 @@ namespace Personel_Takip_Otomasyonu
             this.TxtSifreTekrar.Name = "TxtSifreTekrar";
             this.TxtSifreTekrar.Size = new System.Drawing.Size(227, 22);
             this.TxtSifreTekrar.TabIndex = 2;
+            this.TxtSifreTekrar.UseSystemPasswordChar = true;
             // 
             // txtAdSoyad
             // 

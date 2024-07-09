@@ -46,7 +46,7 @@
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtKullaniciId = new System.Windows.Forms.TextBox();
+            this.txtKullaniciID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,6 +145,7 @@
             this.btnCikis.TabIndex = 26;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnGuncelle
             // 
@@ -154,10 +155,16 @@
             this.btnGuncelle.TabIndex = 25;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // comboBoxSoru
             // 
             this.comboBoxSoru.FormattingEnabled = true;
+            this.comboBoxSoru.Items.AddRange(new object[] {
+            "1) En sevdiğiniz renk nedir?",
+            "2) En sevdiğiniz hayvan nedir?",
+            "3) Uğurlu sayınız nedir?",
+            "\t\t\t"});
             this.comboBoxSoru.Location = new System.Drawing.Point(178, 248);
             this.comboBoxSoru.Name = "comboBoxSoru";
             this.comboBoxSoru.Size = new System.Drawing.Size(227, 24);
@@ -208,12 +215,12 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Kullanıcı ID :";
             // 
-            // txtKullaniciId
+            // txtKullaniciID
             // 
-            this.txtKullaniciId.Location = new System.Drawing.Point(178, 55);
-            this.txtKullaniciId.Name = "txtKullaniciId";
-            this.txtKullaniciId.Size = new System.Drawing.Size(227, 22);
-            this.txtKullaniciId.TabIndex = 29;
+            this.txtKullaniciID.Location = new System.Drawing.Point(178, 55);
+            this.txtKullaniciID.Name = "txtKullaniciID";
+            this.txtKullaniciID.Size = new System.Drawing.Size(227, 22);
+            this.txtKullaniciID.TabIndex = 29;
             // 
             // frmSifremiUnuttum
             // 
@@ -221,7 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(526, 577);
-            this.Controls.Add(this.txtKullaniciId);
+            this.Controls.Add(this.txtKullaniciID);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtAciklama);
             this.Controls.Add(this.btnCikis);
@@ -262,6 +269,6 @@
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtKullaniciId;
+        private System.Windows.Forms.TextBox txtKullaniciID;
     }
 }
