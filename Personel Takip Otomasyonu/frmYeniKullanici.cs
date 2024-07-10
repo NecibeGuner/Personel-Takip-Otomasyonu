@@ -50,9 +50,24 @@ namespace Personel_Takip_Otomasyonu
                     "'" + k.Sifre + "','" + k.AdiSoyadi + "','" + k.Soru + "','" + k.Cevap + "',@Tarih,'" + k.Aciklama + "')";
                 SqlCommand komut = new SqlCommand();
                 komut.Parameters.Add("@Tarih", SqlDbType.Date).Value = k.Tarih;
-                MessageBox.Show("Yeni kullanıcı eklendi", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Yeni kullanıcı eklendi. Kullanıcı ID : ", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Temizle();
                 Veritabani.ESG(komut, sql);
+
+                //try
+                //{
+                //    Veritabani.connection.Open();
+                //    int insertedId = (int)komut.ExecuteScalar(); // ExecuteScalar metodu ile yeni eklenen kaydın ID'si alınır.
+                //    Veritabani.connection.Close();
+
+                //    MessageBox.Show("Yeni kullanıcı eklendi. Kullanıcı ID : " + insertedId, "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    Temizle();
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+
             }
             else
             {

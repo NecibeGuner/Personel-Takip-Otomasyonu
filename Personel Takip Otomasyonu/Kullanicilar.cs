@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Personel_Takip_Otomasyonu
 {
@@ -52,5 +54,18 @@ namespace Personel_Takip_Otomasyonu
             Veritabani.connection.Close();
             return dr;
         }
+        //public static DataTable ComboyaKullaniciGetir(ComboBox combo)
+        //{
+        //    DataTable tbl = new DataTable();
+        //    Veritabani.connection.Open();
+        //    SqlDataAdapter adtr = new SqlDataAdapter("SELECT DepartmanID, Departman FROM Departmanlar", Veritabani.connection);
+        //    adtr.Fill(tbl);
+        //    combo.DataSource = tbl;
+        //    combo.ValueMember = "DepartmanID";//arka planda tuttuğu kısım
+        //    combo.DisplayMember = "Departman";//görünecek olan kısım
+        //    Veritabani.connection.Close();
+        //    return tbl;
+        //}
+        
     }
 }

@@ -46,5 +46,10 @@ namespace Personel_Takip_Otomasyonu
             frmYeniKullanici frm = new frmYeniKullanici();
             frm.ShowDialog();
         }
+
+        private void frmKullanici_Load(object sender, EventArgs e)
+        {
+            //btnGiris.PerformClick();
+        }
     }
 }

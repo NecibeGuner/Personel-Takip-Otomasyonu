@@ -18,6 +18,7 @@ namespace Personel_Takip_Otomasyonu
             cmd.Connection = connection;
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
+            //cmd.ExecuteScalar();//sonradan eklendi siline de bilir
             connection.Close();
         }
         public static DataTable Listele_Ara(DataGridView gridView, string sql)

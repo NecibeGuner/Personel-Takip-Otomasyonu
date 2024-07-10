@@ -82,5 +82,10 @@ namespace Personel_Takip_Otomasyonu
             txtDepartman.Text = listView1.SelectedItems[0].SubItems[1].Text;
             txtAciklama.Text = listView1.SelectedItems[0].SubItems[2].Text;
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //kazara tıklandı
+        }
     }
 }

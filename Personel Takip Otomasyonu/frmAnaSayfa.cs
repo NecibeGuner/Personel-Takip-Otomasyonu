@@ -40,5 +40,17 @@ namespace Personel_Takip_Otomasyonu
             frmKullanici k = new frmKullanici();
             k.ShowDialog();
         }
+
+        private void btnKullaniciListele_Click(object sender, EventArgs e)
+        {
+            frmKullaniciListesi k = new frmKullaniciListesi();
+            k.ShowDialog();
+        }
+
+        private void btnMaasZamlari_Click(object sender, EventArgs e)
+        {
+            frmYapilanZamlar k = new frmYapilanZamlar();
+            k.ShowDialog();
+        }
     }
 }
