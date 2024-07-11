@@ -60,6 +60,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboRol = new System.Windows.Forms.ComboBox();
+            this.txtRolAra = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +134,7 @@
             // lblToplamKayit
             // 
             this.lblToplamKayit.AutoSize = true;
-            this.lblToplamKayit.Location = new System.Drawing.Point(715, 517);
+            this.lblToplamKayit.Location = new System.Drawing.Point(1018, 493);
             this.lblToplamKayit.Name = "lblToplamKayit";
             this.lblToplamKayit.Size = new System.Drawing.Size(163, 16);
             this.lblToplamKayit.TabIndex = 70;
@@ -374,11 +378,53 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label9.Location = new System.Drawing.Point(738, 517);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 18);
+            this.label9.TabIndex = 83;
+            this.label9.Text = "Rol :";
+            // 
+            // comboRol
+            // 
+            this.comboRol.FormattingEnabled = true;
+            this.comboRol.Items.AddRange(new object[] {
+            "admin",
+            "kullanici"});
+            this.comboRol.Location = new System.Drawing.Point(788, 514);
+            this.comboRol.Name = "comboRol";
+            this.comboRol.Size = new System.Drawing.Size(121, 24);
+            this.comboRol.TabIndex = 84;
+            // 
+            // txtRolAra
+            // 
+            this.txtRolAra.Location = new System.Drawing.Point(732, 44);
+            this.txtRolAra.Name = "txtRolAra";
+            this.txtRolAra.Size = new System.Drawing.Size(156, 22);
+            this.txtRolAra.TabIndex = 85;
+            this.txtRolAra.TextChanged += new System.EventHandler(this.txtRolAra_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(729, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 16);
+            this.label11.TabIndex = 86;
+            this.label11.Text = "Rol Ara";
+            // 
             // frmKullaniciListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 730);
+            this.ClientSize = new System.Drawing.Size(1208, 742);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtRolAra);
+            this.Controls.Add(this.comboRol);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.label4);
@@ -448,5 +494,9 @@
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboRol;
+        private System.Windows.Forms.TextBox txtRolAra;
+        private System.Windows.Forms.Label label11;
     }
 }

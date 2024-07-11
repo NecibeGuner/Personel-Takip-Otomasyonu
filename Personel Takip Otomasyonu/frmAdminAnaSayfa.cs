@@ -51,5 +51,11 @@ namespace Personel_Takip_Otomasyonu
         {
             Application.Exit();
         }
+
+        private void btnKullaniciEkle_Click(object sender, EventArgs e)
+        {
+            frmKullaniciEkle frm = new frmKullaniciEkle();
+            frm.ShowDialog();
+        }
     }
 }

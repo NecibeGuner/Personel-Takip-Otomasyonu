@@ -43,6 +43,7 @@ namespace Personel_Takip_Otomasyonu
             k.Cevap = txtCevap.Text;
             k.Aciklama = txtAciklama.Text;
             k.Tarih = DateTime.Now;
+           
 
             if (txtSifre.Text==TxtSifreTekrar.Text)
             {
@@ -53,20 +54,6 @@ namespace Personel_Takip_Otomasyonu
                 MessageBox.Show("Yeni kullanıcı eklendi. Kullanıcı ID : ", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Temizle();
                 Veritabani.ESG(komut, sql);
-
-                //try
-                //{
-                //    Veritabani.connection.Open();
-                //    int insertedId = (int)komut.ExecuteScalar(); // ExecuteScalar metodu ile yeni eklenen kaydın ID'si alınır.
-                //    Veritabani.connection.Close();
-
-                //    MessageBox.Show("Yeni kullanıcı eklendi. Kullanıcı ID : " + insertedId, "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    Temizle();
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
 
             }
             else

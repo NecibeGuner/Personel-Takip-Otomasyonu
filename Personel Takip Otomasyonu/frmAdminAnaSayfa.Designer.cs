@@ -36,6 +36,7 @@
             this.btnPersonelListele = new System.Windows.Forms.Button();
             this.btnPersonelEkle = new System.Windows.Forms.Button();
             this.btnDepartmanlar = new System.Windows.Forms.Button();
+            this.btnKullaniciEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,12 +115,24 @@
             this.btnDepartmanlar.UseVisualStyleBackColor = false;
             this.btnDepartmanlar.Click += new System.EventHandler(this.btnDepartmanlar_Click);
             // 
+            // btnKullaniciEkle
+            // 
+            this.btnKullaniciEkle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(425, 399);
+            this.btnKullaniciEkle.Name = "btnKullaniciEkle";
+            this.btnKullaniciEkle.Size = new System.Drawing.Size(151, 83);
+            this.btnKullaniciEkle.TabIndex = 14;
+            this.btnKullaniciEkle.Text = "KULLANİCİ EKLE\r\n";
+            this.btnKullaniciEkle.UseVisualStyleBackColor = false;
+            this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
+            // 
             // frmAdminAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 568);
+            this.Controls.Add(this.btnKullaniciEkle);
             this.Controls.Add(this.btnMaasZamlari);
             this.Controls.Add(this.btnKullaniciListele);
             this.Controls.Add(this.label1);
@@ -128,6 +141,7 @@
             this.Controls.Add(this.btnPersonelEkle);
             this.Controls.Add(this.btnDepartmanlar);
             this.Name = "frmAdminAnaSayfa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminAnaSayfa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdminAnaSayfa_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -145,5 +159,6 @@
         private System.Windows.Forms.Button btnPersonelListele;
         private System.Windows.Forms.Button btnPersonelEkle;
         private System.Windows.Forms.Button btnDepartmanlar;
+        private System.Windows.Forms.Button btnKullaniciEkle;
     }
 }

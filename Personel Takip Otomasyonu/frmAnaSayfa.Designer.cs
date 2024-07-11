@@ -36,7 +36,6 @@
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnKullaniciListele = new System.Windows.Forms.Button();
             this.btnMaasZamlari = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,17 +102,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "PERSONEL TAKİP SİSTEMİ";
             // 
-            // btnKullaniciListele
-            // 
-            this.btnKullaniciListele.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKullaniciListele.Location = new System.Drawing.Point(634, 403);
-            this.btnKullaniciListele.Name = "btnKullaniciListele";
-            this.btnKullaniciListele.Size = new System.Drawing.Size(151, 83);
-            this.btnKullaniciListele.TabIndex = 5;
-            this.btnKullaniciListele.Text = "KULLANICI LİSTELE";
-            this.btnKullaniciListele.UseVisualStyleBackColor = false;
-            this.btnKullaniciListele.Click += new System.EventHandler(this.btnKullaniciListele_Click);
-            // 
             // btnMaasZamlari
             // 
             this.btnMaasZamlari.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -132,7 +120,6 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1095, 612);
             this.Controls.Add(this.btnMaasZamlari);
-            this.Controls.Add(this.btnKullaniciListele);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnPersonelListele);
@@ -157,7 +144,6 @@
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnKullaniciListele;
         private System.Windows.Forms.Button btnMaasZamlari;
     }
 }
