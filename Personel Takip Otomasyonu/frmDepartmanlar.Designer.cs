@@ -242,6 +242,7 @@
             this.Controls.Add(this.txtDepartman);
             this.Controls.Add(this.txtDepartmanID);
             this.Name = "frmDepartmanlar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Departman Ekleme Silme ve Güncelleme Sayfası";
             this.Load += new System.EventHandler(this.frmDepartmanlar_Load);
             this.ResumeLayout(false);

@@ -67,7 +67,7 @@ namespace Personel_Takip_Otomasyonu
             p.Aciklama = txtAciklama.Text;
             string sorgu = "update personeller set Adi='" + p.Adi + "', Soyadi='" + p.Soyadi + "', " +
                 "Telefon='" + p.Telefon + "', Adres='" + p.Adres + "', Email='" + p.Email + "', DepartmanID='" + p.DepartmanID + "', " +
-                "Maasi=@Maasi, CikisTarihi=@GirisTarihi, Aciklama='" + p.Adi + "' where PersonelID='" + p.PERSONELID + "' ";
+                "Maasi=@Maasi, GirisTarihi=@GirisTarihi, Aciklama='" + p.Aciklama + "' where PersonelID='" + p.PERSONELID + "' ";
             SqlCommand komut = new SqlCommand();
             komut.Parameters.Add("@Maasi", SqlDbType.Decimal).Value = p.Maasi;
             komut.Parameters.Add("@GirisTarihi",SqlDbType.Date).Value = p.GirisTarihi;
@@ -86,8 +86,9 @@ namespace Personel_Takip_Otomasyonu
             //SqlCommand komut = new SqlCommand();
             //Veritabani.ESG(komut, sorgu);
 
-            string sorgu2 = "update personeller set durumu='Pasif' where personelID='" + p.PERSONELID + "'";
+            string sorgu2 = "update personeller set durumu='Pasif', CikisTarihi=@CikisTarihi where personelID='" + p.PERSONELID + "'";
             SqlCommand komut2 = new SqlCommand();
+            komut2.Parameters.Add("@CikisTarihi", SqlDbType.Date).Value = DateTime.Now;
             Veritabani.ESG(komut2, sorgu2);
             Temizle();
             MessageBox.Show("İşlem Başarılı.", "Sil", MessageBoxButtons.OK, MessageBoxIcon.Warning);

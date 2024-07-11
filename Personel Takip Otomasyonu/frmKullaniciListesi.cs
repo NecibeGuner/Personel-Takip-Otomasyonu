@@ -105,19 +105,19 @@ namespace Personel_Takip_Otomasyonu
 
         private void txtKullaniciIDAra_TextChanged(object sender, EventArgs e)
         {
-            Veritabani.Listele_Ara(dataGridView1, "select k.KullaniciID,k.KullaniciAdi,k.AdiSoyadi, k.Tarih,k.Aciklama from Kullanicilar k" +
+            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, Aciklama from Kullanicilar " +
                 "where KullaniciID like'%"+txtKullaniciIDAra.Text+"%'");
         }
 
         private void textKullaniciAdiAra_TextChanged(object sender, EventArgs e)
         {
-            Veritabani.Listele_Ara(dataGridView1, "select k.KullaniciID,k.KullaniciAdi,k.AdiSoyadi, k.Tarih,k.Aciklama from Kullanicilar k" +
+            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, Aciklama from Kullanicilar " +
                "where KullaniciAdi like'%" + txtKullaniciAdiAra.Text + "%'");
         }
 
         private void txtAdiSoyadiAra_TextChanged(object sender, EventArgs e)
         {
-            Veritabani.Listele_Ara(dataGridView1, "select k.KullaniciID,k.KullaniciAdi,k.AdiSoyadi, k.Tarih,k.Aciklama from Kullanicilar k" +
+            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, Aciklama from Kullanicilar " +
               "where AdiSoyadi like'%" + txtAdiSoyadiAra.Text + "%'");
         }
     }

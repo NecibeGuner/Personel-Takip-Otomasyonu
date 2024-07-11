@@ -44,7 +44,7 @@ namespace Personel_Takip_Otomasyonu
             if (dr.Read() ) 
             {
                 durum = true;
-                k.KullaniciID = int.Parse(dr[0].ToString());
+                kid = int.Parse(dr[0].ToString());
             }
             else
             {
