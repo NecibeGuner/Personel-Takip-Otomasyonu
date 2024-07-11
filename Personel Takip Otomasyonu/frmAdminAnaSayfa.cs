@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Personel_Takip_Otomasyonu
 {
-    public partial class frmAnaSayfa : Form
+    public partial class frmAdminAnaSayfa : Form
     {
-        public frmAnaSayfa()
+        public frmAdminAnaSayfa()
         {
             InitializeComponent();
         }
@@ -35,9 +35,10 @@ namespace Personel_Takip_Otomasyonu
             frm.ShowDialog();
         }
 
-        private void frmAnaSayfa_Load(object sender, EventArgs e)
+        private void btnMaasZamlari_Click(object sender, EventArgs e)
         {
-            
+            frmYapilanZamlar k = new frmYapilanZamlar();
+            k.ShowDialog();
         }
 
         private void btnKullaniciListele_Click(object sender, EventArgs e)
@@ -46,13 +47,7 @@ namespace Personel_Takip_Otomasyonu
             k.ShowDialog();
         }
 
-        private void btnMaasZamlari_Click(object sender, EventArgs e)
-        {
-            frmYapilanZamlar k = new frmYapilanZamlar();
-            k.ShowDialog();
-        }
-
-        private void frmAnaSayfa_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmAdminAnaSayfa_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

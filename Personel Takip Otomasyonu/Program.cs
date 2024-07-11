@@ -16,7 +16,7 @@ namespace Personel_Takip_Otomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAnaSayfa());
+            Application.Run(new frmKullanici());
         }
     }
 }

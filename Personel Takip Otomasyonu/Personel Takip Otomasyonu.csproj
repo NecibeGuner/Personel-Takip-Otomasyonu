@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Departmanlar.cs" />
+    <Compile Include="frmAdminAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminAnaSayfa.Designer.cs">
+      <DependentUpon>frmAdminAnaSayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Veritabani.cs" />
     <Compile Include="YapilanZamlar.cs" />
+    <EmbeddedResource Include="frmAdminAnaSayfa.resx">
+      <DependentUpon>frmAdminAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAnaSayfa.resx">
       <DependentUpon>frmAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>

@@ -19,10 +19,20 @@ namespace Personel_Takip_Otomasyonu
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            Kullanicilar.KullaniciGirisi(txtKullaniciAdi.Text,txtSifre.Text);
+            Kullanicilar.KullaniciGirisi(txtKullaniciAdi.Text, txtSifre.Text);
             if (Kullanicilar.durum)
             {
-                this.Close();
+                this.Hide();
+                if (Kullanicilar.rol == "admin")
+                {
+                    frmAdminAnaSayfa adminAnaSayfa = new frmAdminAnaSayfa();
+                    adminAnaSayfa.Show();
+                }
+                else
+                {
+                    frmAnaSayfa kullaniciAnaSayfa = new frmAnaSayfa();
+                    kullaniciAnaSayfa.Show();
+                }
             }
             else
             {
