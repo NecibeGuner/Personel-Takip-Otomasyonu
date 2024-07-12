@@ -37,13 +37,14 @@
             this.btnPersonelEkle = new System.Windows.Forms.Button();
             this.btnDepartmanlar = new System.Windows.Forms.Button();
             this.btnKullaniciEkle = new System.Windows.Forms.Button();
+            this.btnPrimler = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaasZamlari
             // 
             this.btnMaasZamlari.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMaasZamlari.Location = new System.Drawing.Point(268, 399);
+            this.btnMaasZamlari.Location = new System.Drawing.Point(560, 403);
             this.btnMaasZamlari.Name = "btnMaasZamlari";
             this.btnMaasZamlari.Size = new System.Drawing.Size(151, 83);
             this.btnMaasZamlari.TabIndex = 13;
@@ -54,7 +55,7 @@
             // btnKullaniciListele
             // 
             this.btnKullaniciListele.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKullaniciListele.Location = new System.Drawing.Point(582, 399);
+            this.btnKullaniciListele.Location = new System.Drawing.Point(246, 403);
             this.btnKullaniciListele.Name = "btnKullaniciListele";
             this.btnKullaniciListele.Size = new System.Drawing.Size(151, 83);
             this.btnKullaniciListele.TabIndex = 12;
@@ -66,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(272, 49);
+            this.label1.Location = new System.Drawing.Point(332, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(438, 76);
             this.label1.TabIndex = 11;
@@ -75,7 +76,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(305, 128);
+            this.pictureBox1.Location = new System.Drawing.Point(371, 132);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(360, 176);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -85,7 +86,7 @@
             // btnPersonelListele
             // 
             this.btnPersonelListele.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelListele.Location = new System.Drawing.Point(582, 310);
+            this.btnPersonelListele.Location = new System.Drawing.Point(403, 403);
             this.btnPersonelListele.Name = "btnPersonelListele";
             this.btnPersonelListele.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelListele.TabIndex = 9;
@@ -96,7 +97,7 @@
             // btnPersonelEkle
             // 
             this.btnPersonelEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelEkle.Location = new System.Drawing.Point(425, 310);
+            this.btnPersonelEkle.Location = new System.Drawing.Point(403, 314);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelEkle.TabIndex = 8;
@@ -107,7 +108,7 @@
             // btnDepartmanlar
             // 
             this.btnDepartmanlar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDepartmanlar.Location = new System.Drawing.Point(268, 310);
+            this.btnDepartmanlar.Location = new System.Drawing.Point(560, 314);
             this.btnDepartmanlar.Name = "btnDepartmanlar";
             this.btnDepartmanlar.Size = new System.Drawing.Size(151, 83);
             this.btnDepartmanlar.TabIndex = 7;
@@ -118,7 +119,7 @@
             // btnKullaniciEkle
             // 
             this.btnKullaniciEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(425, 399);
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(246, 314);
             this.btnKullaniciEkle.Name = "btnKullaniciEkle";
             this.btnKullaniciEkle.Size = new System.Drawing.Size(151, 83);
             this.btnKullaniciEkle.TabIndex = 14;
@@ -126,12 +127,24 @@
             this.btnKullaniciEkle.UseVisualStyleBackColor = false;
             this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
             // 
+            // btnPrimler
+            // 
+            this.btnPrimler.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPrimler.Location = new System.Drawing.Point(717, 314);
+            this.btnPrimler.Name = "btnPrimler";
+            this.btnPrimler.Size = new System.Drawing.Size(151, 83);
+            this.btnPrimler.TabIndex = 15;
+            this.btnPrimler.Text = "PRİMLER";
+            this.btnPrimler.UseVisualStyleBackColor = false;
+            this.btnPrimler.Click += new System.EventHandler(this.btnPirimler_Click);
+            // 
             // frmAdminAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1000, 568);
+            this.ClientSize = new System.Drawing.Size(1095, 612);
+            this.Controls.Add(this.btnPrimler);
             this.Controls.Add(this.btnKullaniciEkle);
             this.Controls.Add(this.btnMaasZamlari);
             this.Controls.Add(this.btnKullaniciListele);
@@ -160,5 +173,6 @@
         private System.Windows.Forms.Button btnPersonelEkle;
         private System.Windows.Forms.Button btnDepartmanlar;
         private System.Windows.Forms.Button btnKullaniciEkle;
+        private System.Windows.Forms.Button btnPrimler;
     }
 }

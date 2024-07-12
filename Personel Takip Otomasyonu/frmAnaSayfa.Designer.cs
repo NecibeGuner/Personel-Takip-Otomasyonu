@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMaasZamlari = new System.Windows.Forms.Button();
+            this.btnPrimler = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +114,24 @@
             this.btnMaasZamlari.UseVisualStyleBackColor = false;
             this.btnMaasZamlari.Click += new System.EventHandler(this.btnMaasZamlari_Click);
             // 
+            // btnPrimler
+            // 
+            this.btnPrimler.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPrimler.Location = new System.Drawing.Point(477, 403);
+            this.btnPrimler.Name = "btnPrimler";
+            this.btnPrimler.Size = new System.Drawing.Size(151, 83);
+            this.btnPrimler.TabIndex = 7;
+            this.btnPrimler.Text = "PRİMLER";
+            this.btnPrimler.UseVisualStyleBackColor = false;
+            this.btnPrimler.Click += new System.EventHandler(this.btnPirimler_Click);
+            // 
             // frmAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1095, 612);
+            this.Controls.Add(this.btnPrimler);
             this.Controls.Add(this.btnMaasZamlari);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -145,6 +158,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMaasZamlari;
+        private System.Windows.Forms.Button btnPrimler;
     }
 }
 

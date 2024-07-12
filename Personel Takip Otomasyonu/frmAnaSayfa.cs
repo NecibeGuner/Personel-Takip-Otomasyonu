@@ -50,5 +50,11 @@ namespace Personel_Takip_Otomasyonu
         {
             Application.Exit();
         }
+
+        private void btnPirimler_Click(object sender, EventArgs e)
+        {
+            frmPrimler frm = new frmPrimler();
+            frm.ShowDialog();
+        }
     }
 }

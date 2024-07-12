@@ -57,5 +57,11 @@ namespace Personel_Takip_Otomasyonu
             frmKullaniciEkle frm = new frmKullaniciEkle();
             frm.ShowDialog();
         }
+
+        private void btnPirimler_Click(object sender, EventArgs e)
+        {
+            frmPrimler frm = new frmPrimler();
+            frm.ShowDialog();
+        }
     }
 }
