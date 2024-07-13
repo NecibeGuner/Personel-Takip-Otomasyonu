@@ -20,6 +20,7 @@ namespace Personel_Takip_Otomasyonu
 
         private void frmPrimler_Load(object sender, EventArgs e)
         {
+            radioKisiyeOzelPrim.Checked = true;
             int yil = int.Parse(DateTime.Now.Year.ToString());
             for (int i = yil; i >= (yil - 5); i--)
             {
@@ -61,8 +62,6 @@ namespace Personel_Takip_Otomasyonu
                 }
                 MessageBox.Show("İşlem başarılı", "Prim Ekleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            //btnTemizle.PerformClick();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -77,19 +76,16 @@ namespace Personel_Takip_Otomasyonu
             this.Close();
         }
 
-        private void btnTemizle_Click(object sender, EventArgs e)
+        private void btnPrimGoster_Click(object sender, EventArgs e)
         {
-            foreach (Control item in Controls)
-            {
-                if (item is TextBox)
-                {
-                    item.Text = "";
-                }
-                if (item is ComboBox)
-                {
-                    item.Text = "";
-                }
-            }
+            frmPrimleriGoster frm = new frmPrimleriGoster();
+            frm.ShowDialog();
+        }
+
+        private void btnPrimOde_Click(object sender, EventArgs e)//btnPersoneleGorePrimler 
+        {
+            frmPersoneleGorePrimler frm = new frmPersoneleGorePrimler();
+            frm.ShowDialog();
         }
     }
 }

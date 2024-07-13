@@ -45,7 +45,6 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDepartmanID
@@ -107,7 +106,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(163, 193);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(495, 133);
+            this.listView1.Size = new System.Drawing.Size(495, 185);
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -118,7 +117,7 @@
             // columnDepartmanID
             // 
             this.columnDepartmanID.Text = "Departman ID";
-            this.columnDepartmanID.Width = 124;
+            this.columnDepartmanID.Width = 97;
             // 
             // columnDepartman
             // 
@@ -128,7 +127,7 @@
             // columnAciklama
             // 
             this.columnAciklama.Text = "Açıklama";
-            this.columnAciklama.Width = 221;
+            this.columnAciklama.Width = 255;
             // 
             // btnGuncelle
             // 
@@ -214,22 +213,12 @@
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(375, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "label4";
-            // 
             // frmDepartmanlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
@@ -267,6 +256,5 @@
         private System.Windows.Forms.ColumnHeader columnDepartmanID;
         private System.Windows.Forms.ColumnHeader columnDepartman;
         private System.Windows.Forms.ColumnHeader columnAciklama;
-        private System.Windows.Forms.Label label4;
     }
 }

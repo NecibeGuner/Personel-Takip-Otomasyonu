@@ -11,25 +11,26 @@ namespace Personel_Takip_Otomasyonu
 {
     class Veritabani
     {
-        public static SqlConnection connection = new SqlConnection("Data Source=NECIBE-03\\SQLEXPRESS01;Initial Catalog=Personel_Takip;Integrated Security=True;Pooling=False;Encrypt=False");
+        public static SqlConnection connection = new SqlConnection
+            ("Data Source=NECIBE-03\\SQLEXPRESS01;Initial Catalog=Personel_Takip;Integrated Security=True;Pooling=False;Encrypt=False");
         public static void ESG(SqlCommand cmd,string sql)
         {
             connection.Open();
             cmd.Connection = connection;
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
-            //cmd.ExecuteScalar();//sonradan eklendi siline de bilir
             connection.Close();
         }
         public static DataTable Listele_Ara(DataGridView gridView, string sql)
         {
             DataTable tbl = new DataTable();
             connection.Open();
-            SqlDataAdapter adtr = new SqlDataAdapter(sql,connection);
+            SqlDataAdapter adtr = new SqlDataAdapter(sql, connection);
             adtr.Fill(tbl);
             gridView.DataSource = tbl;
             connection.Close();
             return tbl;
         }
     }
+    //cmd.ExecuteScalar();//sonradan eklendi siline de bilir
 }

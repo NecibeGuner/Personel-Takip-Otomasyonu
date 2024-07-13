@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Personel_Takip_Otomasyonu
 {
@@ -29,6 +31,17 @@ namespace Personel_Takip_Otomasyonu
         public DateTime Tarih { get => _Tarih; set => _Tarih = value; }
         #endregion
 
-
+        public static SqlDataReader PersonelAdSoyadGetir(TextBox txtPersonelID,TextBox txtAdSoyad)
+        {
+            Veritabani.connection.Open();
+            SqlCommand komut = new SqlCommand("select *from Personeller where PersonelID='" + txtPersonelID.Text + "'", Veritabani.connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                txtAdSoyad.Text = dr[1] + " " + dr[2];
+            }
+            Veritabani.connection.Close();
+            return dr;
+        }
     }
 }

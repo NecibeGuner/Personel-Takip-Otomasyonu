@@ -44,12 +44,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnPrimEkle = new System.Windows.Forms.Button();
+            this.btnPersoneleGorePrimler = new System.Windows.Forms.Button();
             this.btnPrimGoster = new System.Windows.Forms.Button();
-            this.btnPrimOde = new System.Windows.Forms.Button();
-            this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnPrimEkle = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -200,8 +199,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.btnTemizle);
-            this.panel1.Controls.Add(this.btnPrimOde);
+            this.panel1.Controls.Add(this.btnPersoneleGorePrimler);
             this.panel1.Controls.Add(this.btnPrimGoster);
             this.panel1.Controls.Add(this.btnPrimEkle);
             this.panel1.Controls.Add(this.label5);
@@ -223,25 +221,27 @@
             this.panel1.Size = new System.Drawing.Size(794, 270);
             this.panel1.TabIndex = 26;
             // 
-            // label4
+            // btnPersoneleGorePrimler
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
-            this.label4.Location = new System.Drawing.Point(452, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 18);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Prim Tutarı :";
+            this.btnPersoneleGorePrimler.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
+            this.btnPersoneleGorePrimler.Location = new System.Drawing.Point(545, 185);
+            this.btnPersoneleGorePrimler.Name = "btnPersoneleGorePrimler";
+            this.btnPersoneleGorePrimler.Size = new System.Drawing.Size(110, 58);
+            this.btnPersoneleGorePrimler.TabIndex = 30;
+            this.btnPersoneleGorePrimler.Text = "Personele Göre Prim";
+            this.btnPersoneleGorePrimler.UseVisualStyleBackColor = true;
+            this.btnPersoneleGorePrimler.Click += new System.EventHandler(this.btnPrimOde_Click);
             // 
-            // label5
+            // btnPrimGoster
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(467, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 18);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Açıklama :";
+            this.btnPrimGoster.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
+            this.btnPrimGoster.Location = new System.Drawing.Point(429, 185);
+            this.btnPrimGoster.Name = "btnPrimGoster";
+            this.btnPrimGoster.Size = new System.Drawing.Size(110, 58);
+            this.btnPrimGoster.TabIndex = 29;
+            this.btnPrimGoster.Text = "Prim Göster";
+            this.btnPrimGoster.UseVisualStyleBackColor = true;
+            this.btnPrimGoster.Click += new System.EventHandler(this.btnPrimGoster_Click);
             // 
             // btnPrimEkle
             // 
@@ -254,36 +254,25 @@
             this.btnPrimEkle.UseVisualStyleBackColor = true;
             this.btnPrimEkle.Click += new System.EventHandler(this.btnPrimEkle_Click);
             // 
-            // btnPrimGoster
+            // label5
             // 
-            this.btnPrimGoster.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
-            this.btnPrimGoster.Location = new System.Drawing.Point(429, 185);
-            this.btnPrimGoster.Name = "btnPrimGoster";
-            this.btnPrimGoster.Size = new System.Drawing.Size(110, 58);
-            this.btnPrimGoster.TabIndex = 29;
-            this.btnPrimGoster.Text = "Prim Göster";
-            this.btnPrimGoster.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(467, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 18);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Açıklama :";
             // 
-            // btnPrimOde
+            // label4
             // 
-            this.btnPrimOde.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
-            this.btnPrimOde.Location = new System.Drawing.Point(545, 185);
-            this.btnPrimOde.Name = "btnPrimOde";
-            this.btnPrimOde.Size = new System.Drawing.Size(110, 58);
-            this.btnPrimOde.TabIndex = 30;
-            this.btnPrimOde.Text = "Prim Öde";
-            this.btnPrimOde.UseVisualStyleBackColor = true;
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
-            this.btnTemizle.Location = new System.Drawing.Point(661, 185);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(110, 58);
-            this.btnTemizle.TabIndex = 31;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
-            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
+            this.label4.Location = new System.Drawing.Point(452, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 18);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Prim Tutarı :";
             // 
             // btnCikis
             // 
@@ -347,10 +336,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnPrimOde;
+        private System.Windows.Forms.Button btnPersoneleGorePrimler;
         private System.Windows.Forms.Button btnPrimGoster;
         private System.Windows.Forms.Button btnPrimEkle;
-        private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.ImageList ımageList1;
     }

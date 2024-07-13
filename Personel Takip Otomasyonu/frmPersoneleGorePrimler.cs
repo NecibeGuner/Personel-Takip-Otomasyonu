@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Personel_Takip_Otomasyonu
 {
-    public partial class frmPrimOde : Form
+    public partial class frmPersoneleGorePrimler : Form
     {
-        public frmPrimOde()
+        public frmPersoneleGorePrimler()
         {
             InitializeComponent();
         }

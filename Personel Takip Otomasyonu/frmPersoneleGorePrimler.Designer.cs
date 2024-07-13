@@ -1,6 +1,6 @@
 ﻿namespace Personel_Takip_Otomasyonu
 {
-    partial class frmPrimOde
+    partial class frmPersoneleGorePrimler
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmPersoneleGorePrimler
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmPrimOde";
+            this.Name = "frmPersoneleGorePrimler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmPersoneleGorePrimler";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
