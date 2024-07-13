@@ -46,21 +46,39 @@ namespace Personel_Takip_Otomasyonu
 
         private void btnDonemDegistir_Click(object sender, EventArgs e)
         {
-            //Kullanicilar k = new Kullanicilar();
-            //k.KullaniciID = Kullanicilar.kid;
+            //Primler p = new Primler();
+            //p.Donem = comboAy.Text + "/" + comboYil.Text;
+            //p.PrimID = int.Parse(txtPrimID.Text);
+            //p.Tarih = DateTime.Now;
+            //string sql = "update Primler set donem='" + p.Donem + "' where PrimID='" + p.PrimID + "'";
+            //SqlCommand komut = new SqlCommand();
+            //Veritabani.ESG(komut, sql);
+            //Veritabani.Listele_Ara(dataGridView1, "select *from Primler");
+            //MessageBox.Show("Prim Dönemi Değiştirildi","Dönem Değişikliği",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            Kullanicilar k = new Kullanicilar();
+            k.KullaniciID = Kullanicilar.kid;
+
             Primler p = new Primler();
             p.Donem = comboAy.Text + "/" + comboYil.Text;
             p.PrimID = int.Parse(txtPrimID.Text);
-            //p.PersonelID = int.Parse(txtPersonelID.Text);
-            //p.Islem = "Dönem bilgisi değişti.";
-            //p.Aciklama = "Seçili kaydın dönem bilgisi değişti.";
+            p.PersonelID = int.Parse(txtPersonelID.Text);
+            p.Islem = "Dönem bilgisi değişti.";
+            p.Aciklama = "Seçili kaydın dönem bilgisi değişti.";
             p.Tarih = DateTime.Now;
             string sql = "update Primler set donem='" + p.Donem + "' where PrimID='" + p.PrimID + "'";
             SqlCommand komut = new SqlCommand();
             Veritabani.ESG(komut, sql);
 
+            string sql2 = "insert into PrimHareketleri values('" + k.KullaniciID + "','" + p.PersonelID + "','" + p.PrimID + "'," +
+                "'" + p.Islem + "','" + p.Aciklama + "',@Tarih)";
+            SqlCommand komut2 = new SqlCommand();
+            komut2.Parameters.Add("@Tarih", SqlDbType.Date).Value = p.Tarih;
+            Veritabani.ESG(komut2, sql2);
+
             Veritabani.Listele_Ara(dataGridView1, "select *from Primler");
-            MessageBox.Show("Prim Dönemi Değiştirildi","Dönem Değişikliği",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Prim için dönem değişimi yapıldı.", "Dönem Değişikliği", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnTumPrimleriOde_Click(object sender, EventArgs e)

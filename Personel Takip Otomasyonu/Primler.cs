@@ -19,7 +19,7 @@ namespace Personel_Takip_Otomasyonu
         private decimal _PrimTutari;
         private string _Aciklama;
         private DateTime _Tarih;
-        //private string _Islem;
+        private string _Islem;
 
         public int PrimID { get => _PrimID; set => _PrimID = value; }
         public int PersonelID { get => _PersonelID; set => _PersonelID = value; }
@@ -29,6 +29,7 @@ namespace Personel_Takip_Otomasyonu
         public decimal PrimTutari { get => _PrimTutari; set => _PrimTutari = value; }
         public string Aciklama { get => _Aciklama; set => _Aciklama = value; }
         public DateTime Tarih { get => _Tarih; set => _Tarih = value; }
+        public string Islem { get => _Islem; set => _Islem = value; }
         #endregion
 
         public static SqlDataReader PersonelAdSoyadGetir(TextBox txtPersonelID,TextBox txtAdSoyad)
