@@ -79,13 +79,19 @@ namespace Personel_Takip_Otomasyonu
         private void btnPrimGoster_Click(object sender, EventArgs e)
         {
             frmPrimleriGoster frm = new frmPrimleriGoster();
+            
             frm.ShowDialog();
         }
 
         private void btnPrimOde_Click(object sender, EventArgs e)//btnPersoneleGorePrimler 
         {
             frmPersoneleGorePrimler frm = new frmPersoneleGorePrimler();
+            frm.txtPersonelID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frm.txtPersonelAdSoyad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString() + " " +
+                dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            Veritabani.Listele_Ara(frm.dataGridView1, "select *from Primler where PersonelID='" + frm.txtPersonelID.Text + "'");
             frm.ShowDialog();
         }
+
     }
 }

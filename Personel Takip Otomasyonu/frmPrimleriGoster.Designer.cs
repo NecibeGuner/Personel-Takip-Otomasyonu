@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrimleriGoster));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,13 +44,15 @@
             this.txtPersonelAdSoyad = new System.Windows.Forms.TextBox();
             this.txtPersonelID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDonemDegistir = new System.Windows.Forms.Button();
+            this.btnPrimSil = new System.Windows.Forms.Button();
+            this.btnPrimGuncelle = new System.Windows.Forms.Button();
+            this.btnPrimOde = new System.Windows.Forms.Button();
+            this.btnTumPrimleriOde = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrimID = new System.Windows.Forms.TextBox();
-            this.btnTumPrimleriOde = new System.Windows.Forms.Button();
-            this.btnPrimOde = new System.Windows.Forms.Button();
-            this.btnPrimGuncelle = new System.Windows.Forms.Button();
-            this.btnPrimSil = new System.Windows.Forms.Button();
-            this.btnDonemDegistir = new System.Windows.Forms.Button();
+            this.btnCikis = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -193,6 +197,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Controls.Add(this.btnDonemDegistir);
             this.panel1.Controls.Add(this.btnPrimSil);
             this.panel1.Controls.Add(this.btnPrimGuncelle);
@@ -217,6 +222,56 @@
             this.panel1.Size = new System.Drawing.Size(902, 262);
             this.panel1.TabIndex = 46;
             // 
+            // btnDonemDegistir
+            // 
+            this.btnDonemDegistir.Location = new System.Drawing.Point(727, 28);
+            this.btnDonemDegistir.Name = "btnDonemDegistir";
+            this.btnDonemDegistir.Size = new System.Drawing.Size(134, 60);
+            this.btnDonemDegistir.TabIndex = 49;
+            this.btnDonemDegistir.Text = "Dönem Değiştir";
+            this.btnDonemDegistir.UseVisualStyleBackColor = true;
+            this.btnDonemDegistir.Click += new System.EventHandler(this.btnDonemDegistir_Click);
+            // 
+            // btnPrimSil
+            // 
+            this.btnPrimSil.Location = new System.Drawing.Point(603, 173);
+            this.btnPrimSil.Name = "btnPrimSil";
+            this.btnPrimSil.Size = new System.Drawing.Size(111, 54);
+            this.btnPrimSil.TabIndex = 48;
+            this.btnPrimSil.Text = "Prim Sil";
+            this.btnPrimSil.UseVisualStyleBackColor = true;
+            this.btnPrimSil.Click += new System.EventHandler(this.btnPrimSil_Click);
+            // 
+            // btnPrimGuncelle
+            // 
+            this.btnPrimGuncelle.Location = new System.Drawing.Point(459, 173);
+            this.btnPrimGuncelle.Name = "btnPrimGuncelle";
+            this.btnPrimGuncelle.Size = new System.Drawing.Size(111, 54);
+            this.btnPrimGuncelle.TabIndex = 47;
+            this.btnPrimGuncelle.Text = "Prim Güncelle";
+            this.btnPrimGuncelle.UseVisualStyleBackColor = true;
+            this.btnPrimGuncelle.Click += new System.EventHandler(this.btnPrimGuncelle_Click);
+            // 
+            // btnPrimOde
+            // 
+            this.btnPrimOde.Location = new System.Drawing.Point(322, 175);
+            this.btnPrimOde.Name = "btnPrimOde";
+            this.btnPrimOde.Size = new System.Drawing.Size(107, 52);
+            this.btnPrimOde.TabIndex = 46;
+            this.btnPrimOde.Text = "Prim Öde";
+            this.btnPrimOde.UseVisualStyleBackColor = true;
+            this.btnPrimOde.Click += new System.EventHandler(this.btnPrimOde_Click);
+            // 
+            // btnTumPrimleriOde
+            // 
+            this.btnTumPrimleriOde.Location = new System.Drawing.Point(177, 175);
+            this.btnTumPrimleriOde.Name = "btnTumPrimleriOde";
+            this.btnTumPrimleriOde.Size = new System.Drawing.Size(107, 52);
+            this.btnTumPrimleriOde.TabIndex = 45;
+            this.btnTumPrimleriOde.Text = "Tüm Primleri Öde";
+            this.btnTumPrimleriOde.UseVisualStyleBackColor = true;
+            this.btnTumPrimleriOde.Click += new System.EventHandler(this.btnTumPrimleriOde_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -235,53 +290,28 @@
             this.txtPrimID.Size = new System.Drawing.Size(221, 26);
             this.txtPrimID.TabIndex = 43;
             // 
-            // btnTumPrimleriOde
+            // btnCikis
             // 
-            this.btnTumPrimleriOde.Location = new System.Drawing.Point(177, 175);
-            this.btnTumPrimleriOde.Name = "btnTumPrimleriOde";
-            this.btnTumPrimleriOde.Size = new System.Drawing.Size(107, 52);
-            this.btnTumPrimleriOde.TabIndex = 45;
-            this.btnTumPrimleriOde.Text = "Tüm Primleri Öde";
-            this.btnTumPrimleriOde.UseVisualStyleBackColor = true;
-            this.btnTumPrimleriOde.Click += new System.EventHandler(this.btnTumPrimleriOde_Click);
+            this.btnCikis.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCikis.ImageKey = "exit.png";
+            this.btnCikis.ImageList = this.ımageList1;
+            this.btnCikis.Location = new System.Drawing.Point(750, 173);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(111, 54);
+            this.btnCikis.TabIndex = 50;
+            this.btnCikis.Text = "         Çıkış";
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
-            // btnPrimOde
+            // ımageList1
             // 
-            this.btnPrimOde.Location = new System.Drawing.Point(322, 175);
-            this.btnPrimOde.Name = "btnPrimOde";
-            this.btnPrimOde.Size = new System.Drawing.Size(107, 52);
-            this.btnPrimOde.TabIndex = 46;
-            this.btnPrimOde.Text = "Prim Öde";
-            this.btnPrimOde.UseVisualStyleBackColor = true;
-            this.btnPrimOde.Click += new System.EventHandler(this.btnPrimOde_Click);
-            // 
-            // btnPrimGuncelle
-            // 
-            this.btnPrimGuncelle.Location = new System.Drawing.Point(459, 173);
-            this.btnPrimGuncelle.Name = "btnPrimGuncelle";
-            this.btnPrimGuncelle.Size = new System.Drawing.Size(111, 54);
-            this.btnPrimGuncelle.TabIndex = 47;
-            this.btnPrimGuncelle.Text = "Prim Güncelle";
-            this.btnPrimGuncelle.UseVisualStyleBackColor = true;
-            // 
-            // btnPrimSil
-            // 
-            this.btnPrimSil.Location = new System.Drawing.Point(603, 173);
-            this.btnPrimSil.Name = "btnPrimSil";
-            this.btnPrimSil.Size = new System.Drawing.Size(111, 54);
-            this.btnPrimSil.TabIndex = 48;
-            this.btnPrimSil.Text = "Prim Sil";
-            this.btnPrimSil.UseVisualStyleBackColor = true;
-            // 
-            // btnDonemDegistir
-            // 
-            this.btnDonemDegistir.Location = new System.Drawing.Point(727, 28);
-            this.btnDonemDegistir.Name = "btnDonemDegistir";
-            this.btnDonemDegistir.Size = new System.Drawing.Size(134, 60);
-            this.btnDonemDegistir.TabIndex = 49;
-            this.btnDonemDegistir.Text = "Dönem Değiştir";
-            this.btnDonemDegistir.UseVisualStyleBackColor = true;
-            this.btnDonemDegistir.Click += new System.EventHandler(this.btnDonemDegistir_Click);
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
+            this.ımageList1.Images.SetKeyName(1, "delete.png");
+            this.ımageList1.Images.SetKeyName(2, "exit.png");
+            this.ımageList1.Images.SetKeyName(3, "update.png");
             // 
             // frmPrimleriGoster
             // 
@@ -325,5 +355,7 @@
         private System.Windows.Forms.Button btnPrimGuncelle;
         private System.Windows.Forms.Button btnPrimOde;
         private System.Windows.Forms.Button btnTumPrimleriOde;
+        private System.Windows.Forms.Button btnCikis;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }

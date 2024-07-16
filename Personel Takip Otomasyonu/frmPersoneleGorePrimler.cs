@@ -16,5 +16,10 @@ namespace Personel_Takip_Otomasyonu
         {
             InitializeComponent();
         }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

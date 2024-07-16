@@ -103,5 +103,54 @@ namespace Personel_Takip_Otomasyonu
             Veritabani.Listele_Ara(dataGridView1, "select *from Primler");
             MessageBox.Show("Seçili Personelin Primi Ödendi", "Prim Ödemeleri", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPrimGuncelle_Click(object sender, EventArgs e)
+        {
+
+            Primler p = new Primler();
+
+            //Kullanicilar k = new Kullanicilar();
+            //k.KullaniciID = Kullanicilar.kid;
+
+            p.PrimID = int.Parse(txtPrimID.Text);
+            p.PersonelID = int.Parse(txtPersonelID.Text);
+            p.PrimTutari = decimal.Parse(txtPrimTutari.Text);
+            p.Aciklama = txtAciklama.Text;
+            p.Islem = p.PrimID + " bilgileri değiştirildi.";
+
+            string sql = "update Primler set PersonelID='" + p.PersonelID + "',PrimTutari=@PrimTutari,Aciklama='" + p.Aciklama + "' where PrimID='" + p.PrimID + "'";
+            SqlCommand komut = new SqlCommand();
+            komut.Parameters.AddWithValue("@PrimTutari", SqlDbType.Decimal).Value = p.PrimTutari;
+            Veritabani.ESG(komut, sql);
+
+            //string sql2 = "insert into PrimHareketleri values('" + k.KullaniciID + "','" + p.PersonelID + "','" + p.PrimID + "'," +
+            //   "'" + p.Islem + "','" + p.Aciklama + "',@Tarih)";
+            //SqlCommand komut2 = new SqlCommand();
+            //komut2.Parameters.Add("@Tarih", SqlDbType.Date).Value = p.Tarih;
+            //Veritabani.ESG(komut2, sql2);
+
+            Veritabani.Listele_Ara(dataGridView1, "select *from Primler");
+            MessageBox.Show("Seçili Personelin Primi Bilgileri Güncellendi", "Prim Güncellemesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnPrimSil_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Kayıt Silinsin Mi?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Primler p = new Primler();
+                p.PrimID = int.Parse(dataGridView1.CurrentRow.Cells["PrimID"].Value.ToString());
+                string sql = "delete from Primler where PersonelID='" + p.PersonelID + "'";
+                SqlCommand komut = new SqlCommand();
+                komut.Parameters.AddWithValue("@PrimTutari", SqlDbType.Decimal).Value = p.PrimTutari;
+                Veritabani.ESG(komut, sql);
+                Veritabani.Listele_Ara(dataGridView1, "select *from Primler");
+                MessageBox.Show("Seçili Personelin Primi Bilgileri Güncellendi", "Prim Güncellemesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
