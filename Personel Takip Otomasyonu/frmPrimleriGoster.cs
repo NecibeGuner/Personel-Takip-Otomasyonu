@@ -70,11 +70,11 @@ namespace Personel_Takip_Otomasyonu
             SqlCommand komut = new SqlCommand();
             Veritabani.ESG(komut, sql);
 
-            string sql2 = "insert into PrimHareketleri values('" + k.KullaniciID + "','" + p.PersonelID + "','" + p.PrimID + "'," +
-                "'" + p.Islem + "','" + p.Aciklama + "',@Tarih)";
-            SqlCommand komut2 = new SqlCommand();
-            komut2.Parameters.Add("@Tarih", SqlDbType.Date).Value = p.Tarih;
-            Veritabani.ESG(komut2, sql2);
+            //string sql2 = "insert into PrimHareketleri values('" + k.KullaniciID + "','" + p.PersonelID + "','" + p.PrimID + "'," +
+            //    "'" + p.Islem + "','" + p.Aciklama + "',@Tarih)";
+            //SqlCommand komut2 = new SqlCommand();
+            //komut2.Parameters.Add("@Tarih", SqlDbType.Date).Value = p.Tarih;
+            //Veritabani.ESG(komut2, sql2);
 
             Veritabani.Listele_Ara(dataGridView1, "select *from Primler");
             MessageBox.Show("Prim için dönem değişimi yapıldı.", "Dönem Değişikliği", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -144,12 +144,11 @@ namespace Personel_Takip_Otomasyonu
             {
                 Primler p = new Primler();
                 p.PrimID = int.Parse(dataGridView1.CurrentRow.Cells["PrimID"].Value.ToString());
-                string sql = "delete from Primler where PersonelID='" + p.PersonelID + "'";
+                string sql = "delete from Primler where PrimID='" + p.PrimID + "'";
                 SqlCommand komut = new SqlCommand();
-                komut.Parameters.AddWithValue("@PrimTutari", SqlDbType.Decimal).Value = p.PrimTutari;
                 Veritabani.ESG(komut, sql);
                 Veritabani.Listele_Ara(dataGridView1, "select *from Primler");
-                MessageBox.Show("Seçili Personelin Primi Bilgileri Güncellendi", "Prim Güncellemesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seçili Personelin Primi Kaydı Silindi", "Prim Güncellemesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
