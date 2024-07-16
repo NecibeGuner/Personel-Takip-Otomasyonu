@@ -18,6 +18,11 @@ namespace Personel_Takip_Otomasyonu
             InitializeComponent();
         }
 
+        private void frmDepartmanlar_Load(object sender, EventArgs e)
+        {
+            Departmanlar.DepartmanGetir(listView1);
+        }
+
         private void btnEkle_Click(object sender, EventArgs e)
         {
             Departmanlar d = new Departmanlar();
@@ -30,18 +35,14 @@ namespace Personel_Takip_Otomasyonu
             Departmanlar.DepartmanGetir(listView1);
         }
 
-        private void frmDepartmanlar_Load(object sender, EventArgs e)
-        {
-            Departmanlar.DepartmanGetir(listView1);
-        }
-
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             Departmanlar d = new Departmanlar();
             d.DepartmanID = int.Parse(txtDepartmanID.Text);
             d.Departman = txtDepartman.Text;
             d.Aciklama = txtAciklama.Text;
-            string sorgu = "update departmanlar set departman='" + d.Departman + "','" + d.Aciklama + "'where departmanID='" + d.DepartmanID + "'";
+            string sorgu = "update departmanlar set departman='" + d.Departman + "','" + d.Aciklama + "'" +
+                "where departmanID='" + d.DepartmanID + "'";
             SqlCommand komut = new SqlCommand();
             Veritabani.ESG(komut, sorgu);
             MessageBox.Show("İşlem Başarılı...");
@@ -62,10 +63,16 @@ namespace Personel_Takip_Otomasyonu
             }
             else 
             {
-                MessageBox.Show("Önce Kayıt Seçmelisiniz...", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Önce Kayıt Seçmelisiniz...", "UYARI", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            txtDepartmanID.Text = listView1.SelectedItems[0].SubItems[0].Text;
+            txtDepartman.Text = listView1.SelectedItems[0].SubItems[1].Text;
+            txtAciklama.Text = listView1.SelectedItems[0].SubItems[2].Text;
+        }
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -75,14 +82,6 @@ namespace Personel_Takip_Otomasyonu
         {
             //kazara tıkladım bir işe yaramıyor
         }
-
-        private void listView1_DoubleClick(object sender, EventArgs e)
-        {
-            txtDepartmanID.Text = listView1.SelectedItems[0].SubItems[0].Text;
-            txtDepartman.Text = listView1.SelectedItems[0].SubItems[1].Text;
-            txtAciklama.Text = listView1.SelectedItems[0].SubItems[2].Text;
-        }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //kazara tıklandı
