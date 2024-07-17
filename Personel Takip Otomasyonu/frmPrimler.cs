@@ -26,7 +26,8 @@ namespace Personel_Takip_Otomasyonu
             {
                 comboYil.Items.Add(i);
             }
-            Veritabani.Listele_Ara(dataGridView1, "select PersonelID, Adi, Soyadi, Maasi, GirisTarihi from Personeller");
+            Veritabani.Listele_Ara(dataGridView1, "select PersonelID, Adi, Soyadi, Maasi, GirisTarihi " +
+                "from Personeller");
         }
 
         private void btnPrimEkle_Click(object sender, EventArgs e)

@@ -19,10 +19,10 @@ namespace Personel_Takip_Otomasyonu
         }
         private void YenileListele()
         {
-            Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres,p.Email," +
-               "d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, Departmanlar " +
-               "d where p.DepartmanID=d.DepartmanID");
-            lblToplamKayit.Text = "Taplam Kayıt: " + (dataGridView1.RowCount - 1) + " kayıt listelenmiştir...";
+            Veritabani.Listele_Ara(dataGridView1, "select p.PersonelID,p.Adi,p.Soyadi,p.Telefon,p.Adres," +
+                "p.Email,d.[Departman ],p.Durumu,p.Maasi,p.GirisTarihi,p.Aciklama from Personeller p, " +
+                "Departmanlar d where p.DepartmanID=d.DepartmanID");
+            lblToplamKayit.Text = "Taplam Kayıt: " + (dataGridView1.RowCount - 1) + " kayıt listelenmiştir.";
             decimal toplammaas = 0;
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
@@ -66,14 +66,16 @@ namespace Personel_Takip_Otomasyonu
             p.GirisTarihi = dateTimePickerGirisTarihi.Value;
             p.Aciklama = txtAciklama.Text;
             string sorgu = "update personeller set Adi='" + p.Adi + "', Soyadi='" + p.Soyadi + "', " +
-                "Telefon='" + p.Telefon + "', Adres='" + p.Adres + "', Email='" + p.Email + "', DepartmanID='" + p.DepartmanID + "', " +
-                "Maasi=@Maasi, GirisTarihi=@GirisTarihi, Aciklama='" + p.Aciklama + "' where PersonelID='" + p.PERSONELID + "' ";
+                "Telefon='" + p.Telefon + "', Adres='" + p.Adres + "', Email='" + p.Email + "'," +
+                " DepartmanID='" + p.DepartmanID + "',Maasi=@Maasi, GirisTarihi=@GirisTarihi, " +
+                "Aciklama='" + p.Aciklama + "' where PersonelID='" + p.PERSONELID + "' ";
             SqlCommand komut = new SqlCommand();
             komut.Parameters.Add("@Maasi", SqlDbType.Decimal).Value = p.Maasi;
             komut.Parameters.Add("@GirisTarihi",SqlDbType.Date).Value = p.GirisTarihi;
             Veritabani.ESG(komut,sorgu);
             Temizle();
-            MessageBox.Show("İşlem Başarılı.", "Güncelleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("İşlem Başarılı.", "Güncelleme", 
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             YenileListele();
         }
 
@@ -86,7 +88,8 @@ namespace Personel_Takip_Otomasyonu
             //SqlCommand komut = new SqlCommand();
             //Veritabani.ESG(komut, sorgu);
 
-            string sorgu2 = "update personeller set durumu='Pasif', CikisTarihi=@CikisTarihi where personelID='" + p.PERSONELID + "'";
+            string sorgu2 = "update personeller set durumu='Pasif', CikisTarihi=@CikisTarihi " +
+                "where personelID='" + p.PERSONELID + "'";
             SqlCommand komut2 = new SqlCommand();
             komut2.Parameters.Add("@CikisTarihi", SqlDbType.Date).Value = DateTime.Now;
             Veritabani.ESG(komut2, sorgu2);

@@ -22,7 +22,7 @@ namespace Personel_Takip_Otomasyonu
         {
             Veritabani.Listele_Ara(dataGridView1, "select k.KullaniciID,k.KullaniciAdi,k.AdiSoyadi," +
                "k.Tarih,k.Aciklama, k.Rol from Kullanicilar k");
-            lblToplamKayit.Text = "Taplam Kayıt: " + (dataGridView1.RowCount - 1) + " kayıt listelenmiştir...";         
+            lblToplamKayit.Text = "Taplam Kayıt: " + (dataGridView1.RowCount - 1) + " kayıt listelenmiştir.";         
         }
 
         private void frmKullaniciListesi_Load(object sender, EventArgs e)
@@ -62,19 +62,22 @@ namespace Personel_Takip_Otomasyonu
             k.Rol=comboRol.Text;
             if (txtSifre.Text == txtSifreTekrardan.Text)
             {
-                string sorgu = "update kullanicilar set KullaniciAdi='" + k.KullaniciAdi + "', Sifre='" + k.Sifre + "', " +
-                "AdiSoyadi='" + k.AdiSoyadi + "', Soru='" + k.Soru + "', Cevap='" + k.Cevap + "', Tarih=@GirisTarihi, " +
-                "Aciklama='" + k.Aciklama + "', Rol = '"+k.Rol+"' where KullaniciID='" + k.KullaniciID + "' ";
+                string sorgu = "update kullanicilar set KullaniciAdi='" + k.KullaniciAdi + "', " +
+                    "Sifre='" + k.Sifre + "', AdiSoyadi='" + k.AdiSoyadi + "', Soru='" + k.Soru + "', " +
+                    "Cevap='" + k.Cevap + "', Tarih=@GirisTarihi, Aciklama='" + k.Aciklama + "', " +
+                    "Rol = '"+k.Rol+"' where KullaniciID='" + k.KullaniciID + "' ";
                 SqlCommand komut = new SqlCommand();
                 komut.Parameters.Add("@GirisTarihi", SqlDbType.Date).Value = k.Tarih;
                 Veritabani.ESG(komut, sorgu);
                 Temizle();
-                MessageBox.Show("İşlem Başarılı.", "Güncelleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("İşlem Başarılı.", "Güncelleme", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 YenileListele();
             }
             else
             {
-                MessageBox.Show("Şifreler uyuşmuyor, tekrardan deneyiniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Şifreler uyuşmuyor, tekrardan deneyiniz", "Uyarı",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -105,26 +108,26 @@ namespace Personel_Takip_Otomasyonu
 
         private void txtKullaniciIDAra_TextChanged(object sender, EventArgs e)
         {
-            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, Aciklama from Kullanicilar " +
-                "where KullaniciID like'%"+txtKullaniciIDAra.Text+"%'");
+            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, " +
+                "Tarih, Aciklama from Kullanicilar where KullaniciID like'%"+txtKullaniciIDAra.Text+"%'");
         }
 
         private void textKullaniciAdiAra_TextChanged(object sender, EventArgs e)
         {
-            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, Aciklama from Kullanicilar " +
-               "where KullaniciAdi like'%" + txtKullaniciAdiAra.Text + "%'");
+            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, " +
+                "Aciklama from Kullanicilar where KullaniciAdi like'%" + txtKullaniciAdiAra.Text + "%'");
         }
 
         private void txtAdiSoyadiAra_TextChanged(object sender, EventArgs e)
         {
-            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, Aciklama from Kullanicilar " +
-              "where AdiSoyadi like'%" + txtAdiSoyadiAra.Text + "%'");
+            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, " +
+                "Aciklama from Kullanicilar where AdiSoyadi like'%" + txtAdiSoyadiAra.Text + "%'");
         }
 
         private void txtRolAra_TextChanged(object sender, EventArgs e)
         {
-            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, Aciklama from Kullanicilar " +
-              "where Rol like'%" + txtRolAra.Text + "%'");
+            Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi, AdiSoyadi, Tarih, " +
+                "Aciklama from Kullanicilar where Rol like'%" + txtRolAra.Text + "%'");
         }
     }
 }

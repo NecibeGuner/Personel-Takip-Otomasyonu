@@ -51,8 +51,10 @@ namespace Personel_Takip_Otomasyonu
             p.Maasi = decimal.Parse(txtMaasi.Text);
             p.GirisTarihi = dateTimePickerGirisTarihi.Value;
             p.Aciklama = txtAciklama.Text;
-            string sorgu = "insert into Personeller(Adi,Soyadi,Telefon,Adres,Email,DepartmanID,Maasi,GirisTarihi,Aciklama) values('" + p.Adi + "'," +
-                "'" + p.Soyadi + "','" + p.Telefon + "','" + p.Adres + "','" + p.Email + "','" + p.DepartmanID + "',@Maasi, @GirisTarihi,'" + p.Aciklama + "')";
+            string sorgu = "insert into Personeller(Adi,Soyadi,Telefon,Adres,Email,DepartmanID,Maasi," +
+                "GirisTarihi,Aciklama) values('" + p.Adi + "','" + p.Soyadi + "','" + p.Telefon + "'," +
+                "'" + p.Adres + "','" + p.Email + "','" + p.DepartmanID + "',@Maasi, " +
+                "@GirisTarihi,'" + p.Aciklama + "')";
             SqlCommand komut = new SqlCommand(sorgu);
             komut.Parameters.Add("@Maasi", SqlDbType.Decimal).Value = p.Maasi;
             komut.Parameters.Add("@GirisTarihi",SqlDbType.Date).Value = p.GirisTarihi;

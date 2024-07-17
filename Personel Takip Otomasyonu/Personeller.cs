@@ -37,7 +37,8 @@ namespace Personel_Takip_Otomasyonu
         {
             DataTable tbl = new DataTable();
             Veritabani.connection.Open();
-            SqlDataAdapter adtr = new SqlDataAdapter("SELECT DepartmanID, Departman FROM Departmanlar", Veritabani.connection);
+            SqlDataAdapter adtr = new SqlDataAdapter("SELECT DepartmanID, Departman FROM Departmanlar", 
+                Veritabani.connection);
             adtr.Fill(tbl);
             combo.DataSource = tbl;
             combo.ValueMember = "DepartmanID";//arka planda tuttuğu kısım
@@ -50,9 +51,11 @@ namespace Personel_Takip_Otomasyonu
             DataTable tbl = new DataTable();
             Veritabani.connection.Open();
             SqlDataAdapter adtr = new SqlDataAdapter("select p.PersonelID, p.Adi, p.Soyadi,p.Telefon, " +
-                "p.Adres, p.Email, d.Departman, p.Durumu, p.Maasi, p.GirisTarihi, p.Aciklama from Personeller p, " +
-                "Departmanlar d where p.DepartmanID = d.DepartmanID and GirisTarihi =@P1 ", Veritabani.connection);
-            adtr.SelectCommand.Parameters.Add("@P1", SqlDbType.Date).Value = DateTime.Parse(dt.Value.ToShortDateString());
+                "p.Adres, p.Email, d.Departman, p.Durumu, p.Maasi, p.GirisTarihi, p.Aciklama from " +
+                "Personeller p, Departmanlar d where p.DepartmanID = d.DepartmanID and GirisTarihi =@P1 ", 
+                Veritabani.connection);
+            adtr.SelectCommand.Parameters.Add("@P1", SqlDbType.Date).Value = DateTime.Parse
+                (dt.Value.ToShortDateString());
             gridView.DataSource = tbl;
             adtr.Fill(tbl);
             Veritabani.connection.Close();

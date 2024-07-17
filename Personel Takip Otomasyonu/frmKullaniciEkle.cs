@@ -51,32 +51,20 @@ namespace Personel_Takip_Otomasyonu
 
             if (txtSifre.Text == txtSifreTekrardan.Text)
             {
-                string sql = "insert into Kullanicilar(KullaniciAdi,Sifre,AdiSoyadi,Soru,Cevap,Tarih,Aciklama,Rol) values('" + k.KullaniciAdi + "'," +
-                    "'" + k.Sifre + "','" + k.AdiSoyadi + "','" + k.Soru + "','" + k.Cevap + "',@Tarih,'" + k.Aciklama + "','" + k.Rol + "')";
+                string sql = "insert into Kullanicilar(KullaniciAdi,Sifre,AdiSoyadi,Soru,Cevap,Tarih," +
+                    "Aciklama,Rol) values('" + k.KullaniciAdi + "','" + k.Sifre + "','" + k.AdiSoyadi + "'," +
+                    "'" + k.Soru + "','" + k.Cevap + "',@Tarih,'" + k.Aciklama + "','" + k.Rol + "')";
                 SqlCommand komut = new SqlCommand();
                 komut.Parameters.Add("@Tarih", SqlDbType.Date).Value = k.Tarih;
-                MessageBox.Show("Yeni kullanıcı eklendi.", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Yeni kullanıcı eklendi.", "Kayıt", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Temizle();
                 Veritabani.ESG(komut, sql);
-
-                //try
-                //{
-                //    Veritabani.connection.Open();
-                //    int insertedId = (int)komut.ExecuteScalar(); // ExecuteScalar metodu ile yeni eklenen kaydın ID'si alınır.
-                //    Veritabani.connection.Close();
-
-                //    MessageBox.Show("Yeni kullanıcı eklendi. Kullanıcı ID : " + insertedId, "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    Temizle();
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-
             }
             else
             {
-                MessageBox.Show("Şifreler uyuşmuyor, tekrardan deneyiniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Şifreler uyuşmuyor, tekrardan deneyiniz", "Uyarı", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
