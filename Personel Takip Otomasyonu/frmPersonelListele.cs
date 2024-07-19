@@ -52,9 +52,10 @@ namespace Personel_Takip_Otomasyonu
                 }
             }
         }
+        Personeller p = new Personeller();
+        Kullanicilar k = new Kullanicilar();
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Personeller p = new Personeller();
             p.PERSONELID = int.Parse(txtPersonelID.Text);
             p.Adi = txtAdi.Text;
             p.Soyadi = txtSoyadi.Text;
@@ -73,6 +74,9 @@ namespace Personel_Takip_Otomasyonu
             komut.Parameters.Add("@Maasi", SqlDbType.Decimal).Value = p.Maasi;
             komut.Parameters.Add("@GirisTarihi",SqlDbType.Date).Value = p.GirisTarihi;
             Veritabani.ESG(komut,sorgu);
+            p.Islem = p.PERSONELID + " nolu personelin bilgileri güncellendi.";
+            p.Aciklama = "Personel güncelleme";
+            Personeller.PersonelIslemEkle(p,k);
             Temizle();
             MessageBox.Show("İşlem Başarılı.", "Güncelleme", 
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,18 +85,17 @@ namespace Personel_Takip_Otomasyonu
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            Personeller p = new Personeller();
-            
-            p.PERSONELID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            //string sorgu = "delete from personeller where PersonelID='" + p.PERSONELID + "'";
-            //SqlCommand komut = new SqlCommand();
-            //Veritabani.ESG(komut, sorgu);
+            Personeller p = new Personeller(); 
 
+            p.PERSONELID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             string sorgu2 = "update personeller set durumu='Pasif', CikisTarihi=@CikisTarihi " +
                 "where personelID='" + p.PERSONELID + "'";
             SqlCommand komut2 = new SqlCommand();
             komut2.Parameters.Add("@CikisTarihi", SqlDbType.Date).Value = DateTime.Now;
             Veritabani.ESG(komut2, sorgu2);
+            p.Islem = p.PERSONELID + " nolu personel işten çıkarıldı.";
+            p.Aciklama = "İşten Çıkarma";
+            Personeller.PersonelIslemEkle(p, k);
             Temizle();
             MessageBox.Show("İşlem Başarılı.", "Sil", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             YenileListele();

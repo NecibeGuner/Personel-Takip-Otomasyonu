@@ -32,7 +32,7 @@ namespace Personel_Takip_Otomasyonu
         public DateTime Tarih { get => _Tarih; set => _Tarih = value; }
         public string Rol { get => _Rol; set => _Rol = value; }
 
-          // Rol bilgisi
+        // Rol bilgisi
 
         public static bool durum = false;
         public static int kid = 0;

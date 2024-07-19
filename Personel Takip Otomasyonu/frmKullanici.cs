@@ -36,7 +36,7 @@ namespace Personel_Takip_Otomasyonu
             }
             else
             {
-                MessageBox.Show("Kullanıcı Adı veya Şifre yanlış...", "Uyarı", 
+                MessageBox.Show("Kullanıcı Adı veya Şifre yanlış...", "Uyarı",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

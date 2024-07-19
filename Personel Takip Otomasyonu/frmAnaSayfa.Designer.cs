@@ -44,7 +44,7 @@
             // btnDepartmanlar
             // 
             this.btnDepartmanlar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDepartmanlar.Location = new System.Drawing.Point(320, 314);
+            this.btnDepartmanlar.Location = new System.Drawing.Point(309, 320);
             this.btnDepartmanlar.Name = "btnDepartmanlar";
             this.btnDepartmanlar.Size = new System.Drawing.Size(151, 83);
             this.btnDepartmanlar.TabIndex = 0;
@@ -55,7 +55,7 @@
             // btnPersonelEkle
             // 
             this.btnPersonelEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelEkle.Location = new System.Drawing.Point(477, 314);
+            this.btnPersonelEkle.Location = new System.Drawing.Point(466, 320);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelEkle.TabIndex = 1;
@@ -66,7 +66,7 @@
             // btnPersonelListele
             // 
             this.btnPersonelListele.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelListele.Location = new System.Drawing.Point(634, 314);
+            this.btnPersonelListele.Location = new System.Drawing.Point(623, 320);
             this.btnPersonelListele.Name = "btnPersonelListele";
             this.btnPersonelListele.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelListele.TabIndex = 2;
@@ -82,13 +82,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(371, 132);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 176);
+            this.pictureBox1.Size = new System.Drawing.Size(372, 182);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -97,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(331, 91);
+            this.label1.Location = new System.Drawing.Point(336, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(438, 38);
             this.label1.TabIndex = 4;
@@ -106,7 +103,7 @@
             // btnMaasZamlari
             // 
             this.btnMaasZamlari.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMaasZamlari.Location = new System.Drawing.Point(320, 403);
+            this.btnMaasZamlari.Location = new System.Drawing.Point(309, 409);
             this.btnMaasZamlari.Name = "btnMaasZamlari";
             this.btnMaasZamlari.Size = new System.Drawing.Size(151, 83);
             this.btnMaasZamlari.TabIndex = 6;
@@ -117,7 +114,7 @@
             // btnPrimler
             // 
             this.btnPrimler.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPrimler.Location = new System.Drawing.Point(477, 403);
+            this.btnPrimler.Location = new System.Drawing.Point(466, 409);
             this.btnPrimler.Name = "btnPrimler";
             this.btnPrimler.Size = new System.Drawing.Size(151, 83);
             this.btnPrimler.TabIndex = 7;
@@ -140,7 +137,7 @@
             this.Controls.Add(this.btnDepartmanlar);
             this.Name = "frmAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Ana Sayfa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAnaSayfa_FormClosing);
             this.Load += new System.EventHandler(this.frmAnaSayfa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
