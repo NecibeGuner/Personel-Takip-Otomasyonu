@@ -40,20 +40,37 @@ namespace Personel_Takip_Otomasyonu
             k.Cevap = txtCevap.Text;
             k.Aciklama = txtAciklama.Text;
             k.Tarih = DateTime.Now;
-
-            if (txtSifre.Text == TxtSifreTekrar.Text)
+            if (Kullanicilar.SoruCevapDogrula(k.KullaniciID, k.Soru, k.Cevap))
             {
-                string sql = "update kullanicilar set kullaniciAdi='" + k.KullaniciAdi + "',Sifre='" + k.Sifre + "',AdiSoyadi='" + k.AdiSoyadi + "'," +
-                 "Soru='" + k.Soru + "',Cevap='" + k.Cevap + "',Tarih=@Tarih,Aciklama='" + k.Aciklama + "' where kullaniciID='" + k.KullaniciID + "'";
-                SqlCommand komut = new SqlCommand();
-                komut.Parameters.Add("@Tarih", SqlDbType.Date).Value = k.Tarih;
-                MessageBox.Show("Kullanıcı bilgileri güncellendi.", "Güncelleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Temizle();
-                Veritabani.ESG(komut, sql);
+                if (txtSifre.Text == TxtSifreTekrar.Text)
+                {
+                    string sql = "UPDATE kullanicilar SET kullaniciAdi = @KullaniciAdi, Sifre = @Sifre, AdiSoyadi = @AdiSoyadi, " +
+                                 "Soru = @Soru, Cevap = @Cevap, Tarih = @Tarih, Aciklama = @Aciklama WHERE KullaniciID = @KullaniciID";
+                    SqlCommand komut = new SqlCommand(sql, Veritabani.connection);
+                    komut.Parameters.AddWithValue("@KullaniciAdi", k.KullaniciAdi);
+                    komut.Parameters.AddWithValue("@Sifre", k.Sifre);
+                    komut.Parameters.AddWithValue("@AdiSoyadi", k.AdiSoyadi);
+                    komut.Parameters.AddWithValue("@Soru", k.Soru);
+                    komut.Parameters.AddWithValue("@Cevap", k.Cevap);
+                    komut.Parameters.AddWithValue("@Tarih", k.Tarih);
+                    komut.Parameters.AddWithValue("@Aciklama", k.Aciklama);
+                    komut.Parameters.AddWithValue("@KullaniciID", k.KullaniciID);
+
+                    Veritabani.connection.Open();
+                    komut.ExecuteNonQuery();
+                    Veritabani.connection.Close();
+
+                    MessageBox.Show("Kullanıcı bilgileri güncellendi.", "Güncelleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Temizle();
+                }
+                else
+                {
+                    MessageBox.Show("Şifreler uyuşmuyor, tekrardan deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Şifreler uyuşmuyor, tekrardan deneyiniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Güvenlik sorusu veya cevabı yanlış.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

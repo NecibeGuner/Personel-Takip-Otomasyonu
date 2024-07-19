@@ -134,7 +134,7 @@
             // lblToplamKayit
             // 
             this.lblToplamKayit.AutoSize = true;
-            this.lblToplamKayit.Location = new System.Drawing.Point(1018, 493);
+            this.lblToplamKayit.Location = new System.Drawing.Point(785, 557);
             this.lblToplamKayit.Name = "lblToplamKayit";
             this.lblToplamKayit.Size = new System.Drawing.Size(163, 16);
             this.lblToplamKayit.TabIndex = 70;
@@ -455,6 +455,7 @@
             this.Controls.Add(this.txtAdiSoyadiAra);
             this.Controls.Add(this.txtKullaniciIDAra);
             this.Name = "frmKullaniciListesi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKullaniciListesi";
             this.Load += new System.EventHandler(this.frmKullaniciListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

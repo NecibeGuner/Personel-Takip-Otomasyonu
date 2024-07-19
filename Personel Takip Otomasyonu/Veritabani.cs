@@ -32,5 +32,4 @@ namespace Personel_Takip_Otomasyonu
             return tbl;
         }
     }
-    //cmd.ExecuteScalar();//sonradan eklendi siline de bilir
 }
