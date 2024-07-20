@@ -86,6 +86,12 @@
     <Compile Include="frmKullaniciListesi.Designer.cs">
       <DependentUpon>frmKullaniciListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMesaiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMesaiEkle.Designer.cs">
+      <DependentUpon>frmMesaiEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersoneleGorePrimler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,7 @@
       <DependentUpon>frmYeniKullanici.cs</DependentUpon>
     </Compile>
     <Compile Include="Kullanicilar.cs" />
+    <Compile Include="Mesailer.cs" />
     <Compile Include="Personeller.cs" />
     <Compile Include="Primler.cs" />
     <Compile Include="Program.cs" />
@@ -158,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKullaniciListesi.resx">
       <DependentUpon>frmKullaniciListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMesaiEkle.resx">
+      <DependentUpon>frmMesaiEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersoneleGorePrimler.resx">
       <DependentUpon>frmPersoneleGorePrimler.cs</DependentUpon>

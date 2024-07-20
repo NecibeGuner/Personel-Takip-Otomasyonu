@@ -53,12 +53,14 @@ namespace Personel_Takip_Otomasyonu
             this.btnEkle = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnCikis = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtAdi
             // 
             this.txtAdi.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtAdi.Location = new System.Drawing.Point(149, 41);
+            this.txtAdi.Location = new System.Drawing.Point(177, 40);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(221, 28);
             this.txtAdi.TabIndex = 0;
@@ -66,7 +68,7 @@ namespace Personel_Takip_Otomasyonu
             // txtSoyadi
             // 
             this.txtSoyadi.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtSoyadi.Location = new System.Drawing.Point(149, 75);
+            this.txtSoyadi.Location = new System.Drawing.Point(177, 74);
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(221, 28);
             this.txtSoyadi.TabIndex = 1;
@@ -74,7 +76,7 @@ namespace Personel_Takip_Otomasyonu
             // txtTelefon
             // 
             this.txtTelefon.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtTelefon.Location = new System.Drawing.Point(149, 109);
+            this.txtTelefon.Location = new System.Drawing.Point(177, 108);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(221, 28);
             this.txtTelefon.TabIndex = 2;
@@ -82,7 +84,7 @@ namespace Personel_Takip_Otomasyonu
             // txtAdres
             // 
             this.txtAdres.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtAdres.Location = new System.Drawing.Point(149, 143);
+            this.txtAdres.Location = new System.Drawing.Point(177, 142);
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(221, 65);
@@ -91,7 +93,7 @@ namespace Personel_Takip_Otomasyonu
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtEmail.Location = new System.Drawing.Point(149, 214);
+            this.txtEmail.Location = new System.Drawing.Point(177, 213);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(221, 28);
             this.txtEmail.TabIndex = 4;
@@ -99,7 +101,7 @@ namespace Personel_Takip_Otomasyonu
             // txtMaasi
             // 
             this.txtMaasi.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMaasi.Location = new System.Drawing.Point(149, 283);
+            this.txtMaasi.Location = new System.Drawing.Point(177, 282);
             this.txtMaasi.Name = "txtMaasi";
             this.txtMaasi.Size = new System.Drawing.Size(223, 28);
             this.txtMaasi.TabIndex = 6;
@@ -107,7 +109,7 @@ namespace Personel_Takip_Otomasyonu
             // txtAciklama
             // 
             this.txtAciklama.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAciklama.Location = new System.Drawing.Point(149, 353);
+            this.txtAciklama.Location = new System.Drawing.Point(177, 352);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(223, 70);
@@ -117,7 +119,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.comboDepartman.Font = new System.Drawing.Font("Calibri", 10.2F);
             this.comboDepartman.FormattingEnabled = true;
-            this.comboDepartman.Location = new System.Drawing.Point(149, 248);
+            this.comboDepartman.Location = new System.Drawing.Point(177, 247);
             this.comboDepartman.Name = "comboDepartman";
             this.comboDepartman.Size = new System.Drawing.Size(223, 29);
             this.comboDepartman.TabIndex = 9;
@@ -127,7 +129,7 @@ namespace Personel_Takip_Otomasyonu
             this.dateTimePickerGirisTarihi.CustomFormat = "dd MMM yyyy";
             this.dateTimePickerGirisTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePickerGirisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerGirisTarihi.Location = new System.Drawing.Point(149, 320);
+            this.dateTimePickerGirisTarihi.Location = new System.Drawing.Point(177, 319);
             this.dateTimePickerGirisTarihi.Name = "dateTimePickerGirisTarihi";
             this.dateTimePickerGirisTarihi.Size = new System.Drawing.Size(223, 27);
             this.dateTimePickerGirisTarihi.TabIndex = 10;
@@ -136,7 +138,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(24, 45);
+            this.label1.Location = new System.Drawing.Point(18, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 18);
             this.label1.TabIndex = 11;
@@ -146,7 +148,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(24, 79);
+            this.label2.Location = new System.Drawing.Point(16, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 18);
             this.label2.TabIndex = 12;
@@ -156,7 +158,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(26, 113);
+            this.label3.Location = new System.Drawing.Point(18, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 13;
@@ -166,7 +168,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(26, 163);
+            this.label4.Location = new System.Drawing.Point(18, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 18);
             this.label4.TabIndex = 14;
@@ -176,7 +178,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(26, 214);
+            this.label5.Location = new System.Drawing.Point(18, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 15;
@@ -186,7 +188,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(24, 248);
+            this.label6.Location = new System.Drawing.Point(16, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 18);
             this.label6.TabIndex = 16;
@@ -196,7 +198,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(26, 283);
+            this.label8.Location = new System.Drawing.Point(18, 247);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 18);
             this.label8.TabIndex = 18;
@@ -206,7 +208,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(26, 320);
+            this.label9.Location = new System.Drawing.Point(18, 284);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 18);
             this.label9.TabIndex = 19;
@@ -216,7 +218,7 @@ namespace Personel_Takip_Otomasyonu
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(26, 367);
+            this.label10.Location = new System.Drawing.Point(18, 331);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 18);
             this.label10.TabIndex = 20;
@@ -232,7 +234,7 @@ namespace Personel_Takip_Otomasyonu
             this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEkle.ImageIndex = 0;
             this.btnEkle.ImageList = this.ımageList1;
-            this.btnEkle.Location = new System.Drawing.Point(149, 443);
+            this.btnEkle.Location = new System.Drawing.Point(177, 442);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(112, 74);
             this.btnEkle.TabIndex = 21;
@@ -260,7 +262,7 @@ namespace Personel_Takip_Otomasyonu
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.ImageIndex = 2;
             this.btnCikis.ImageList = this.ımageList1;
-            this.btnCikis.Location = new System.Drawing.Point(260, 443);
+            this.btnCikis.Location = new System.Drawing.Point(288, 442);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(112, 74);
             this.btnCikis.TabIndex = 22;
@@ -269,23 +271,32 @@ namespace Personel_Takip_Otomasyonu
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(20, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(154, 394);
+            this.panel1.TabIndex = 23;
+            // 
             // frmPersonelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(457, 548);
+            this.ClientSize = new System.Drawing.Size(495, 578);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnEkle);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerGirisTarihi);
             this.Controls.Add(this.comboDepartman);
             this.Controls.Add(this.txtAciklama);
@@ -299,6 +310,8 @@ namespace Personel_Takip_Otomasyonu
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Ekleme Sayfası";
             this.Load += new System.EventHandler(this.frmPersonelEkle_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +340,6 @@ namespace Personel_Takip_Otomasyonu
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.ImageList ımageList1;
+        private Panel panel1;
     }
 }

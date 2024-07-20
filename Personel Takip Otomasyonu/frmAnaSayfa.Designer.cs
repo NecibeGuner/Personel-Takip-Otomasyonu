@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMaasZamlari = new System.Windows.Forms.Button();
             this.btnPrimler = new System.Windows.Forms.Button();
+            this.btnMesaiEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,12 +123,23 @@
             this.btnPrimler.UseVisualStyleBackColor = false;
             this.btnPrimler.Click += new System.EventHandler(this.btnPirimler_Click);
             // 
+            // btnMesaiEkle
+            // 
+            this.btnMesaiEkle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMesaiEkle.Location = new System.Drawing.Point(623, 409);
+            this.btnMesaiEkle.Name = "btnMesaiEkle";
+            this.btnMesaiEkle.Size = new System.Drawing.Size(151, 83);
+            this.btnMesaiEkle.TabIndex = 8;
+            this.btnMesaiEkle.Text = "MESAİLER";
+            this.btnMesaiEkle.UseVisualStyleBackColor = false;
+            // 
             // frmAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1095, 612);
+            this.Controls.Add(this.btnMesaiEkle);
             this.Controls.Add(this.btnPrimler);
             this.Controls.Add(this.btnMaasZamlari);
             this.Controls.Add(this.label1);
@@ -156,6 +168,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMaasZamlari;
         private System.Windows.Forms.Button btnPrimler;
+        private System.Windows.Forms.Button btnMesaiEkle;
     }
 }
 
