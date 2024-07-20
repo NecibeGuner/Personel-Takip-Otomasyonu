@@ -44,7 +44,7 @@ namespace Personel_Takip_Otomasyonu
 
             k.KullaniciID = Kullanicilar.kid;
             p.PERSONELID = int.Parse(lbl.Text);
-            m.BaslangicSaati = dateTimeBaslangic.Text + " " + maskedTxtBaslangic;
+            m.BaslangicSaati = dateTimeBaslangic.Text + " " + maskedTxtBaslangic.Text;
             m.BitisSaati = dateTimeBitis.Text + " " + maskedTxtBitis.Text;
             m.MesaiSaatUcreti = decimal.Parse(txtMesaiSaatUcreti.Text);
             m.Tutar = decimal.Parse(txtTutar.Text);
@@ -53,9 +53,9 @@ namespace Personel_Takip_Otomasyonu
             m.Tarih = DateTime.Now;
 
             string sql = "insert into Mesailer(KullaniciID, PersonelID, BaslangicSaati, BitisSaati, " +
-                "MesaaiUcreti, Tutar, Donem, Aciklama, Tarih) values('" + k.KullaniciID + "'," +
+                "MesaiUcreti, Tutar, Donem, Aciklama, Tarih) values('" + k.KullaniciID + "'," +
                 "'" + p.PERSONELID + "','" + m.BaslangicSaati + "','" + m.BitisSaati + "'," +
-                "@MSaatUcreti,@Tutar ,'" + m.Donem + "','" + m.Aciklama + "', @Tarih";
+                "@MSaatUcreti,@Tutar ,'" + m.Donem + "','" + m.Aciklama + "', @Tarih)";
             SqlCommand komut = new SqlCommand();
             komut.Parameters.Add("@MSaatUcreti", SqlDbType.Decimal).Value = m.MesaiSaatUcreti;
             komut.Parameters.Add("@Tutar", SqlDbType.Decimal).Value = m.Tutar;
@@ -73,7 +73,18 @@ namespace Personel_Takip_Otomasyonu
 
         private void txtMesaiSaatUcreti_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                string baslangic = dateTimeBaslangic.Text + " " + maskedTxtBaslangic.Text;
+                string bitis = dateTimeBitis.Text + " " + maskedTxtBitis.Text;
+                TimeSpan saatfarki = DateTime.Parse(bitis) - DateTime.Parse(baslangic);
+                double MSaatUcreti = double.Parse(txtMesaiSaatUcreti.Text);
+                double tutar = saatfarki.TotalHours * MSaatUcreti;
+                txtTutar.Text = tutar.ToString("0.00");
+            }
+            catch
+            {
+            }
         }
     }
 }
