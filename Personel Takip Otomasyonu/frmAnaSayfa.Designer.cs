@@ -39,13 +39,14 @@
             this.btnMaasZamlari = new System.Windows.Forms.Button();
             this.btnPrimler = new System.Windows.Forms.Button();
             this.btnMesaiEkle = new System.Windows.Forms.Button();
+            this.btnMesaiListele = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDepartmanlar
             // 
             this.btnDepartmanlar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDepartmanlar.Location = new System.Drawing.Point(309, 320);
+            this.btnDepartmanlar.Location = new System.Drawing.Point(250, 320);
             this.btnDepartmanlar.Name = "btnDepartmanlar";
             this.btnDepartmanlar.Size = new System.Drawing.Size(151, 83);
             this.btnDepartmanlar.TabIndex = 0;
@@ -56,7 +57,7 @@
             // btnPersonelEkle
             // 
             this.btnPersonelEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelEkle.Location = new System.Drawing.Point(466, 320);
+            this.btnPersonelEkle.Location = new System.Drawing.Point(407, 320);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelEkle.TabIndex = 1;
@@ -67,7 +68,7 @@
             // btnPersonelListele
             // 
             this.btnPersonelListele.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelListele.Location = new System.Drawing.Point(623, 320);
+            this.btnPersonelListele.Location = new System.Drawing.Point(407, 409);
             this.btnPersonelListele.Name = "btnPersonelListele";
             this.btnPersonelListele.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelListele.TabIndex = 2;
@@ -104,7 +105,7 @@
             // btnMaasZamlari
             // 
             this.btnMaasZamlari.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMaasZamlari.Location = new System.Drawing.Point(309, 409);
+            this.btnMaasZamlari.Location = new System.Drawing.Point(250, 409);
             this.btnMaasZamlari.Name = "btnMaasZamlari";
             this.btnMaasZamlari.Size = new System.Drawing.Size(151, 83);
             this.btnMaasZamlari.TabIndex = 6;
@@ -115,7 +116,7 @@
             // btnPrimler
             // 
             this.btnPrimler.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPrimler.Location = new System.Drawing.Point(466, 409);
+            this.btnPrimler.Location = new System.Drawing.Point(721, 321);
             this.btnPrimler.Name = "btnPrimler";
             this.btnPrimler.Size = new System.Drawing.Size(151, 83);
             this.btnPrimler.TabIndex = 7;
@@ -126,12 +127,23 @@
             // btnMesaiEkle
             // 
             this.btnMesaiEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMesaiEkle.Location = new System.Drawing.Point(623, 409);
+            this.btnMesaiEkle.Location = new System.Drawing.Point(564, 320);
             this.btnMesaiEkle.Name = "btnMesaiEkle";
             this.btnMesaiEkle.Size = new System.Drawing.Size(151, 83);
             this.btnMesaiEkle.TabIndex = 8;
             this.btnMesaiEkle.Text = "MESAİLER";
             this.btnMesaiEkle.UseVisualStyleBackColor = false;
+            // 
+            // btnMesaiListele
+            // 
+            this.btnMesaiListele.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMesaiListele.Location = new System.Drawing.Point(564, 409);
+            this.btnMesaiListele.Name = "btnMesaiListele";
+            this.btnMesaiListele.Size = new System.Drawing.Size(151, 83);
+            this.btnMesaiListele.TabIndex = 9;
+            this.btnMesaiListele.Text = "MESAİ LİSTELE";
+            this.btnMesaiListele.UseVisualStyleBackColor = false;
+            this.btnMesaiListele.Click += new System.EventHandler(this.btnMesaiListele_Click);
             // 
             // frmAnaSayfa
             // 
@@ -139,6 +151,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1095, 612);
+            this.Controls.Add(this.btnMesaiListele);
             this.Controls.Add(this.btnMesaiEkle);
             this.Controls.Add(this.btnPrimler);
             this.Controls.Add(this.btnMaasZamlari);
@@ -169,6 +182,7 @@
         private System.Windows.Forms.Button btnMaasZamlari;
         private System.Windows.Forms.Button btnPrimler;
         private System.Windows.Forms.Button btnMesaiEkle;
+        private System.Windows.Forms.Button btnMesaiListele;
     }
 }
 

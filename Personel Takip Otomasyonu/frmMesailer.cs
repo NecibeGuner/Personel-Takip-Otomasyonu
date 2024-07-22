@@ -64,5 +64,32 @@ namespace Personel_Takip_Otomasyonu
         {
             this.Close();
         }
+
+        private void btnPersonelMesaileri_Click(object sender, EventArgs e)
+        {
+            frmPersonelMesaileri frm = new frmPersonelMesaileri();
+            frm.ShowDialog();
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            foreach (Control item in Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+                }
+                if (item is ComboBox)
+                {
+                    item.Text = "";
+                }
+                if (item is MaskedTextBox)
+                {
+                    item.Text = "";
+                }
+            }
+            dateTimeBaslangic.Value = DateTime.Now;
+            dateTimeBitis.Value = DateTime.Now;
+        }
     }
 }

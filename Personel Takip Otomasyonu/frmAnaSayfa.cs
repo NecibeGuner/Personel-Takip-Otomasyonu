@@ -37,7 +37,7 @@ namespace Personel_Takip_Otomasyonu
 
         private void frmAnaSayfa_Load(object sender, EventArgs e)
         {
-            
+            //kazara tıklandı
         }
 
         private void btnMaasZamlari_Click(object sender, EventArgs e)
@@ -54,6 +54,12 @@ namespace Personel_Takip_Otomasyonu
         private void btnPirimler_Click(object sender, EventArgs e)
         {
             frmPrimler frm = new frmPrimler();
+            frm.ShowDialog();
+        }
+
+        private void btnMesaiListele_Click(object sender, EventArgs e)
+        {
+            frmMesailer frm = new frmMesailer();
             frm.ShowDialog();
         }
     }
