@@ -65,7 +65,8 @@ namespace Personel_Takip_Otomasyonu
         {
             bool dogrulandi = false;
             Veritabani.connection.Open();
-            SqlCommand komut = new SqlCommand("SELECT * FROM kullanicilar WHERE KullaniciID = @kullaniciID AND Soru = @soru AND Cevap = @cevap", Veritabani.connection);
+            SqlCommand komut = new SqlCommand("SELECT * FROM kullanicilar WHERE KullaniciID = @kullaniciID " +
+                "AND Soru = @soru AND Cevap = @cevap", Veritabani.connection);
             komut.Parameters.AddWithValue("@kullaniciID", kullaniciID);
             komut.Parameters.AddWithValue("@soru", soru);
             komut.Parameters.AddWithValue("@cevap", cevap);
@@ -78,87 +79,5 @@ namespace Personel_Takip_Otomasyonu
             Veritabani.connection.Close();
             return dogrulandi;
         }
-        //public void Guncelle()
-        //{
-        //    List<string> fieldsToUpdate = new List<string>();
-        //    List<SqlParameter> parameters = new List<SqlParameter>();
-
-        //    if (!string.IsNullOrEmpty(KullaniciAdi))
-        //    {
-        //        fieldsToUpdate.Add("KullaniciAdi = @KullaniciAdi");
-        //        parameters.Add(new SqlParameter("@KullaniciAdi", KullaniciAdi));
-        //    }
-
-        //    if (!string.IsNullOrEmpty(Sifre))
-        //    {
-        //        fieldsToUpdate.Add("Sifre = @Sifre");
-        //        parameters.Add(new SqlParameter("@Sifre", Sifre));
-        //    }
-
-        //    if (!string.IsNullOrEmpty(AdiSoyadi))
-        //    {
-        //        fieldsToUpdate.Add("AdiSoyadi = @AdiSoyadi");
-        //        parameters.Add(new SqlParameter("@AdiSoyadi", AdiSoyadi));
-        //    }
-
-        //    if (!string.IsNullOrEmpty(Soru))
-        //    {
-        //        fieldsToUpdate.Add("Soru = @Soru");
-        //        parameters.Add(new SqlParameter("@Soru", Soru));
-        //    }
-
-        //    if (!string.IsNullOrEmpty(Cevap))
-        //    {
-        //        fieldsToUpdate.Add("Cevap = @Cevap");
-        //        parameters.Add(new SqlParameter("@Cevap", Cevap));
-        //    }
-
-        //    if (!string.IsNullOrEmpty(Aciklama))
-        //    {
-        //        fieldsToUpdate.Add("Aciklama = @Aciklama");
-        //        parameters.Add(new SqlParameter("@Aciklama", Aciklama));
-        //    }
-
-        //    if (!string.IsNullOrEmpty(Rol))
-        //    {
-        //        fieldsToUpdate.Add("Rol = @Rol");
-        //        parameters.Add(new SqlParameter("@Rol", Rol));
-        //    }
-
-        //    fieldsToUpdate.Add("Tarih = @Tarih");
-        //    parameters.Add(new SqlParameter("@Tarih", Tarih));
-
-        //    string query = "UPDATE kullanicilar SET " + string.Join(", ", fieldsToUpdate) + " WHERE KullaniciID = @KullaniciID";
-        //    parameters.Add(new SqlParameter("@KullaniciID", KullaniciID));
-
-        //    using (SqlConnection connection = Veritabani.connection)
-        //    {
-        //        SqlCommand command = new SqlCommand(query, connection);
-        //        command.Parameters.AddRange(parameters.ToArray());
-        //        connection.Open();
-        //        command.ExecuteNonQuery();
-        //        connection.Close();
-        //    }
-        //}
-
-        /*Kullanicilar k = new Kullanicilar();
-         k._KullaniciAdi = kullaniciadi;
-         k._Sifre = sifre;
-         Veritabani.connection.Open();
-         SqlCommand komut = new SqlCommand("select *from kullanicilar where kullaniciadi ='" + k._KullaniciAdi + "'"
-              + "and  sifre = '" + k._Sifre + "'", Veritabani.connection);
-         SqlDataReader dr = komut.ExecuteReader();
-         if (dr.Read() ) 
-         {
-            durum = true;
-            kid = int.Parse(dr[0].ToString());
-         }
-         else
-         {
-            durum = false;
-         }
-         dr.Close();
-         Veritabani.connection.Close();
-         return dr;*/
     }
 }

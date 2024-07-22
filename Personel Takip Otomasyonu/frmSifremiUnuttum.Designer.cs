@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSifremiUnuttum));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,8 +48,8 @@
             this.TxtSifreTekrar = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtKullaniciID = new System.Windows.Forms.TextBox();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,77 +64,95 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(53, 39);
+            this.panel1.Location = new System.Drawing.Point(79, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(119, 399);
             this.panel1.TabIndex = 28;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label8.Location = new System.Drawing.Point(20, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 18);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Kullanıcı ID :";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 328);
+            this.label7.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label7.Location = new System.Drawing.Point(19, 329);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 16);
+            this.label7.Size = new System.Drawing.Size(81, 18);
             this.label7.TabIndex = 17;
             this.label7.Text = "Açıklama : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 50);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label1.Location = new System.Drawing.Point(19, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.Size = new System.Drawing.Size(98, 18);
             this.label1.TabIndex = 12;
             this.label1.Text = "Kullanıcı Adı :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 262);
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label6.Location = new System.Drawing.Point(19, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 16);
+            this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 11;
             this.label6.Text = "Cevap :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 207);
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label5.Location = new System.Drawing.Point(20, 208);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 16);
+            this.label5.Size = new System.Drawing.Size(46, 18);
             this.label5.TabIndex = 9;
             this.label5.Text = "Soru :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 165);
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label4.Location = new System.Drawing.Point(19, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.Size = new System.Drawing.Size(77, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Ad Soyad :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 125);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label3.Location = new System.Drawing.Point(19, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 16);
+            this.label3.Size = new System.Drawing.Size(93, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Şifre Tekrar :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 84);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.label2.Location = new System.Drawing.Point(20, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Şifre :";
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(178, 364);
+            this.txtAciklama.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtAciklama.Location = new System.Drawing.Point(204, 365);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(227, 61);
@@ -139,40 +160,51 @@
             // 
             // btnCikis
             // 
-            this.btnCikis.Location = new System.Drawing.Point(297, 471);
+            this.btnCikis.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnCikis.Font = new System.Drawing.Font("Eras Demi ITC", 9F);
+            this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCikis.ImageKey = "exit.png";
+            this.btnCikis.ImageList = this.ımageList1;
+            this.btnCikis.Location = new System.Drawing.Point(323, 472);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(108, 61);
             this.btnCikis.TabIndex = 26;
-            this.btnCikis.Text = "Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.Text = "      Çıkış";
+            this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(178, 471);
+            this.btnGuncelle.Font = new System.Drawing.Font("Eras Demi ITC", 9F);
+            this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuncelle.ImageKey = "update.png";
+            this.btnGuncelle.ImageList = this.ımageList1;
+            this.btnGuncelle.Location = new System.Drawing.Point(204, 472);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(113, 61);
             this.btnGuncelle.TabIndex = 25;
-            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Text = "         Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // comboBoxSoru
             // 
+            this.comboBoxSoru.Font = new System.Drawing.Font("Calibri", 10.2F);
             this.comboBoxSoru.FormattingEnabled = true;
             this.comboBoxSoru.Items.AddRange(new object[] {
             "1) En sevdiğiniz renk nedir?",
             "2) En sevdiğiniz hayvan nedir?",
             "3) Uğurlu sayınız nedir?",
             "\t\t\t"});
-            this.comboBoxSoru.Location = new System.Drawing.Point(178, 248);
+            this.comboBoxSoru.Location = new System.Drawing.Point(204, 249);
             this.comboBoxSoru.Name = "comboBoxSoru";
-            this.comboBoxSoru.Size = new System.Drawing.Size(227, 24);
+            this.comboBoxSoru.Size = new System.Drawing.Size(227, 29);
             this.comboBoxSoru.TabIndex = 24;
             // 
             // txtCevap
             // 
-            this.txtCevap.Location = new System.Drawing.Point(178, 288);
+            this.txtCevap.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtCevap.Location = new System.Drawing.Point(204, 289);
             this.txtCevap.Multiline = true;
             this.txtCevap.Name = "txtCevap";
             this.txtCevap.Size = new System.Drawing.Size(227, 61);
@@ -180,54 +212,59 @@
             // 
             // txtAdSoyad
             // 
-            this.txtAdSoyad.Location = new System.Drawing.Point(178, 206);
+            this.txtAdSoyad.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtAdSoyad.Location = new System.Drawing.Point(204, 207);
             this.txtAdSoyad.Name = "txtAdSoyad";
-            this.txtAdSoyad.Size = new System.Drawing.Size(227, 22);
+            this.txtAdSoyad.Size = new System.Drawing.Size(227, 28);
             this.txtAdSoyad.TabIndex = 22;
             // 
             // TxtSifreTekrar
             // 
-            this.TxtSifreTekrar.Location = new System.Drawing.Point(178, 166);
+            this.TxtSifreTekrar.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.TxtSifreTekrar.Location = new System.Drawing.Point(204, 167);
             this.TxtSifreTekrar.Name = "TxtSifreTekrar";
-            this.TxtSifreTekrar.Size = new System.Drawing.Size(227, 22);
+            this.TxtSifreTekrar.Size = new System.Drawing.Size(227, 28);
             this.TxtSifreTekrar.TabIndex = 21;
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(178, 125);
+            this.txtSifre.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtSifre.Location = new System.Drawing.Point(204, 126);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(227, 22);
+            this.txtSifre.Size = new System.Drawing.Size(227, 28);
             this.txtSifre.TabIndex = 20;
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(178, 88);
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(204, 89);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(227, 22);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(227, 28);
             this.txtKullaniciAdi.TabIndex = 19;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(31, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 16);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Kullanıcı ID :";
             // 
             // txtKullaniciID
             // 
-            this.txtKullaniciID.Location = new System.Drawing.Point(178, 55);
+            this.txtKullaniciID.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtKullaniciID.Location = new System.Drawing.Point(204, 56);
             this.txtKullaniciID.Name = "txtKullaniciID";
-            this.txtKullaniciID.Size = new System.Drawing.Size(227, 22);
+            this.txtKullaniciID.Size = new System.Drawing.Size(227, 28);
             this.txtKullaniciID.TabIndex = 29;
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
+            this.ımageList1.Images.SetKeyName(1, "delete.png");
+            this.ımageList1.Images.SetKeyName(2, "exit.png");
+            this.ımageList1.Images.SetKeyName(3, "update.png");
             // 
             // frmSifremiUnuttum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(526, 577);
+            this.ClientSize = new System.Drawing.Size(559, 580);
             this.Controls.Add(this.txtKullaniciID);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtAciklama);
@@ -270,5 +307,6 @@
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtKullaniciID;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }
