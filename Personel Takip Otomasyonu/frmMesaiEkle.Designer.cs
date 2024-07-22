@@ -49,8 +49,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCikis = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnEkle = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             // 
             this.dateTimeBaslangic.CustomFormat = "dd MMM yyyy";
             this.dateTimeBaslangic.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.dateTimeBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeBaslangic.Location = new System.Drawing.Point(303, 124);
             this.dateTimeBaslangic.Name = "dateTimeBaslangic";
             this.dateTimeBaslangic.Size = new System.Drawing.Size(159, 28);
@@ -145,7 +145,6 @@
             this.maskedTxtBaslangic.Name = "maskedTxtBaslangic";
             this.maskedTxtBaslangic.Size = new System.Drawing.Size(55, 28);
             this.maskedTxtBaslangic.TabIndex = 11;
-            this.maskedTxtBitis.ValidatingType = typeof(System.DateTime);           
             // 
             // maskedTxtBitis
             // 
@@ -161,7 +160,7 @@
             // 
             this.dateTimeBitis.CustomFormat = "dd MMM yyyy";
             this.dateTimeBitis.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.dateTimeBitis.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeBitis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeBitis.Location = new System.Drawing.Point(303, 174);
             this.dateTimeBitis.Name = "dateTimeBitis";
             this.dateTimeBitis.Size = new System.Drawing.Size(158, 28);
@@ -268,6 +267,15 @@
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
+            this.ımageList1.Images.SetKeyName(1, "delete.png");
+            this.ımageList1.Images.SetKeyName(2, "exit.png");
+            this.ımageList1.Images.SetKeyName(3, "update.png");
+            // 
             // btnEkle
             // 
             this.btnEkle.BackColor = System.Drawing.SystemColors.Window;
@@ -286,15 +294,6 @@
             this.btnEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
-            // 
-            // ımageList1
-            // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
-            this.ımageList1.Images.SetKeyName(1, "delete.png");
-            this.ımageList1.Images.SetKeyName(2, "exit.png");
-            this.ımageList1.Images.SetKeyName(3, "update.png");
             // 
             // label8
             // 

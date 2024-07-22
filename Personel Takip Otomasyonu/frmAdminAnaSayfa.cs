@@ -69,5 +69,16 @@ namespace Personel_Takip_Otomasyonu
             frmMesaiEkle frm = new frmMesaiEkle();
             frm.ShowDialog();
         }
+
+        private void frmAdminAnaSayfa_Load(object sender, EventArgs e)
+        {
+            //kazara tıklandı
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmMesailer frm = new frmMesailer();
+            frm.ShowDialog();
+        }
     }
 }

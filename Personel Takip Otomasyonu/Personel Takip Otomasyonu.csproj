@@ -92,6 +92,12 @@
     <Compile Include="frmMesaiEkle.Designer.cs">
       <DependentUpon>frmMesaiEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMesailer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMesailer.Designer.cs">
+      <DependentUpon>frmMesailer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersoneleGorePrimler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMesaiEkle.resx">
       <DependentUpon>frmMesaiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMesailer.resx">
+      <DependentUpon>frmMesailer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersoneleGorePrimler.resx">
       <DependentUpon>frmPersoneleGorePrimler.cs</DependentUpon>

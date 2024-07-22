@@ -183,7 +183,7 @@
             // 
             this.dateTimePickerGirisTarihi.CustomFormat = "dd MMM yyyy";
             this.dateTimePickerGirisTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePickerGirisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerGirisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerGirisTarihi.Location = new System.Drawing.Point(462, 580);
             this.dateTimePickerGirisTarihi.Name = "dateTimePickerGirisTarihi";
             this.dateTimePickerGirisTarihi.Size = new System.Drawing.Size(239, 27);

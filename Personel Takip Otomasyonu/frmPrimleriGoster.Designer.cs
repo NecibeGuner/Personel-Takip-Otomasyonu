@@ -44,6 +44,8 @@
             this.txtPersonelAdSoyad = new System.Windows.Forms.TextBox();
             this.txtPersonelID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCikis = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnDonemDegistir = new System.Windows.Forms.Button();
             this.btnPrimSil = new System.Windows.Forms.Button();
             this.btnPrimGuncelle = new System.Windows.Forms.Button();
@@ -51,14 +53,13 @@
             this.btnTumPrimleriOde = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrimID = new System.Windows.Forms.TextBox();
-            this.btnCikis = new System.Windows.Forms.Button();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -222,6 +223,29 @@
             this.panel1.Size = new System.Drawing.Size(902, 262);
             this.panel1.TabIndex = 46;
             // 
+            // btnCikis
+            // 
+            this.btnCikis.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCikis.ImageKey = "exit.png";
+            this.btnCikis.ImageList = this.ımageList1;
+            this.btnCikis.Location = new System.Drawing.Point(750, 173);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(111, 54);
+            this.btnCikis.TabIndex = 50;
+            this.btnCikis.Text = "         Çıkış";
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
+            this.ımageList1.Images.SetKeyName(1, "delete.png");
+            this.ımageList1.Images.SetKeyName(2, "exit.png");
+            this.ımageList1.Images.SetKeyName(3, "update.png");
+            // 
             // btnDonemDegistir
             // 
             this.btnDonemDegistir.Location = new System.Drawing.Point(727, 28);
@@ -289,29 +313,6 @@
             this.txtPrimID.Name = "txtPrimID";
             this.txtPrimID.Size = new System.Drawing.Size(221, 26);
             this.txtPrimID.TabIndex = 43;
-            // 
-            // btnCikis
-            // 
-            this.btnCikis.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCikis.ImageKey = "exit.png";
-            this.btnCikis.ImageList = this.ımageList1;
-            this.btnCikis.Location = new System.Drawing.Point(750, 173);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(111, 54);
-            this.btnCikis.TabIndex = 50;
-            this.btnCikis.Text = "         Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = false;
-            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
-            // ımageList1
-            // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
-            this.ımageList1.Images.SetKeyName(1, "delete.png");
-            this.ımageList1.Images.SetKeyName(2, "exit.png");
-            this.ımageList1.Images.SetKeyName(3, "update.png");
             // 
             // frmPrimleriGoster
             // 
