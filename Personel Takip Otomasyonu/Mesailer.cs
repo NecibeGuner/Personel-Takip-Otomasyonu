@@ -18,6 +18,7 @@ namespace Personel_Takip_Otomasyonu
         private string _Donem;
         private string _Aciklama;
         private DateTime _Tarih;
+        private string _Islem;
 
         public int MesaiID { get => _MesaiID; set => _MesaiID = value; }
         public string BaslangicSaati { get => _BaslangicSaati; set => _BaslangicSaati = value; }
@@ -28,6 +29,7 @@ namespace Personel_Takip_Otomasyonu
         public string Donem { get => _Donem; set => _Donem = value; }
         public string Aciklama { get => _Aciklama; set => _Aciklama = value; }
         public DateTime Tarih { get => _Tarih; set => _Tarih = value; }
+        public string Islem { get => _Islem; set => _Islem = value; }
         #endregion
     }
 }

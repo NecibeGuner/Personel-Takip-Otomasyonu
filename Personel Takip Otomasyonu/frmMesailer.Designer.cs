@@ -278,6 +278,7 @@
             this.btnMesaiSil.TabIndex = 57;
             this.btnMesaiSil.Text = "Mesai Sil";
             this.btnMesaiSil.UseVisualStyleBackColor = true;
+            this.btnMesaiSil.Click += new System.EventHandler(this.btnMesaiSil_Click);
             // 
             // btnMesaiGuncelle
             // 
@@ -287,6 +288,7 @@
             this.btnMesaiGuncelle.TabIndex = 56;
             this.btnMesaiGuncelle.Text = "Mesai Güncelle";
             this.btnMesaiGuncelle.UseVisualStyleBackColor = true;
+            this.btnMesaiGuncelle.Click += new System.EventHandler(this.btnMesaiGuncelle_Click);
             // 
             // btnMesaiOde
             // 
@@ -296,6 +298,7 @@
             this.btnMesaiOde.TabIndex = 55;
             this.btnMesaiOde.Text = "Mesai Öde";
             this.btnMesaiOde.UseVisualStyleBackColor = true;
+            this.btnMesaiOde.Click += new System.EventHandler(this.btnMesaiOde_Click);
             // 
             // btnTumMesaileriOde
             // 
@@ -305,6 +308,7 @@
             this.btnTumMesaileriOde.TabIndex = 54;
             this.btnTumMesaileriOde.Text = "Tüm Mesaileri Öde";
             this.btnTumMesaileriOde.UseVisualStyleBackColor = true;
+            this.btnTumMesaileriOde.Click += new System.EventHandler(this.btnTumMesaileriOde_Click);
             // 
             // btnPersonelMesaileri
             // 
