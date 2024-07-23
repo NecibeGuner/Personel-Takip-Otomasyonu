@@ -49,7 +49,7 @@ namespace Personel_Takip_Otomasyonu
             {
                 if (combo.SelectedItem.ToString() == dr[0] + "." + dr[1] + " " + dr[2])
                 {
-                    lblPersonelID.Text = dr[0].ToString();
+                    lblPersonelID.Text = dr[0].ToString() + ". " + dr[1].ToString() + " " +dr[2].ToString();
                 }
             }
             Veritabani.connection.Close();

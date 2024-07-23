@@ -40,7 +40,6 @@ namespace Personel_Takip_Otomasyonu
 
             }
         }
-
         private void txtMesaiIDAra_TextChanged(object sender, EventArgs e)
         {
             Veritabani.Listele_Ara(dataGridViewMesailer, "select *from Mesailer where MesaiID like '" + txtMesaiIDAra.Text + "'");
@@ -50,7 +49,6 @@ namespace Personel_Takip_Otomasyonu
                 Veritabani.Listele_Ara(dataGridViewMesailer, "select* from Mesailer where PersonelID='" + PersonelID + "'");
             }
         }
-
         private void txtPersonelIDAra_TextChanged(object sender, EventArgs e)
         {
             Primler.PersonelAdSoyadGetir(txtPersonelIDAra, txtAdSoyadAra);

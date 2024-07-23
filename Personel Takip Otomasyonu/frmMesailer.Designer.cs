@@ -262,9 +262,9 @@
             this.btnCikis.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.ImageKey = "exit.png";
-            this.btnCikis.Location = new System.Drawing.Point(993, 591);
+            this.btnCikis.Location = new System.Drawing.Point(1003, 582);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(118, 78);
+            this.btnCikis.Size = new System.Drawing.Size(122, 87);
             this.btnCikis.TabIndex = 58;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = false;
@@ -272,9 +272,9 @@
             // 
             // btnMesaiSil
             // 
-            this.btnMesaiSil.Location = new System.Drawing.Point(708, 591);
+            this.btnMesaiSil.Location = new System.Drawing.Point(722, 582);
             this.btnMesaiSil.Name = "btnMesaiSil";
-            this.btnMesaiSil.Size = new System.Drawing.Size(115, 78);
+            this.btnMesaiSil.Size = new System.Drawing.Size(122, 87);
             this.btnMesaiSil.TabIndex = 57;
             this.btnMesaiSil.Text = "Mesai Sil";
             this.btnMesaiSil.UseVisualStyleBackColor = true;
@@ -282,9 +282,9 @@
             // 
             // btnMesaiGuncelle
             // 
-            this.btnMesaiGuncelle.Location = new System.Drawing.Point(571, 591);
+            this.btnMesaiGuncelle.Location = new System.Drawing.Point(583, 582);
             this.btnMesaiGuncelle.Name = "btnMesaiGuncelle";
-            this.btnMesaiGuncelle.Size = new System.Drawing.Size(109, 78);
+            this.btnMesaiGuncelle.Size = new System.Drawing.Size(122, 87);
             this.btnMesaiGuncelle.TabIndex = 56;
             this.btnMesaiGuncelle.Text = "Mesai Güncelle";
             this.btnMesaiGuncelle.UseVisualStyleBackColor = true;
@@ -292,9 +292,9 @@
             // 
             // btnMesaiOde
             // 
-            this.btnMesaiOde.Location = new System.Drawing.Point(426, 591);
+            this.btnMesaiOde.Location = new System.Drawing.Point(443, 582);
             this.btnMesaiOde.Name = "btnMesaiOde";
-            this.btnMesaiOde.Size = new System.Drawing.Size(112, 78);
+            this.btnMesaiOde.Size = new System.Drawing.Size(122, 87);
             this.btnMesaiOde.TabIndex = 55;
             this.btnMesaiOde.Text = "Mesai Öde";
             this.btnMesaiOde.UseVisualStyleBackColor = true;
@@ -302,9 +302,9 @@
             // 
             // btnTumMesaileriOde
             // 
-            this.btnTumMesaileriOde.Location = new System.Drawing.Point(285, 591);
+            this.btnTumMesaileriOde.Location = new System.Drawing.Point(298, 582);
             this.btnTumMesaileriOde.Name = "btnTumMesaileriOde";
-            this.btnTumMesaileriOde.Size = new System.Drawing.Size(115, 78);
+            this.btnTumMesaileriOde.Size = new System.Drawing.Size(122, 87);
             this.btnTumMesaileriOde.TabIndex = 54;
             this.btnTumMesaileriOde.Text = "Tüm Mesaileri Öde";
             this.btnTumMesaileriOde.UseVisualStyleBackColor = true;
@@ -312,9 +312,9 @@
             // 
             // btnPersonelMesaileri
             // 
-            this.btnPersonelMesaileri.Location = new System.Drawing.Point(139, 591);
+            this.btnPersonelMesaileri.Location = new System.Drawing.Point(148, 582);
             this.btnPersonelMesaileri.Name = "btnPersonelMesaileri";
-            this.btnPersonelMesaileri.Size = new System.Drawing.Size(115, 78);
+            this.btnPersonelMesaileri.Size = new System.Drawing.Size(122, 87);
             this.btnPersonelMesaileri.TabIndex = 59;
             this.btnPersonelMesaileri.Text = "Personel Mesaileri";
             this.btnPersonelMesaileri.UseVisualStyleBackColor = true;
@@ -322,9 +322,9 @@
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(848, 591);
+            this.btnTemizle.Location = new System.Drawing.Point(859, 582);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(115, 78);
+            this.btnTemizle.Size = new System.Drawing.Size(122, 87);
             this.btnTemizle.TabIndex = 60;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
