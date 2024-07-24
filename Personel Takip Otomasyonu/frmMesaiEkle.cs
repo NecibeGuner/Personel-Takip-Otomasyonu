@@ -33,7 +33,7 @@ namespace Personel_Takip_Otomasyonu
         {
             lbl = new Label();
             YapilanZamlar.ComboSecilirsePersonenelIDGetir(comboPersonelAdSoyad, lbl);
-            MessageBox.Show(lbl.Text);
+            //MessageBox.Show(lbl.Text);
         }
 
         private void btnEkle_Click(object sender, EventArgs e)

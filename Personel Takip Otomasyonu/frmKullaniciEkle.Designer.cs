@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKullaniciEkle));
             this.btnCikis = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnEkle = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,10 +47,9 @@
             this.txtAdiSoyadi = new System.Windows.Forms.TextBox();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.comboRol = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboRol = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,15 @@
             this.btnCikis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click_1);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
+            this.ımageList1.Images.SetKeyName(1, "delete.png");
+            this.ımageList1.Images.SetKeyName(2, "exit.png");
+            this.ımageList1.Images.SetKeyName(3, "update.png");
             // 
             // btnEkle
             // 
@@ -231,15 +240,6 @@
             this.panel1.Size = new System.Drawing.Size(128, 370);
             this.panel1.TabIndex = 43;
             // 
-            // ımageList1
-            // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "kaydet.png");
-            this.ımageList1.Images.SetKeyName(1, "delete.png");
-            this.ımageList1.Images.SetKeyName(2, "exit.png");
-            this.ımageList1.Images.SetKeyName(3, "update.png");
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -249,6 +249,16 @@
             this.label1.Size = new System.Drawing.Size(94, 18);
             this.label1.TabIndex = 41;
             this.label1.Text = "Kullanıcı Adı:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(8, 119);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 18);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Şifre Tekrardan:";
             // 
             // comboRol
             // 
@@ -261,16 +271,6 @@
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(223, 29);
             this.comboRol.TabIndex = 44;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(8, 119);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 18);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Şifre Tekrardan:";
             // 
             // frmKullaniciEkle
             // 
@@ -290,6 +290,7 @@
             this.Controls.Add(this.txtAdiSoyadi);
             this.Controls.Add(this.txtKullaniciAdi);
             this.Name = "frmKullaniciEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Ekleme Sayfası";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

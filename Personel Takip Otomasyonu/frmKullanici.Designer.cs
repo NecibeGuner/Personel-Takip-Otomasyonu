@@ -80,7 +80,7 @@
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(254, 26);
             this.txtKullaniciAdi.TabIndex = 3;
-            this.txtKullaniciAdi.Text = "userAdmin";
+            this.txtKullaniciAdi.Text = "AdminNecibe";
             // 
             // txtSifre
             // 
