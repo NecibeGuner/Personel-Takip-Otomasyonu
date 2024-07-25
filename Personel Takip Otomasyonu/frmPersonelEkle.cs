@@ -39,13 +39,14 @@ namespace Personel_Takip_Otomasyonu
                 }
             }
         }
-        Personeller p = new Personeller();
-        Kullanicilar k = new Kullanicilar();
+        
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            Personeller p = new Personeller();
+            Kullanicilar k = new Kullanicilar();
             p.Adi = txtAdi.Text;
             p.Soyadi = txtSoyadi.Text;
-            p.Telefon = txtTelefon.Text;
+            p.Telefon = maskedtxtTelefon.Text;
             p.Adres = txtAdres.Text;
             p.Email = txtEmail.Text;
             p.DepartmanID = (int)comboDepartman.SelectedValue;
@@ -60,14 +61,13 @@ namespace Personel_Takip_Otomasyonu
             komut.Parameters.Add("@Maasi", SqlDbType.Decimal).Value = p.Maasi;
             komut.Parameters.Add("@GirisTarihi",SqlDbType.Date).Value = p.GirisTarihi;
             Veritabani.ESG(komut,sorgu);
-            //Personeller.PersonelIDSonKayit(p);
-            //p.Islem = p.PERSONELID + " nolu yeni personel kaydı oluşturuldu.";
-            //p.Aciklama = "Yeni personel ekleme";
-
-
-            //Personeller.PersonelIslemEkle(p, k);
+            Personeller.PersonelIDSonKayit(p);
+            p.Islem = p.PERSONELID + " nolu yeni personel kaydı oluşturuldu.";
+            p.Aciklama = "Yeni personel ekleme";
+            Personeller.PersonelIslemEkle(p, k);
             Temizle();
-            MessageBox.Show("İşlem Başarılı...","Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("İşlem Başarılı...","Kayıt", MessageBoxButtons.OK, 
+                MessageBoxIcon.Information);
         }
     }
 }

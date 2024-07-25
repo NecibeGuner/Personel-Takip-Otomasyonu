@@ -41,7 +41,7 @@ namespace Personel_Takip_Otomasyonu
             d.DepartmanID = int.Parse(txtDepartmanID.Text);
             d.Departman = txtDepartman.Text;
             d.Aciklama = txtAciklama.Text;
-            string sorgu = "update departmanlar set departman='" + d.Departman + "','" + d.Aciklama + "'" +
+            string sorgu = "update departmanlar set departman='" + d.Departman + "',aciklama='" + d.Aciklama + "'" +
                 "where departmanID='" + d.DepartmanID + "'";
             SqlCommand komut = new SqlCommand();
             Veritabani.ESG(komut, sorgu);

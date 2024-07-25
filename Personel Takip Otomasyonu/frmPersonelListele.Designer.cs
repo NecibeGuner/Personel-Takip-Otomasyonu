@@ -44,7 +44,6 @@ namespace Personel_Takip_Otomasyonu
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtSoyadi = new System.Windows.Forms.TextBox();
             this.txtAdi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,6 +68,7 @@ namespace Personel_Takip_Otomasyonu
             this.txtPersonelID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dateTimePickerG_Tarihi = new System.Windows.Forms.DateTimePicker();
+            this.maskedtxtTelefon = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,14 +184,6 @@ namespace Personel_Takip_Otomasyonu
             this.label7.Size = new System.Drawing.Size(95, 18);
             this.label7.TabIndex = 17;
             this.label7.Text = "Personel Adı:";
-            // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtTelefon.Location = new System.Drawing.Point(140, 629);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(194, 28);
-            this.txtTelefon.TabIndex = 16;
             // 
             // txtSoyadi
             // 
@@ -441,12 +433,22 @@ namespace Personel_Takip_Otomasyonu
             this.dateTimePickerG_Tarihi.TabIndex = 41;
             this.dateTimePickerG_Tarihi.ValueChanged += new System.EventHandler(this.dateTimePickerG_Tarihi_ValueChanged);
             // 
+            // maskedtxtTelefon
+            // 
+            this.maskedtxtTelefon.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.maskedtxtTelefon.Location = new System.Drawing.Point(140, 629);
+            this.maskedtxtTelefon.Mask = "(999) 000-0000";
+            this.maskedtxtTelefon.Name = "maskedtxtTelefon";
+            this.maskedtxtTelefon.Size = new System.Drawing.Size(194, 28);
+            this.maskedtxtTelefon.TabIndex = 42;
+            // 
             // frmPersonelListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1228, 763);
+            this.Controls.Add(this.maskedtxtTelefon);
             this.Controls.Add(this.dateTimePickerG_Tarihi);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -471,7 +473,6 @@ namespace Personel_Takip_Otomasyonu
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.txtSoyadi);
             this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.dataGridView1);
@@ -507,7 +508,6 @@ namespace Personel_Takip_Otomasyonu
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.TextBox txtSoyadi;
         private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.Label label8;
@@ -532,5 +532,6 @@ namespace Personel_Takip_Otomasyonu
         private System.Windows.Forms.TextBox txtPersonelID;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dateTimePickerG_Tarihi;
+        private MaskedTextBox maskedtxtTelefon;
     }
 }

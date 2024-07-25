@@ -43,7 +43,7 @@ namespace Personel_Takip_Otomasyonu
         {
             Veritabani.connection.Open();
             SqlCommand komut = new SqlCommand("select ident_current('Personeller')", Veritabani.connection);
-            p.PERSONELID = int.Parse(komut.ExecuteNonQuery().ToString());
+            p.PERSONELID = int.Parse(komut.ExecuteScalar().ToString());
             Veritabani.connection.Close();
             return p.PERSONELID;
         }

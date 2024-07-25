@@ -34,7 +34,6 @@ namespace Personel_Takip_Otomasyonu
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPersonelEkle));
             this.txtAdi = new System.Windows.Forms.TextBox();
             this.txtSoyadi = new System.Windows.Forms.TextBox();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtAdres = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtMaasi = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@ namespace Personel_Takip_Otomasyonu
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnCikis = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.maskedtxtTelefon = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,14 +72,6 @@ namespace Personel_Takip_Otomasyonu
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(221, 28);
             this.txtSoyadi.TabIndex = 1;
-            // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtTelefon.Location = new System.Drawing.Point(177, 108);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(221, 28);
-            this.txtTelefon.TabIndex = 2;
             // 
             // txtAdres
             // 
@@ -288,12 +280,22 @@ namespace Personel_Takip_Otomasyonu
             this.panel1.Size = new System.Drawing.Size(154, 394);
             this.panel1.TabIndex = 23;
             // 
+            // maskedtxtTelefon
+            // 
+            this.maskedtxtTelefon.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.maskedtxtTelefon.Location = new System.Drawing.Point(177, 109);
+            this.maskedtxtTelefon.Mask = "(999) 000-0000";
+            this.maskedtxtTelefon.Name = "maskedtxtTelefon";
+            this.maskedtxtTelefon.Size = new System.Drawing.Size(221, 28);
+            this.maskedtxtTelefon.TabIndex = 24;
+            // 
             // frmPersonelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(495, 578);
+            this.Controls.Add(this.maskedtxtTelefon);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnEkle);
@@ -303,7 +305,6 @@ namespace Personel_Takip_Otomasyonu
             this.Controls.Add(this.txtMaasi);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtAdres);
-            this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.txtSoyadi);
             this.Controls.Add(this.txtAdi);
             this.Name = "frmPersonelEkle";
@@ -321,7 +322,6 @@ namespace Personel_Takip_Otomasyonu
 
         private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.TextBox txtSoyadi;
-        private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.TextBox txtAdres;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtMaasi;
@@ -341,5 +341,6 @@ namespace Personel_Takip_Otomasyonu
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.ImageList ımageList1;
         private Panel panel1;
+        private MaskedTextBox maskedtxtTelefon;
     }
 }

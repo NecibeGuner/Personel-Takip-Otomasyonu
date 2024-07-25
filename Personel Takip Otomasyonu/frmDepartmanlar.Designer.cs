@@ -51,14 +51,14 @@
             // 
             this.txtDepartmanID.Location = new System.Drawing.Point(256, 56);
             this.txtDepartmanID.Name = "txtDepartmanID";
-            this.txtDepartmanID.Size = new System.Drawing.Size(163, 22);
+            this.txtDepartmanID.Size = new System.Drawing.Size(235, 22);
             this.txtDepartmanID.TabIndex = 0;
             // 
             // txtDepartman
             // 
             this.txtDepartman.Location = new System.Drawing.Point(256, 84);
             this.txtDepartman.Name = "txtDepartman";
-            this.txtDepartman.Size = new System.Drawing.Size(163, 22);
+            this.txtDepartman.Size = new System.Drawing.Size(235, 22);
             this.txtDepartman.TabIndex = 1;
             // 
             // txtAciklama
@@ -66,7 +66,7 @@
             this.txtAciklama.Location = new System.Drawing.Point(256, 112);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(163, 59);
+            this.txtAciklama.Size = new System.Drawing.Size(235, 66);
             this.txtAciklama.TabIndex = 2;
             // 
             // label3
@@ -106,7 +106,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(163, 193);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(495, 185);
+            this.listView1.Size = new System.Drawing.Size(568, 232);
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -127,7 +127,7 @@
             // columnAciklama
             // 
             this.columnAciklama.Text = "Açıklama";
-            this.columnAciklama.Width = 255;
+            this.columnAciklama.Width = 335;
             // 
             // btnGuncelle
             // 
@@ -139,7 +139,7 @@
             this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuncelle.ImageIndex = 4;
             this.btnGuncelle.ImageList = this.ımageList1;
-            this.btnGuncelle.Location = new System.Drawing.Point(546, 59);
+            this.btnGuncelle.Location = new System.Drawing.Point(618, 56);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(112, 58);
             this.btnGuncelle.TabIndex = 40;
@@ -168,7 +168,7 @@
             this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSil.ImageIndex = 0;
             this.btnSil.ImageList = this.ımageList1;
-            this.btnSil.Location = new System.Drawing.Point(439, 123);
+            this.btnSil.Location = new System.Drawing.Point(511, 120);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(101, 58);
             this.btnSil.TabIndex = 39;
@@ -186,7 +186,7 @@
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.ImageIndex = 2;
             this.btnCikis.ImageList = this.ımageList1;
-            this.btnCikis.Location = new System.Drawing.Point(546, 123);
+            this.btnCikis.Location = new System.Drawing.Point(618, 120);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(112, 58);
             this.btnCikis.TabIndex = 38;
@@ -204,7 +204,7 @@
             this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEkle.ImageKey = "kaydet.png";
             this.btnEkle.ImageList = this.ımageList1;
-            this.btnEkle.Location = new System.Drawing.Point(439, 59);
+            this.btnEkle.Location = new System.Drawing.Point(511, 56);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(101, 58);
             this.btnEkle.TabIndex = 41;
@@ -218,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(868, 507);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);

@@ -59,7 +59,7 @@ namespace Personel_Takip_Otomasyonu
             p.PERSONELID = int.Parse(txtPersonelID.Text);
             p.Adi = txtAdi.Text;
             p.Soyadi = txtSoyadi.Text;
-            p.Telefon = txtTelefon.Text;
+            p.Telefon = maskedtxtTelefon.Text;
             p.Adres = txtAdres.Text;
             p.Email = txtEmail.Text;
             p.DepartmanID = (int)comboDepartman.SelectedValue;
@@ -106,7 +106,7 @@ namespace Personel_Takip_Otomasyonu
             txtPersonelID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtAdi.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtSoyadi.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtTelefon.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            maskedtxtTelefon.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtAdres.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txtEmail.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             comboDepartman.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
