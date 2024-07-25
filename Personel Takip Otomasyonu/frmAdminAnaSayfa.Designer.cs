@@ -36,10 +36,11 @@
             this.btnPersonelListele = new System.Windows.Forms.Button();
             this.btnPersonelEkle = new System.Windows.Forms.Button();
             this.btnDepartmanlar = new System.Windows.Forms.Button();
-            this.btnKullaniciEkle = new System.Windows.Forms.Button();
             this.btnPrimler = new System.Windows.Forms.Button();
             this.btnMesaiEkle = new System.Windows.Forms.Button();
             this.btnMesaiListele = new System.Windows.Forms.Button();
+            this.btnIzinEkle = new System.Windows.Forms.Button();
+            this.btnIzinListele = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,21 +119,10 @@
             this.btnDepartmanlar.UseVisualStyleBackColor = false;
             this.btnDepartmanlar.Click += new System.EventHandler(this.btnDepartmanlar_Click);
             // 
-            // btnKullaniciEkle
-            // 
-            this.btnKullaniciEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(161, 316);
-            this.btnKullaniciEkle.Name = "btnKullaniciEkle";
-            this.btnKullaniciEkle.Size = new System.Drawing.Size(151, 83);
-            this.btnKullaniciEkle.TabIndex = 14;
-            this.btnKullaniciEkle.Text = "KULLANİCİ EKLE\r\n";
-            this.btnKullaniciEkle.UseVisualStyleBackColor = false;
-            this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
-            // 
             // btnPrimler
             // 
             this.btnPrimler.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPrimler.Location = new System.Drawing.Point(789, 316);
+            this.btnPrimler.Location = new System.Drawing.Point(161, 316);
             this.btnPrimler.Name = "btnPrimler";
             this.btnPrimler.Size = new System.Drawing.Size(151, 83);
             this.btnPrimler.TabIndex = 15;
@@ -162,16 +152,39 @@
             this.btnMesaiListele.UseVisualStyleBackColor = false;
             this.btnMesaiListele.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnIzinEkle
+            // 
+            this.btnIzinEkle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnIzinEkle.Location = new System.Drawing.Point(789, 316);
+            this.btnIzinEkle.Name = "btnIzinEkle";
+            this.btnIzinEkle.Size = new System.Drawing.Size(151, 83);
+            this.btnIzinEkle.TabIndex = 20;
+            this.btnIzinEkle.Text = "İZİN EKLE";
+            this.btnIzinEkle.UseVisualStyleBackColor = false;
+            this.btnIzinEkle.Click += new System.EventHandler(this.btnIzinEkle_Click);
+            // 
+            // btnIzinListele
+            // 
+            this.btnIzinListele.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnIzinListele.Location = new System.Drawing.Point(789, 405);
+            this.btnIzinListele.Name = "btnIzinListele";
+            this.btnIzinListele.Size = new System.Drawing.Size(151, 83);
+            this.btnIzinListele.TabIndex = 21;
+            this.btnIzinListele.Text = "İZİN HAREKETLERİ LİSTELE";
+            this.btnIzinListele.UseVisualStyleBackColor = false;
+            this.btnIzinListele.Click += new System.EventHandler(this.btnIzinListele_Click);
+            // 
             // frmAdminAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1095, 612);
+            this.Controls.Add(this.btnIzinListele);
+            this.Controls.Add(this.btnIzinEkle);
             this.Controls.Add(this.btnMesaiListele);
             this.Controls.Add(this.btnMesaiEkle);
             this.Controls.Add(this.btnPrimler);
-            this.Controls.Add(this.btnKullaniciEkle);
             this.Controls.Add(this.btnMaasZamlari);
             this.Controls.Add(this.btnKullaniciListele);
             this.Controls.Add(this.label1);
@@ -199,9 +212,10 @@
         private System.Windows.Forms.Button btnPersonelListele;
         private System.Windows.Forms.Button btnPersonelEkle;
         private System.Windows.Forms.Button btnDepartmanlar;
-        private System.Windows.Forms.Button btnKullaniciEkle;
         private System.Windows.Forms.Button btnPrimler;
         private System.Windows.Forms.Button btnMesaiEkle;
         private System.Windows.Forms.Button btnMesaiListele;
+        private System.Windows.Forms.Button btnIzinEkle;
+        private System.Windows.Forms.Button btnIzinListele;
     }
 }

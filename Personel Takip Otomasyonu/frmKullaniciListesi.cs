@@ -134,5 +134,11 @@ namespace Personel_Takip_Otomasyonu
             Veritabani.Listele_Ara(dataGridView1, "select KullaniciID, KullaniciAdi,Sifre, AdiSoyadi, " +
                 "Tarih, Aciklama, Rol, Soru, Cevap from Kullanicilar where Rol like'%" + txtRolAra.Text + "%'");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmKullaniciEkle frmKullaniciEkle = new frmKullaniciEkle();
+            frmKullaniciEkle.ShowDialog();
+        }
     }
 }

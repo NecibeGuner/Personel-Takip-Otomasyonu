@@ -52,12 +52,6 @@ namespace Personel_Takip_Otomasyonu
             Application.Exit();
         }
 
-        private void btnKullaniciEkle_Click(object sender, EventArgs e)
-        {
-            frmKullaniciEkle frm = new frmKullaniciEkle();
-            frm.ShowDialog();
-        }
-
         private void btnPirimler_Click(object sender, EventArgs e)
         {
             frmPrimler frm = new frmPrimler();
@@ -78,6 +72,18 @@ namespace Personel_Takip_Otomasyonu
         private void button1_Click(object sender, EventArgs e)
         {
             frmMesailer frm = new frmMesailer();
+            frm.ShowDialog();
+        }
+
+        private void btnIzinEkle_Click(object sender, EventArgs e)
+        {
+            frmIzinEkle frm = new frmIzinEkle();
+            frm.ShowDialog();
+        }
+
+        private void btnIzinListele_Click(object sender, EventArgs e)
+        {
+            frmIzinListele frm = new frmIzinListele();
             frm.ShowDialog();
         }
     }

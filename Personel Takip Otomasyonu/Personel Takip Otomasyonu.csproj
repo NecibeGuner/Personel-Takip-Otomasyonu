@@ -68,6 +68,24 @@
     <Compile Include="frmDepartmanlar.Designer.cs">
       <DependentUpon>frmDepartmanlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIzinEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzinEkle.Designer.cs">
+      <DependentUpon>frmIzinEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIzinListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzinListele.Designer.cs">
+      <DependentUpon>frmIzinListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIzinTurleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzinTurleri.Designer.cs">
+      <DependentUpon>frmIzinTurleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKullanici.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +170,7 @@
     <Compile Include="frmYeniKullanici.Designer.cs">
       <DependentUpon>frmYeniKullanici.cs</DependentUpon>
     </Compile>
+    <Compile Include="Izin.cs" />
     <Compile Include="Kullanicilar.cs" />
     <Compile Include="Mesailer.cs" />
     <Compile Include="Personeller.cs" />
@@ -168,6 +187,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDepartmanlar.resx">
       <DependentUpon>frmDepartmanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIzinEkle.resx">
+      <DependentUpon>frmIzinEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIzinListele.resx">
+      <DependentUpon>frmIzinListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIzinTurleri.resx">
+      <DependentUpon>frmIzinTurleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKullanici.resx">
       <DependentUpon>frmKullanici.cs</DependentUpon>

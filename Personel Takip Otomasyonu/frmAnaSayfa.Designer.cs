@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaSayfa));
             this.btnDepartmanlar = new System.Windows.Forms.Button();
             this.btnPersonelEkle = new System.Windows.Forms.Button();
             this.btnPersonelListele = new System.Windows.Forms.Button();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMaasZamlari = new System.Windows.Forms.Button();
             this.btnPrimler = new System.Windows.Forms.Button();
             this.btnMesaiEkle = new System.Windows.Forms.Button();
             this.btnMesaiListele = new System.Windows.Forms.Button();
+            this.btnIzinListele = new System.Windows.Forms.Button();
+            this.btnIzinEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDepartmanlar
             // 
             this.btnDepartmanlar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDepartmanlar.Location = new System.Drawing.Point(250, 320);
+            this.btnDepartmanlar.Location = new System.Drawing.Point(167, 319);
             this.btnDepartmanlar.Name = "btnDepartmanlar";
             this.btnDepartmanlar.Size = new System.Drawing.Size(151, 83);
             this.btnDepartmanlar.TabIndex = 0;
@@ -57,7 +57,7 @@
             // btnPersonelEkle
             // 
             this.btnPersonelEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelEkle.Location = new System.Drawing.Point(407, 320);
+            this.btnPersonelEkle.Location = new System.Drawing.Point(324, 319);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelEkle.TabIndex = 1;
@@ -68,19 +68,13 @@
             // btnPersonelListele
             // 
             this.btnPersonelListele.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPersonelListele.Location = new System.Drawing.Point(407, 409);
+            this.btnPersonelListele.Location = new System.Drawing.Point(324, 408);
             this.btnPersonelListele.Name = "btnPersonelListele";
             this.btnPersonelListele.Size = new System.Drawing.Size(151, 83);
             this.btnPersonelListele.TabIndex = 2;
             this.btnPersonelListele.Text = "PERSONEL LİSTELE";
             this.btnPersonelListele.UseVisualStyleBackColor = false;
             this.btnPersonelListele.Click += new System.EventHandler(this.btnPersonelListele_Click);
-            // 
-            // ımageList1
-            // 
-            this.ımageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.ımageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // pictureBox1
             // 
@@ -105,7 +99,7 @@
             // btnMaasZamlari
             // 
             this.btnMaasZamlari.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMaasZamlari.Location = new System.Drawing.Point(250, 409);
+            this.btnMaasZamlari.Location = new System.Drawing.Point(167, 408);
             this.btnMaasZamlari.Name = "btnMaasZamlari";
             this.btnMaasZamlari.Size = new System.Drawing.Size(151, 83);
             this.btnMaasZamlari.TabIndex = 6;
@@ -116,7 +110,7 @@
             // btnPrimler
             // 
             this.btnPrimler.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPrimler.Location = new System.Drawing.Point(721, 321);
+            this.btnPrimler.Location = new System.Drawing.Point(638, 320);
             this.btnPrimler.Name = "btnPrimler";
             this.btnPrimler.Size = new System.Drawing.Size(151, 83);
             this.btnPrimler.TabIndex = 7;
@@ -127,7 +121,7 @@
             // btnMesaiEkle
             // 
             this.btnMesaiEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMesaiEkle.Location = new System.Drawing.Point(564, 320);
+            this.btnMesaiEkle.Location = new System.Drawing.Point(481, 319);
             this.btnMesaiEkle.Name = "btnMesaiEkle";
             this.btnMesaiEkle.Size = new System.Drawing.Size(151, 83);
             this.btnMesaiEkle.TabIndex = 8;
@@ -137,7 +131,7 @@
             // btnMesaiListele
             // 
             this.btnMesaiListele.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMesaiListele.Location = new System.Drawing.Point(564, 409);
+            this.btnMesaiListele.Location = new System.Drawing.Point(481, 408);
             this.btnMesaiListele.Name = "btnMesaiListele";
             this.btnMesaiListele.Size = new System.Drawing.Size(151, 83);
             this.btnMesaiListele.TabIndex = 9;
@@ -145,12 +139,36 @@
             this.btnMesaiListele.UseVisualStyleBackColor = false;
             this.btnMesaiListele.Click += new System.EventHandler(this.btnMesaiListele_Click);
             // 
+            // btnIzinListele
+            // 
+            this.btnIzinListele.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnIzinListele.Location = new System.Drawing.Point(795, 408);
+            this.btnIzinListele.Name = "btnIzinListele";
+            this.btnIzinListele.Size = new System.Drawing.Size(151, 83);
+            this.btnIzinListele.TabIndex = 10;
+            this.btnIzinListele.Text = "İZİN HAREKETLERİ LİSTELE";
+            this.btnIzinListele.UseVisualStyleBackColor = false;
+            this.btnIzinListele.Click += new System.EventHandler(this.btnIzinListele_Click);
+            // 
+            // btnIzinEkle
+            // 
+            this.btnIzinEkle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnIzinEkle.Location = new System.Drawing.Point(795, 320);
+            this.btnIzinEkle.Name = "btnIzinEkle";
+            this.btnIzinEkle.Size = new System.Drawing.Size(151, 83);
+            this.btnIzinEkle.TabIndex = 11;
+            this.btnIzinEkle.Text = "İZİN EKLE";
+            this.btnIzinEkle.UseVisualStyleBackColor = false;
+            this.btnIzinEkle.Click += new System.EventHandler(this.btnIzinEkle_Click);
+            // 
             // frmAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1095, 612);
+            this.Controls.Add(this.btnIzinEkle);
+            this.Controls.Add(this.btnIzinListele);
             this.Controls.Add(this.btnMesaiListele);
             this.Controls.Add(this.btnMesaiEkle);
             this.Controls.Add(this.btnPrimler);
@@ -176,13 +194,14 @@
         private System.Windows.Forms.Button btnDepartmanlar;
         private System.Windows.Forms.Button btnPersonelEkle;
         private System.Windows.Forms.Button btnPersonelListele;
-        private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMaasZamlari;
         private System.Windows.Forms.Button btnPrimler;
         private System.Windows.Forms.Button btnMesaiEkle;
         private System.Windows.Forms.Button btnMesaiListele;
+        private System.Windows.Forms.Button btnIzinListele;
+        private System.Windows.Forms.Button btnIzinEkle;
     }
 }
 
