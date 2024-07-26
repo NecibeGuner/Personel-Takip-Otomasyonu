@@ -64,13 +64,14 @@
             this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEkle.ImageKey = "kaydet.png";
             this.btnEkle.ImageList = this.ımageList1;
-            this.btnEkle.Location = new System.Drawing.Point(467, 47);
+            this.btnEkle.Location = new System.Drawing.Point(99, 342);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(101, 58);
             this.btnEkle.TabIndex = 52;
             this.btnEkle.Text = "EKLE";
             this.btnEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // btnGuncelle
             // 
@@ -82,13 +83,14 @@
             this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuncelle.ImageIndex = 4;
             this.btnGuncelle.ImageList = this.ımageList1;
-            this.btnGuncelle.Location = new System.Drawing.Point(574, 47);
+            this.btnGuncelle.Location = new System.Drawing.Point(218, 342);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(112, 58);
             this.btnGuncelle.TabIndex = 51;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click_1);
             // 
             // btnSil
             // 
@@ -100,12 +102,13 @@
             this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSil.ImageIndex = 0;
             this.btnSil.ImageList = this.ımageList1;
-            this.btnSil.Location = new System.Drawing.Point(467, 111);
+            this.btnSil.Location = new System.Drawing.Point(347, 342);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(101, 58);
             this.btnSil.TabIndex = 50;
             this.btnSil.Text = "     Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // btnCikis
             // 
@@ -117,12 +120,13 @@
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.ImageIndex = 2;
             this.btnCikis.ImageList = this.ımageList1;
-            this.btnCikis.Location = new System.Drawing.Point(574, 111);
+            this.btnCikis.Location = new System.Drawing.Point(463, 342);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(112, 58);
             this.btnCikis.TabIndex = 49;
             this.btnCikis.Text = "      ÇIKIŞ";
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click_1);
             // 
             // listView1
             // 
@@ -131,12 +135,13 @@
             this.columnIzinTuruID,
             this.columnIzinTuru});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(119, 184);
+            this.listView1.Location = new System.Drawing.Point(52, 31);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(568, 232);
             this.listView1.TabIndex = 48;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick_1);
             // 
             // columnIzinTuruID
             // 
@@ -151,7 +156,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(113, 135);
+            this.label2.Location = new System.Drawing.Point(332, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 47;
@@ -160,7 +165,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 68);
+            this.label1.Location = new System.Drawing.Point(96, 283);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 46;
@@ -168,16 +173,16 @@
             // 
             // txtIzinTuru
             // 
-            this.txtIzinTuru.Location = new System.Drawing.Point(198, 129);
+            this.txtIzinTuru.Location = new System.Drawing.Point(335, 302);
             this.txtIzinTuru.Name = "txtIzinTuru";
-            this.txtIzinTuru.Size = new System.Drawing.Size(196, 22);
+            this.txtIzinTuru.Size = new System.Drawing.Size(228, 22);
             this.txtIzinTuru.TabIndex = 43;
             // 
             // txtIzinTuruID
             // 
-            this.txtIzinTuruID.Location = new System.Drawing.Point(198, 65);
+            this.txtIzinTuruID.Location = new System.Drawing.Point(99, 302);
             this.txtIzinTuruID.Name = "txtIzinTuruID";
-            this.txtIzinTuruID.Size = new System.Drawing.Size(196, 22);
+            this.txtIzinTuruID.Size = new System.Drawing.Size(149, 22);
             this.txtIzinTuruID.TabIndex = 42;
             // 
             // frmIzinTurleri
@@ -185,12 +190,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(800, 462);
+            this.ClientSize = new System.Drawing.Size(682, 456);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnCikis);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIzinTuru);

@@ -20,7 +20,7 @@ namespace Personel_Takip_Otomasyonu
 
         private void frmPersonelEkle_Load(object sender, EventArgs e)
         {
-            Personeller.ComboyaDepartmanGetir(comboDepartman);
+            Personeller.ComboyaKayitGetir(comboDepartman);
         }
 
         private void btnCikis_Click(object sender, EventArgs e)

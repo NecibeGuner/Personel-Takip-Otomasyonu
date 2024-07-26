@@ -33,7 +33,45 @@ namespace Personel_Takip_Otomasyonu
             txtIzinTuru.Text = "";
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            //kazar tıkladım
+
+        }
+
+        private void btnCikis_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void listView1_DoubleClick_1(object sender, EventArgs e)
+        {
+            txtIzinTuruID.Text = listView1.SelectedItems[0].SubItems[0].Text;
+            txtIzinTuru.Text = listView1.SelectedItems[0].SubItems[1].Text;
+        }
+
+        private void btnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Izin i = new Izin();
+                i.IzinTurID = int.Parse(txtIzinTuruID.Text);
+                i.IzinTuru = txtIzinTuru.Text;
+                string sql = "update IzinTurleri set IzinTuru='" + i.IzinTuru + "' where IzinTurID='" + i.IzinTurID + "'";
+                SqlCommand komut = new SqlCommand();
+                Veritabani.ESG(komut, sql);
+                MessageBox.Show("Kayıt güncellendi.", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Izin.ListvieweKayitGetir(listView1);
+                Temizle();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Hata Türü");
+            }
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -55,34 +93,7 @@ namespace Personel_Takip_Otomasyonu
             }
         }
 
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Izin i = new Izin();
-                i.IzinTurID = int.Parse(txtIzinTuruID.Text);
-                i.IzinTuru = txtIzinTuru.Text;
-                string sql = "update IzinTurleri set IzinTuru='" + i.IzinTuru + "' where IzinTurID='" + i.IzinTurID + "'";
-                SqlCommand komut = new SqlCommand();
-                Veritabani.ESG(komut, sql);
-                MessageBox.Show("Kayıt güncellendi.", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Izin.ListvieweKayitGetir(listView1);
-                Temizle();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message, "Hata Türü");
-            }
-        }
-
-        private void listView1_DoubleClick(object sender, EventArgs e)
-        {
-            txtIzinTuruID.Text = listView1.SelectedItems[0].SubItems[0].Text;
-            txtIzinTuru.Text = listView1.SelectedItems[0].SubItems[1].Text;
-        }
-
-        private void btnSil_Click(object sender, EventArgs e)
+        private void btnSil_Click_1(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0)
             {
@@ -101,10 +112,24 @@ namespace Personel_Takip_Otomasyonu
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnEkle_Click(object sender, EventArgs e)
         {
-            //kazar tıkladım
+            //çalışmıyor
+        }
 
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            //çalışmıyor
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            //yanlış
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            //çalışmıyor
         }
     }
 }

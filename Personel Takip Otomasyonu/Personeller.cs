@@ -48,7 +48,7 @@ namespace Personel_Takip_Otomasyonu
             return p.PERSONELID;
         }
 
-        public static void PersonelIslemEkle (Personeller p, Kullanicilar k)
+        public static void PersonelIslemEkle(Personeller p, Kullanicilar k)
         {
             k.KullaniciID = Kullanicilar.kid;
             p.Tarih = DateTime.Now;
@@ -58,26 +58,28 @@ namespace Personel_Takip_Otomasyonu
             komut.Parameters.Add("@Tarih", SqlDbType.Date).Value = p.Tarih;
             Veritabani.ESG(komut, sql);
         }
-        public static DataTable ComboyaDepartmanGetir(ComboBox combo)
+        public static string sql = "select*from Departmanlar";
+        public static string value = "DepartmanID";
+        public static string text = "Departman";
+        public static DataTable ComboyaKayitGetir(ComboBox combo)
         {
             DataTable tbl = new DataTable();
             Veritabani.connection.Open();
-            SqlDataAdapter adtr = new SqlDataAdapter("SELECT DepartmanID, Departman FROM Departmanlar", 
-                Veritabani.connection);
+            SqlDataAdapter adtr = new SqlDataAdapter(sql, Veritabani.connection);
             adtr.Fill(tbl);
             combo.DataSource = tbl;
-            combo.ValueMember = "DepartmanID";//arka planda tuttuğu kısım
-            combo.DisplayMember = "Departman";//görünecek olan kısım
+            combo.ValueMember = value;
+            combo.DisplayMember = text;
             Veritabani.connection.Close();
             return tbl;
         }
-        public static DataTable TariheGoreAra(DateTimePicker dt,DataGridView gridView)
+        public static DataTable TariheGoreAra(DateTimePicker dt, DataGridView gridView)
         {
             DataTable tbl = new DataTable();
             Veritabani.connection.Open();
             SqlDataAdapter adtr = new SqlDataAdapter("select p.PersonelID, p.Adi, p.Soyadi,p.Telefon, " +
                 "p.Adres, p.Email, d.Departman, p.Durumu, p.Maasi, p.GirisTarihi, p.Aciklama from " +
-                "Personeller p, Departmanlar d where p.DepartmanID = d.DepartmanID and GirisTarihi =@P1 ", 
+                "Personeller p, Departmanlar d where p.DepartmanID = d.DepartmanID and GirisTarihi =@P1 ",
                 Veritabani.connection);
             adtr.SelectCommand.Parameters.Add("@P1", SqlDbType.Date).Value = DateTime.Parse
                 (dt.Value.ToShortDateString());
@@ -88,3 +90,4 @@ namespace Personel_Takip_Otomasyonu
         }
     }
 }
+

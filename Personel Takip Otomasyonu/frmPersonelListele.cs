@@ -32,7 +32,7 @@ namespace Personel_Takip_Otomasyonu
         }
         private void frmPersonelListele_Load(object sender, EventArgs e)
         {
-            Personeller.ComboyaDepartmanGetir(comboDepartman);
+            Personeller.ComboyaKayitGetir(comboDepartman);
             YenileListele();
         }
 

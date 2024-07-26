@@ -10,12 +10,12 @@ namespace Personel_Takip_Otomasyonu
 {
     class Izin:Personeller
     {
-        //public Izin()
-        //{
-        //    Izin.sql = "select *from IzinTurleri";
-        //    Izin.value = "IzinTurID";
-        //    Izin.text = "IzinTuru";
-        //}
+        public Izin()
+        {
+            Izin.sql = "select *from IzinTurleri";
+            Izin.value = "IzinTurID";
+            Izin.text = "IzinTuru";
+        }
 
         private int _izinHareketID;
         private int _izinTurID;
@@ -45,6 +45,19 @@ namespace Personel_Takip_Otomasyonu
                 ekle.Text = dr[0].ToString();
                 ekle.SubItems.Add(dr[1].ToString());
                 lst.Items.Add(ekle);
+            }
+            Veritabani.connection.Close();
+            return dr;
+        }
+
+        public static SqlDataReader ComboyaPersonelGetir(ComboBox cmb)
+        {
+            Veritabani.connection.Open();
+            SqlCommand sql = new SqlCommand("select PersonelID,Adi,Soyadi from Personeller", Veritabani.connection);
+            SqlDataReader dr = sql.ExecuteReader();
+            while (dr.Read())
+            {
+                cmb.Items.Add(dr[0] + "." + dr[1] + " " + dr[2]);
             }
             Veritabani.connection.Close();
             return dr;
