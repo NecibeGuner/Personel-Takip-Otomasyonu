@@ -224,7 +224,7 @@
             // btnPersoneleGorePrimler
             // 
             this.btnPersoneleGorePrimler.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
-            this.btnPersoneleGorePrimler.Location = new System.Drawing.Point(545, 189);
+            this.btnPersoneleGorePrimler.Location = new System.Drawing.Point(601, 195);
             this.btnPersoneleGorePrimler.Name = "btnPersoneleGorePrimler";
             this.btnPersoneleGorePrimler.Size = new System.Drawing.Size(110, 58);
             this.btnPersoneleGorePrimler.TabIndex = 30;
@@ -235,7 +235,7 @@
             // btnPrimGoster
             // 
             this.btnPrimGoster.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
-            this.btnPrimGoster.Location = new System.Drawing.Point(429, 189);
+            this.btnPrimGoster.Location = new System.Drawing.Point(485, 195);
             this.btnPrimGoster.Name = "btnPrimGoster";
             this.btnPrimGoster.Size = new System.Drawing.Size(110, 58);
             this.btnPrimGoster.TabIndex = 29;
@@ -246,7 +246,7 @@
             // btnPrimEkle
             // 
             this.btnPrimEkle.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
-            this.btnPrimEkle.Location = new System.Drawing.Point(313, 189);
+            this.btnPrimEkle.Location = new System.Drawing.Point(369, 195);
             this.btnPrimEkle.Name = "btnPrimEkle";
             this.btnPrimEkle.Size = new System.Drawing.Size(110, 58);
             this.btnPrimEkle.TabIndex = 28;

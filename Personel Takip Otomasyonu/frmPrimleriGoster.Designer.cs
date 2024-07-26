@@ -53,6 +53,7 @@
             this.btnTumPrimleriOde = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrimID = new System.Windows.Forms.TextBox();
+            this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +199,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.btnExcelVeriAktarimi);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Controls.Add(this.btnDonemDegistir);
             this.panel1.Controls.Add(this.btnPrimSil);
@@ -258,7 +260,7 @@
             // 
             // btnPrimSil
             // 
-            this.btnPrimSil.Location = new System.Drawing.Point(603, 173);
+            this.btnPrimSil.Location = new System.Drawing.Point(626, 173);
             this.btnPrimSil.Name = "btnPrimSil";
             this.btnPrimSil.Size = new System.Drawing.Size(111, 54);
             this.btnPrimSil.TabIndex = 48;
@@ -268,7 +270,7 @@
             // 
             // btnPrimGuncelle
             // 
-            this.btnPrimGuncelle.Location = new System.Drawing.Point(459, 173);
+            this.btnPrimGuncelle.Location = new System.Drawing.Point(497, 173);
             this.btnPrimGuncelle.Name = "btnPrimGuncelle";
             this.btnPrimGuncelle.Size = new System.Drawing.Size(111, 54);
             this.btnPrimGuncelle.TabIndex = 47;
@@ -278,7 +280,7 @@
             // 
             // btnPrimOde
             // 
-            this.btnPrimOde.Location = new System.Drawing.Point(322, 175);
+            this.btnPrimOde.Location = new System.Drawing.Point(370, 173);
             this.btnPrimOde.Name = "btnPrimOde";
             this.btnPrimOde.Size = new System.Drawing.Size(107, 52);
             this.btnPrimOde.TabIndex = 46;
@@ -288,7 +290,7 @@
             // 
             // btnTumPrimleriOde
             // 
-            this.btnTumPrimleriOde.Location = new System.Drawing.Point(177, 175);
+            this.btnTumPrimleriOde.Location = new System.Drawing.Point(245, 173);
             this.btnTumPrimleriOde.Name = "btnTumPrimleriOde";
             this.btnTumPrimleriOde.Size = new System.Drawing.Size(107, 52);
             this.btnTumPrimleriOde.TabIndex = 45;
@@ -313,6 +315,17 @@
             this.txtPrimID.Name = "txtPrimID";
             this.txtPrimID.Size = new System.Drawing.Size(221, 26);
             this.txtPrimID.TabIndex = 43;
+            // 
+            // btnExcelVeriAktarimi
+            // 
+            this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(35, 171);
+            this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(194, 54);
+            this.btnExcelVeriAktarimi.TabIndex = 64;
+            this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
+            this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
+            this.btnExcelVeriAktarimi.Click += new System.EventHandler(this.btnExcelVeriAktarimi_Click);
             // 
             // frmPrimleriGoster
             // 
@@ -358,5 +371,6 @@
         private System.Windows.Forms.Button btnTumPrimleriOde;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button btnExcelVeriAktarimi;
     }
 }

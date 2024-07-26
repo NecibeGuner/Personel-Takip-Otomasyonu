@@ -66,6 +66,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnKullaiciEkleme = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -434,19 +435,31 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "delete.png";
-            this.button1.Location = new System.Drawing.Point(1053, 511);
+            this.button1.Location = new System.Drawing.Point(994, 505);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 73);
+            this.button1.Size = new System.Drawing.Size(186, 34);
             this.button1.TabIndex = 87;
             this.button1.Text = "Kullanıcı Ekleme";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnExcelVeriAktarimi
+            // 
+            this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Eras Demi ITC", 9F);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(994, 544);
+            this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(186, 45);
+            this.btnExcelVeriAktarimi.TabIndex = 88;
+            this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
+            this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
+            this.btnExcelVeriAktarimi.Click += new System.EventHandler(this.btnExcelVeriAktarimi_Click);
             // 
             // frmKullaniciListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1208, 742);
+            this.Controls.Add(this.btnExcelVeriAktarimi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnKullaiciEkleme);
             this.Controls.Add(this.label11);
@@ -529,5 +542,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnKullaiciEkleme;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcelVeriAktarimi;
     }
 }

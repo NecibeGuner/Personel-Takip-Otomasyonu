@@ -69,6 +69,7 @@ namespace Personel_Takip_Otomasyonu
             this.label15 = new System.Windows.Forms.Label();
             this.dateTimePickerG_Tarihi = new System.Windows.Forms.DateTimePicker();
             this.maskedtxtTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -344,7 +345,7 @@ namespace Personel_Takip_Otomasyonu
             // lblToplamKayit
             // 
             this.lblToplamKayit.AutoSize = true;
-            this.lblToplamKayit.Location = new System.Drawing.Point(718, 533);
+            this.lblToplamKayit.Location = new System.Drawing.Point(699, 530);
             this.lblToplamKayit.Name = "lblToplamKayit";
             this.lblToplamKayit.Size = new System.Drawing.Size(163, 16);
             this.lblToplamKayit.TabIndex = 34;
@@ -353,7 +354,7 @@ namespace Personel_Takip_Otomasyonu
             // lblToplamMaas
             // 
             this.lblToplamMaas.AutoSize = true;
-            this.lblToplamMaas.Location = new System.Drawing.Point(718, 566);
+            this.lblToplamMaas.Location = new System.Drawing.Point(699, 563);
             this.lblToplamMaas.Name = "lblToplamMaas";
             this.lblToplamMaas.Size = new System.Drawing.Size(253, 16);
             this.lblToplamMaas.TabIndex = 35;
@@ -442,12 +443,24 @@ namespace Personel_Takip_Otomasyonu
             this.maskedtxtTelefon.Size = new System.Drawing.Size(194, 28);
             this.maskedtxtTelefon.TabIndex = 42;
             // 
+            // btnExcelVeriAktarimi
+            // 
+            this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Eras Demi ITC", 9F);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(1025, 531);
+            this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(170, 58);
+            this.btnExcelVeriAktarimi.TabIndex = 63;
+            this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
+            this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
+            this.btnExcelVeriAktarimi.Click += new System.EventHandler(this.btnExcelVeriAktarimi_Click);
+            // 
             // frmPersonelListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1228, 763);
+            this.Controls.Add(this.btnExcelVeriAktarimi);
             this.Controls.Add(this.maskedtxtTelefon);
             this.Controls.Add(this.dateTimePickerG_Tarihi);
             this.Controls.Add(this.label15);
@@ -533,5 +546,6 @@ namespace Personel_Takip_Otomasyonu
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dateTimePickerG_Tarihi;
         private MaskedTextBox maskedtxtTelefon;
+        private Button btnExcelVeriAktarimi;
     }
 }

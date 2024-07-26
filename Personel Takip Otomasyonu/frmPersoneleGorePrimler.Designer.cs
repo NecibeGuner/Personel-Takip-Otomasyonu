@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCikis = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -124,12 +125,24 @@
             this.ımageList1.Images.SetKeyName(2, "exit.png");
             this.ımageList1.Images.SetKeyName(3, "update.png");
             // 
+            // btnExcelVeriAktarimi
+            // 
+            this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(534, 565);
+            this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(194, 81);
+            this.btnExcelVeriAktarimi.TabIndex = 65;
+            this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
+            this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
+            this.btnExcelVeriAktarimi.Click += new System.EventHandler(this.btnExcelVeriAktarimi_Click);
+            // 
             // frmPersoneleGorePrimler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(949, 658);
+            this.Controls.Add(this.btnExcelVeriAktarimi);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.panel1);
             this.Name = "frmPersoneleGorePrimler";
@@ -152,5 +165,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button btnExcelVeriAktarimi;
     }
 }

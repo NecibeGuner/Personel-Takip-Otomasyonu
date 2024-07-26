@@ -61,6 +61,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -262,7 +263,7 @@
             this.btnCikis.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.ImageKey = "exit.png";
-            this.btnCikis.Location = new System.Drawing.Point(1003, 582);
+            this.btnCikis.Location = new System.Drawing.Point(1090, 582);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(122, 87);
             this.btnCikis.TabIndex = 58;
@@ -272,7 +273,7 @@
             // 
             // btnMesaiSil
             // 
-            this.btnMesaiSil.Location = new System.Drawing.Point(722, 582);
+            this.btnMesaiSil.Location = new System.Drawing.Point(663, 582);
             this.btnMesaiSil.Name = "btnMesaiSil";
             this.btnMesaiSil.Size = new System.Drawing.Size(122, 87);
             this.btnMesaiSil.TabIndex = 57;
@@ -282,7 +283,7 @@
             // 
             // btnMesaiGuncelle
             // 
-            this.btnMesaiGuncelle.Location = new System.Drawing.Point(583, 582);
+            this.btnMesaiGuncelle.Location = new System.Drawing.Point(518, 582);
             this.btnMesaiGuncelle.Name = "btnMesaiGuncelle";
             this.btnMesaiGuncelle.Size = new System.Drawing.Size(122, 87);
             this.btnMesaiGuncelle.TabIndex = 56;
@@ -292,7 +293,7 @@
             // 
             // btnMesaiOde
             // 
-            this.btnMesaiOde.Location = new System.Drawing.Point(443, 582);
+            this.btnMesaiOde.Location = new System.Drawing.Point(378, 582);
             this.btnMesaiOde.Name = "btnMesaiOde";
             this.btnMesaiOde.Size = new System.Drawing.Size(122, 87);
             this.btnMesaiOde.TabIndex = 55;
@@ -302,7 +303,7 @@
             // 
             // btnTumMesaileriOde
             // 
-            this.btnTumMesaileriOde.Location = new System.Drawing.Point(298, 582);
+            this.btnTumMesaileriOde.Location = new System.Drawing.Point(236, 582);
             this.btnTumMesaileriOde.Name = "btnTumMesaileriOde";
             this.btnTumMesaileriOde.Size = new System.Drawing.Size(122, 87);
             this.btnTumMesaileriOde.TabIndex = 54;
@@ -312,7 +313,7 @@
             // 
             // btnPersonelMesaileri
             // 
-            this.btnPersonelMesaileri.Location = new System.Drawing.Point(148, 582);
+            this.btnPersonelMesaileri.Location = new System.Drawing.Point(92, 582);
             this.btnPersonelMesaileri.Name = "btnPersonelMesaileri";
             this.btnPersonelMesaileri.Size = new System.Drawing.Size(122, 87);
             this.btnPersonelMesaileri.TabIndex = 59;
@@ -322,7 +323,7 @@
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(859, 582);
+            this.btnTemizle.Location = new System.Drawing.Point(807, 582);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(122, 87);
             this.btnTemizle.TabIndex = 60;
@@ -336,7 +337,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(-3, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -412,10 +413,22 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1283, 530);
             this.panel1.TabIndex = 67;
+            // 
+            // btnExcelVeriAktarimi
+            // 
+            this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(950, 584);
+            this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(122, 85);
+            this.btnExcelVeriAktarimi.TabIndex = 63;
+            this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
+            this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
+            this.btnExcelVeriAktarimi.Click += new System.EventHandler(this.btnExcelVeriAktarimi_Click);
             // 
             // frmMesailer
             // 
@@ -423,9 +436,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1307, 737);
+            this.Controls.Add(this.btnExcelVeriAktarimi);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.maskedTxtBaslangic);
             this.Controls.Add(this.txtTutar);
             this.Controls.Add(this.maskedTxtBitis);
@@ -501,5 +514,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnExcelVeriAktarimi;
     }
 }

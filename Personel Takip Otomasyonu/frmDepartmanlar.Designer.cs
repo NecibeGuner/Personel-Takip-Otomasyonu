@@ -45,26 +45,27 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.txtAciklama = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDepartmanID
             // 
-            this.txtDepartmanID.Location = new System.Drawing.Point(256, 56);
+            this.txtDepartmanID.Location = new System.Drawing.Point(201, 56);
             this.txtDepartmanID.Name = "txtDepartmanID";
-            this.txtDepartmanID.Size = new System.Drawing.Size(235, 22);
+            this.txtDepartmanID.Size = new System.Drawing.Size(221, 22);
             this.txtDepartmanID.TabIndex = 0;
             // 
             // txtDepartman
             // 
-            this.txtDepartman.Location = new System.Drawing.Point(256, 84);
+            this.txtDepartman.Location = new System.Drawing.Point(201, 84);
             this.txtDepartman.Name = "txtDepartman";
-            this.txtDepartman.Size = new System.Drawing.Size(235, 22);
+            this.txtDepartman.Size = new System.Drawing.Size(221, 22);
             this.txtDepartman.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(147, 59);
+            this.label1.Location = new System.Drawing.Point(92, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 6;
@@ -73,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(147, 87);
+            this.label2.Location = new System.Drawing.Point(92, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 7;
@@ -87,9 +88,9 @@
             this.columnDepartman,
             this.columnAciklama});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(150, 209);
+            this.listView1.Location = new System.Drawing.Point(95, 209);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(568, 232);
+            this.listView1.Size = new System.Drawing.Size(682, 248);
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -105,12 +106,12 @@
             // columnDepartman
             // 
             this.columnDepartman.Text = "Departman";
-            this.columnDepartman.Width = 116;
+            this.columnDepartman.Width = 143;
             // 
             // columnAciklama
             // 
             this.columnAciklama.Text = "Açıklama";
-            this.columnAciklama.Width = 335;
+            this.columnAciklama.Width = 401;
             // 
             // btnGuncelle
             // 
@@ -122,7 +123,7 @@
             this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuncelle.ImageIndex = 4;
             this.btnGuncelle.ImageList = this.ımageList1;
-            this.btnGuncelle.Location = new System.Drawing.Point(618, 56);
+            this.btnGuncelle.Location = new System.Drawing.Point(557, 56);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(112, 58);
             this.btnGuncelle.TabIndex = 40;
@@ -151,7 +152,7 @@
             this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSil.ImageIndex = 0;
             this.btnSil.ImageList = this.ımageList1;
-            this.btnSil.Location = new System.Drawing.Point(511, 120);
+            this.btnSil.Location = new System.Drawing.Point(676, 59);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(101, 58);
             this.btnSil.TabIndex = 39;
@@ -169,7 +170,7 @@
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.ImageIndex = 2;
             this.btnCikis.ImageList = this.ımageList1;
-            this.btnCikis.Location = new System.Drawing.Point(618, 120);
+            this.btnCikis.Location = new System.Drawing.Point(648, 120);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(112, 58);
             this.btnCikis.TabIndex = 38;
@@ -187,7 +188,7 @@
             this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEkle.ImageKey = "kaydet.png";
             this.btnEkle.ImageList = this.ımageList1;
-            this.btnEkle.Location = new System.Drawing.Point(511, 56);
+            this.btnEkle.Location = new System.Drawing.Point(450, 56);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(101, 58);
             this.btnEkle.TabIndex = 41;
@@ -198,20 +199,31 @@
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(256, 112);
+            this.txtAciklama.Location = new System.Drawing.Point(201, 115);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(235, 66);
+            this.txtAciklama.Size = new System.Drawing.Size(221, 63);
             this.txtAciklama.TabIndex = 42;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(147, 115);
+            this.label3.Location = new System.Drawing.Point(92, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 43;
             this.label3.Text = "Açıklama";
+            // 
+            // btnExcelVeriAktarimi
+            // 
+            this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Eras Demi ITC", 9F);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(472, 120);
+            this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(170, 58);
+            this.btnExcelVeriAktarimi.TabIndex = 89;
+            this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
+            this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
+            this.btnExcelVeriAktarimi.Click += new System.EventHandler(this.btnExcelVeriAktarimi_Click);
             // 
             // frmDepartmanlar
             // 
@@ -219,6 +231,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(868, 507);
+            this.Controls.Add(this.btnExcelVeriAktarimi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAciklama);
             this.Controls.Add(this.btnEkle);
@@ -256,5 +269,6 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.TextBox txtAciklama;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnExcelVeriAktarimi;
     }
 }

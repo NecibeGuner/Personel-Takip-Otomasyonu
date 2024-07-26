@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,6 +79,29 @@ namespace Personel_Takip_Otomasyonu
             this.Close();
         }
 
+        private void btnExcelVeriAktarimi_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application uyg = new Microsoft.Office.Interop.Excel.Application();
+            uyg.Visible = true;
+            Microsoft.Office.Interop.Excel.Workbook kitap = uyg.Workbooks.Add(System.Reflection.Missing.Value);
+            Microsoft.Office.Interop.Excel.Worksheet sayfa = (Microsoft.Office.Interop.Excel.Worksheet)kitap.Sheets[1];
+            // ListView sütun başlıklarını Excel'e ekleyin
+            for (int i = 0; i < listView1.Columns.Count; i++)
+            {
+                Range range = (Range)sayfa.Cells[1, i + 1];
+                range.Value2 = listView1.Columns[i].Text;
+            }
+
+            // ListView verilerini Excel'e ekleyin
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                for (int j = 0; j < listView1.Items[i].SubItems.Count; j++)
+                {
+                    Range range = (Range)sayfa.Cells[i + 2, j + 1];
+                    range.Value2 = listView1.Items[i].SubItems[j].Text;
+                }
+            }
+        }
         private void listView1_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
             //kazara tıkladım bir işe yaramıyor

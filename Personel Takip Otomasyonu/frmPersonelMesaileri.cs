@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,6 +53,75 @@ namespace Personel_Takip_Otomasyonu
         private void txtPersonelIDAra_TextChanged(object sender, EventArgs e)
         {
             Primler.PersonelAdSoyadGetir(txtPersonelIDAra, txtAdSoyadAra);
+        }
+
+        private void btnExcelVeriAktarimi_Click(object sender, EventArgs e)
+        {
+            //gqt ye sorulacak
+            //Microsoft.Office.Interop.Excel.Application uyg = new Microsoft.Office.Interop.Excel.Application();
+            //uyg.Visible = true;
+            //Microsoft.Office.Interop.Excel.Workbook kitap = uyg.Workbooks.Add(System.Reflection.Missing.Value);
+            //Microsoft.Office.Interop.Excel.Worksheet sayfa = (Microsoft.Office.Interop.Excel.Worksheet)kitap.Sheets[1];
+            //for (int i = 0; i < dataGridViewMesailer.Columns.Count; i++)
+            //{
+            //    Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[1, i + 1];
+            //    range.Value2 = dataGridViewMesailer.Columns[i].HeaderText;
+            //}
+            //for (int i = 0; i < dataGridViewMesailer.Columns.Count; i++)
+            //{
+            //    for (int j = 0; j < dataGridViewMesailer.Rows.Count; j++)
+            //    {
+            //        Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[j + 2, i + 1];
+            //        range.Value2 = dataGridViewMesailer[i, j].Value;
+            //        sayfa.Columns["B:B"].NumberFormat = "0.000";
+            //        sayfa.Columns["E:E"].NumberFormat = "gg.aa.yyyy";
+            //        sayfa.Columns["F:F"].NumberFormat = "gg.aa.yyyy";
+            //        sayfa.Columns["I:I"].NumberFormat = "gg.aa.yyyy";
+            //        sayfa.Columns["J:J"].NumberFormat = "gg.aa.yyyy ss:dd:nn";
+            //    }
+            //}
+            Microsoft.Office.Interop.Excel.Application uyg = new Microsoft.Office.Interop.Excel.Application();
+            uyg.Visible = true;
+            Microsoft.Office.Interop.Excel.Workbook kitap = uyg.Workbooks.Add(System.Reflection.Missing.Value);
+            Microsoft.Office.Interop.Excel.Worksheet sayfa = (Microsoft.Office.Interop.Excel.Worksheet)kitap.Sheets[1];
+
+            // Sütun başlıklarını ekleyin
+            for (int i = 0; i < dataGridViewMesailer.Columns.Count; i++)
+            {
+                Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[1, i + 1];
+                range.Value2 = dataGridViewMesailer.Columns[i].HeaderText;
+            }
+
+            // Verileri ekleyin
+            for (int i = 0; i < dataGridViewMesailer.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < dataGridViewMesailer.Columns.Count; j++)
+                {
+                    Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[i + 2, j + 1];
+                    range.Value2 = dataGridViewMesailer[j, i].Value;
+
+                    if (j == 1) // KullaniciID için
+                    {
+                        range.NumberFormat = "0.000";
+                    }
+                    if (j == 3 || j == 4) // Tarih formatı gereken hücreler
+                    {
+                        range.NumberFormat = "dd.MM.yyyy HH:mm";
+                    }
+                    if (j == 5) // MesaiÜcreti formatı için
+                    {
+                        range.NumberFormat = "#,##0.00 ₺"; // Para birimi formatı
+                    }
+                    if (j == 6) // Tutar formatı için
+                    {
+                        range.NumberFormat = "#,##0.00 ₺"; // Para birimi formatı
+                    }
+                    if (j == 10) // Dönem formatı gereken hücre
+                    {
+                        range.NumberFormat = "MM.yyyy";
+                    }
+                }
+            }
         }
     }
 }

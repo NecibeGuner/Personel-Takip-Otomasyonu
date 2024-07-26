@@ -51,6 +51,7 @@
             this.dateTimeBaslangic = new System.Windows.Forms.DateTimePicker();
             this.dateTimeBitis = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -278,6 +279,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.btnExcelVeriAktarimi);
             this.panel1.Controls.Add(this.dateTimeBitis);
             this.panel1.Controls.Add(this.dateTimeBaslangic);
             this.panel1.Controls.Add(this.label7);
@@ -300,6 +302,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(999, 201);
             this.panel1.TabIndex = 62;
+            // 
+            // btnExcelVeriAktarimi
+            // 
+            this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Eras Demi ITC", 9F);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(449, 136);
+            this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(170, 48);
+            this.btnExcelVeriAktarimi.TabIndex = 62;
+            this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
+            this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
+            this.btnExcelVeriAktarimi.Click += new System.EventHandler(this.btnExcelVeriAktarimi_Click);
             // 
             // frmIzinListele
             // 
@@ -343,5 +356,6 @@
         private System.Windows.Forms.DateTimePicker dateTimeBaslangic;
         private System.Windows.Forms.DateTimePicker dateTimeBitis;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnExcelVeriAktarimi;
     }
 }

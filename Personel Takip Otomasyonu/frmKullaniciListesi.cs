@@ -140,5 +140,31 @@ namespace Personel_Takip_Otomasyonu
             frmKullaniciEkle frmKullaniciEkle = new frmKullaniciEkle();
             frmKullaniciEkle.ShowDialog();
         }
+
+        private void btnExcelVeriAktarimi_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application uyg = new Microsoft.Office.Interop.Excel.Application();
+            uyg.Visible = true;
+            Microsoft.Office.Interop.Excel.Workbook kitap = uyg.Workbooks.Add(System.Reflection.Missing.Value);
+            Microsoft.Office.Interop.Excel.Worksheet sayfa = (Microsoft.Office.Interop.Excel.Worksheet)kitap.Sheets[1];
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[1, i + 1];
+                range.Value2 = dataGridView1.Columns[i].HeaderText;
+            }
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Rows.Count; j++)
+                {
+                    Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[j + 2, i + 1];
+                    range.Value2 = dataGridView1[i, j].Value;
+                    sayfa.Columns["B:B"].NumberFormat = "0.000";
+                    sayfa.Columns["E:E"].NumberFormat = "gg.aa.yyyy";
+                    sayfa.Columns["F:F"].NumberFormat = "gg.aa.yyyy";
+                    sayfa.Columns["I:I"].NumberFormat = "gg.aa.yyyy";
+                    sayfa.Columns["J:J"].NumberFormat = "gg.aa.yyyy ss:dd:nn";
+                }
+            }
+        }
     }
 }

@@ -93,6 +93,5 @@ namespace Personel_Takip_Otomasyonu
             Veritabani.Listele_Ara(frm.dataGridView1, "select *from Primler where PersonelID='" + frm.txtPersonelID.Text + "'");
             frm.ShowDialog();
         }
-
     }
 }
