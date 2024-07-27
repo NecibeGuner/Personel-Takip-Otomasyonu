@@ -137,7 +137,7 @@
             // lblToplamKayit
             // 
             this.lblToplamKayit.AutoSize = true;
-            this.lblToplamKayit.Location = new System.Drawing.Point(785, 557);
+            this.lblToplamKayit.Location = new System.Drawing.Point(746, 557);
             this.lblToplamKayit.Name = "lblToplamKayit";
             this.lblToplamKayit.Size = new System.Drawing.Size(163, 16);
             this.lblToplamKayit.TabIndex = 70;
@@ -435,9 +435,9 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "delete.png";
-            this.button1.Location = new System.Drawing.Point(994, 505);
+            this.button1.Location = new System.Drawing.Point(1015, 557);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 34);
+            this.button1.Size = new System.Drawing.Size(165, 34);
             this.button1.TabIndex = 87;
             this.button1.Text = "Kullanıcı Ekleme";
             this.button1.UseVisualStyleBackColor = false;
@@ -446,9 +446,9 @@
             // btnExcelVeriAktarimi
             // 
             this.btnExcelVeriAktarimi.Font = new System.Drawing.Font("Eras Demi ITC", 9F);
-            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(994, 544);
+            this.btnExcelVeriAktarimi.Location = new System.Drawing.Point(990, 506);
             this.btnExcelVeriAktarimi.Name = "btnExcelVeriAktarimi";
-            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(186, 45);
+            this.btnExcelVeriAktarimi.Size = new System.Drawing.Size(190, 45);
             this.btnExcelVeriAktarimi.TabIndex = 88;
             this.btnExcelVeriAktarimi.Text = "Excel\'e Verileri Aktar";
             this.btnExcelVeriAktarimi.UseVisualStyleBackColor = true;
