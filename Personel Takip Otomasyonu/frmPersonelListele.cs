@@ -156,27 +156,27 @@ namespace Personel_Takip_Otomasyonu
                 Microsoft.Office.Interop.Excel.Workbook kitap = uyg.Workbooks.Add(System.Reflection.Missing.Value);
                 Microsoft.Office.Interop.Excel.Worksheet sayfa = (Microsoft.Office.Interop.Excel.Worksheet)kitap.Sheets[1];
 
-                // Sütun başlıklarını ekleyin
+                // Sütun başlıklarını ekler
                 for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 {
                     Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[1, i + 1];
                     range.Value2 = dataGridView1.Columns[i].HeaderText;
                 }
 
-                // Verileri ekleyin
+                // Verileri ekler
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
                     for (int j = 0; j < dataGridView1.Columns.Count; j++)
                     {
                         Microsoft.Office.Interop.Excel.Range range = (Microsoft.Office.Interop.Excel.Range)sayfa.Cells[i + 2, j + 1];
 
-                        // Maaş kolonunu doğru formatta ekleyin
+                        // Maaş kolonunu doğru formatta ekler
                         if (dataGridView1.Columns[j].HeaderText == "Maasi")
                         {
                             if (decimal.TryParse(dataGridView1.Rows[i].Cells[j].Value?.ToString(), out decimal maas))
                             {
                                 range.Value2 = maas;
-                                range.NumberFormat = "0.00"; // İsteğe bağlı: Maaşı iki ondalık basamakla formatlayın
+                                range.NumberFormat = "0.00"; // İsteğe bağlı: Maaşı iki ondalık basamakla formatlar
                             }
                             else
                             {
@@ -188,7 +188,7 @@ namespace Personel_Takip_Otomasyonu
                             if (DateTime.TryParse(dataGridView1.Rows[i].Cells[j].Value?.ToString(), out DateTime girisTarihi))
                             {
                                 range.Value2 = girisTarihi.ToOADate();
-                                range.NumberFormat = "dd.mm.yyyy"; // Giriş tarihini doğru formatta ayarlayın
+                                range.NumberFormat = "dd.mm.yyyy"; // Giriş tarihini doğru formatta ayarlar
                             }
                             else
                             {
@@ -200,7 +200,7 @@ namespace Personel_Takip_Otomasyonu
                             range.Value2 = dataGridView1.Rows[i].Cells[j].Value;
                         }
 
-                        // Diğer kolonların formatlarını ayarlayın
+                        // Diğer kolonların formatlarını ayarlar
                         if (dataGridView1.Columns[j].HeaderText == "GirisTarihi")
                         {
                             range.NumberFormat = "dd.mm.yyyy";
@@ -212,7 +212,7 @@ namespace Personel_Takip_Otomasyonu
                     }
                 }
 
-                //MessageBox.Show("Veriler başarıyla Excel'e aktarıldı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Veriler başarıyla Excel'e aktarıldı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

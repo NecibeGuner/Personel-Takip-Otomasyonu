@@ -65,12 +65,10 @@ namespace Personel_Takip_Otomasyonu
             MessageBox.Show("Mesai bilgileri eklendi.", "Mesailer", MessageBoxButtons.OK, 
                 MessageBoxIcon.Information);
         }
-
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void txtMesaiSaatUcreti_TextChanged(object sender, EventArgs e)
         {
             try
@@ -81,10 +79,8 @@ namespace Personel_Takip_Otomasyonu
                 double MSaatUcreti = double.Parse(txtMesaiSaatUcreti.Text);
                 double tutar = saatfarki.TotalHours * MSaatUcreti;
                 txtTutar.Text = tutar.ToString("0.00");
-            }
-            catch
-            {
-            }
+
+            } catch {}
         }
     }
 }

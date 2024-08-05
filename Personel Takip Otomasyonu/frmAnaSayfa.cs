@@ -74,5 +74,11 @@ namespace Personel_Takip_Otomasyonu
             frmIzinListele frm = new frmIzinListele();
             frm.ShowDialog();
         }
+
+        private void btnMesaiEkle_Click(object sender, EventArgs e)
+        {
+            frmMesaiEkle frm = new frmMesaiEkle();
+            frm.ShowDialog();
+        }
     }
 }

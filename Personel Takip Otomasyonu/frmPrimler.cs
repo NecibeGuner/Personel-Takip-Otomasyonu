@@ -84,7 +84,7 @@ namespace Personel_Takip_Otomasyonu
             frm.ShowDialog();
         }
 
-        private void btnPrimOde_Click(object sender, EventArgs e)//btnPersoneleGorePrimler 
+        private void btnPersoneleGorePimler(object sender, EventArgs e)//btnPersoneleGorePrimler 
         {
             frmPersoneleGorePrimler frm = new frmPersoneleGorePrimler();
             frm.txtPersonelID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();

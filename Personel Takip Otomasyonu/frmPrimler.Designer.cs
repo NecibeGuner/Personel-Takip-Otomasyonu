@@ -230,7 +230,7 @@
             this.btnPersoneleGorePrimler.TabIndex = 30;
             this.btnPersoneleGorePrimler.Text = "Personele Göre Prim";
             this.btnPersoneleGorePrimler.UseVisualStyleBackColor = true;
-            this.btnPersoneleGorePrimler.Click += new System.EventHandler(this.btnPrimOde_Click);
+            this.btnPersoneleGorePrimler.Click += new System.EventHandler(this.btnPersoneleGorePimler);
             // 
             // btnPrimGoster
             // 

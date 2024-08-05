@@ -64,7 +64,6 @@
             this.comboRol = new System.Windows.Forms.ComboBox();
             this.txtRolAra = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnKullaiciEkleme = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExcelVeriAktarimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -419,13 +418,6 @@
             this.label11.TabIndex = 86;
             this.label11.Text = "Rol Ara";
             // 
-            // btnKullaiciEkleme
-            // 
-            this.btnKullaiciEkleme.Location = new System.Drawing.Point(0, 0);
-            this.btnKullaiciEkleme.Name = "btnKullaiciEkleme";
-            this.btnKullaiciEkleme.Size = new System.Drawing.Size(75, 23);
-            this.btnKullaiciEkleme.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Window;
@@ -461,7 +453,6 @@
             this.ClientSize = new System.Drawing.Size(1208, 742);
             this.Controls.Add(this.btnExcelVeriAktarimi);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnKullaiciEkleme);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtRolAra);
             this.Controls.Add(this.comboRol);
@@ -540,7 +531,6 @@
         private System.Windows.Forms.ComboBox comboRol;
         private System.Windows.Forms.TextBox txtRolAra;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnKullaiciEkleme;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnExcelVeriAktarimi;
     }
